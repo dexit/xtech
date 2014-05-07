@@ -1,0 +1,141 @@
+2014/05/07 13:44:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xtech.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/05/07 15:54:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `t_branches` (`name`, `description`, `telephones`, `emails`, `address`) VALUES (:name, :description, :telephones, :emails, :address).
+2014/05/07 15:54:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `t_branches` (`name`, `description`, `telephones`, `emails`, `address`) VALUES (:name, :description, :telephones, :emails, :address)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\CDbMigration.php(178): CDbCommand->insert('t_branches', Array)
+#2 C:\WebOpenServer\domains\xtech\protected\migrations\m140507_112643_insert_branches.php(20): CDbMigration->insert('t_branches', Array)
+#3 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(385): m140507_112643_insert_branches->up()
+#4 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140507_112643_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\WebOpenServer\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\WebOpenServer\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\WebOpenServer\domains\xtech\protected\yiic.php(7): require_once('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
+#13 {main}
+---
+2014/05/07 16:54:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: ALTER TABLE `t_branches` CHANGE `id_branch` `id_branch` INT(2) auto_increment primary key.
+2014/05/07 16:54:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: ALTER TABLE `t_branches` CHANGE `id_branch` `id_branch` INT(2) auto_increment primary key' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(1417): CDbCommand->execute()
+#1 C:\WebOpenServer\domains\yii\framework\db\CDbMigration.php(329): CDbCommand->alterColumn('t_branches', 'id_branch', 'INT(2) auto_inc...')
+#2 C:\WebOpenServer\domains\xtech\protected\migrations\m140507_112643_insert_branches.php(8): CDbMigration->alterColumn('t_branches', 'id_branch', 'INT(2) auto_inc...')
+#3 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(385): m140507_112643_insert_branches->up()
+#4 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140507_112643_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\WebOpenServer\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\WebOpenServer\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\WebOpenServer\domains\xtech\protected\yiic.php(7): require_once('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
+#13 {main}
+---
+2014/05/07 17:08:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: ALTER TABLE `t_branches` CHANGE `id_branch` `id_branch` INT(2) PRIMARY KEY AUTO_INCREMENT.
+2014/05/07 17:08:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: ALTER TABLE `t_branches` CHANGE `id_branch` `id_branch` INT(2) PRIMARY KEY AUTO_INCREMENT' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(1417): CDbCommand->execute()
+#1 C:\WebOpenServer\domains\yii\framework\db\CDbMigration.php(329): CDbCommand->alterColumn('t_branches', 'id_branch', 'INT(2) PRIMARY ...')
+#2 C:\WebOpenServer\domains\xtech\protected\migrations\m140507_112643_insert_branches.php(8): CDbMigration->alterColumn('t_branches', 'id_branch', 'INT(2) PRIMARY ...')
+#3 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(385): m140507_112643_insert_branches->up()
+#4 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140507_112643_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\WebOpenServer\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\WebOpenServer\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\WebOpenServer\domains\xtech\protected\yiic.php(7): require_once('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
+#13 {main}
+---
+2014/05/07 17:11:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `t_branches` (`name`, `description`, `telephones`, `emails`, `address`) VALUES (:name, :description, :telephones, :emails, :address).
+2014/05/07 17:11:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `t_branches` (`name`, `description`, `telephones`, `emails`, `address`) VALUES (:name, :description, :telephones, :emails, :address)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\CDbMigration.php(178): CDbCommand->insert('t_branches', Array)
+#2 C:\WebOpenServer\domains\xtech\protected\migrations\m140507_112643_insert_branches.php(15): CDbMigration->insert('t_branches', Array)
+#3 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(385): m140507_112643_insert_branches->up()
+#4 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140507_112643_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\WebOpenServer\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\WebOpenServer\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\WebOpenServer\domains\xtech\protected\yiic.php(7): require_once('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
+#13 {main}
+---
+2014/05/07 17:59:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: CREATE TABLE `t_departmens` (
+	`id_department` INT(2) PRIMARY KEY AUTO_INCREMENT,
+	`id_branch` INT(2) PRIMARY KEY,
+	`name` VARCHAR(255) NOT NULL,
+	`description` VARCHAR(500) DEFAULT NULL,
+	`telephones` VARCHAR(255) DEFAULT NULL,
+	`emails` VARCHAR(500) DEFAULT NULL,
+	`boss` INT(2) PRIMARY KEY
+) ENGINE=InnoDB.
+2014/05/07 17:59:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: CREATE TABLE `t_departmens` (
+	`id_department` INT(2) PRIMARY KEY AUTO_INCREMENT,
+	`id_branch` INT(2) PRIMARY KEY,
+	`name` VARCHAR(255) NOT NULL,
+	`description` VARCHAR(500) DEFAULT NULL,
+	`telephones` VARCHAR(255) DEFAULT NULL,
+	`emails` VARCHAR(500) DEFAULT NULL,
+	`boss` INT(2) PRIMARY KEY
+) ENGINE=InnoDB' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\WebOpenServer\domains\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('t_departmens', Array, 'ENGINE=InnoDB')
+#2 C:\WebOpenServer\domains\xtech\protected\migrations\m140507_112959_departmens.php(15): CDbMigration->createTable('t_departmens', Array, 'ENGINE=InnoDB')
+#3 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(385): m140507_112959_departmens->up()
+#4 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140507_112959_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\WebOpenServer\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\WebOpenServer\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\WebOpenServer\domains\xtech\protected\yiic.php(7): require_once('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
+#13 {main}
+---
+2014/05/07 18:00:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: CREATE TABLE `t_departmens` (
+	`id_department` INT(2) PRIMARY KEY AUTO_INCREMENT,
+	`id_branch` INT(2),
+	`name` VARCHAR(255) NOT NULL,
+	`description` VARCHAR(500) DEFAULT NULL,
+	`telephones` VARCHAR(255) DEFAULT NULL,
+	`emails` VARCHAR(500) DEFAULT NULL,
+	`boss` INT(2) PRIMARY KEY
+) ENGINE=InnoDB.
+2014/05/07 18:00:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined. The SQL statement executed was: CREATE TABLE `t_departmens` (
+	`id_department` INT(2) PRIMARY KEY AUTO_INCREMENT,
+	`id_branch` INT(2),
+	`name` VARCHAR(255) NOT NULL,
+	`description` VARCHAR(500) DEFAULT NULL,
+	`telephones` VARCHAR(255) DEFAULT NULL,
+	`emails` VARCHAR(500) DEFAULT NULL,
+	`boss` INT(2) PRIMARY KEY
+) ENGINE=InnoDB' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\WebOpenServer\domains\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('t_departmens', Array, 'ENGINE=InnoDB')
+#2 C:\WebOpenServer\domains\xtech\protected\migrations\m140507_112959_departmens.php(15): CDbMigration->createTable('t_departmens', Array, 'ENGINE=InnoDB')
+#3 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(385): m140507_112959_departmens->up()
+#4 C:\WebOpenServer\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140507_112959_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\WebOpenServer\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\WebOpenServer\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\WebOpenServer\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\WebOpenServer\domains\xtech\protected\yiic.php(7): require_once('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
+#13 {main}
+---
