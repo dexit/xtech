@@ -139,3 +139,11 @@ Stack trace:
 #12 C:\WebOpenServer\domains\xtech\protected\yiic(4): require_once('C:\WebOpenServe...')
 #13 {main}
 ---
+2014/05/08 15:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "main".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php
+---
