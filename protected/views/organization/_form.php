@@ -1,0 +1,82 @@
+<?php
+/* @var $this OrganizationController */
+/* @var $model Organization */
+/* @var $form CActiveForm */
+?>
+
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'organization-form',
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// There is a call to performAjaxValidation() commented in generated controller code.
+	// See class documentation of CActiveForm for details on this.
+	'enableAjaxValidation'=>false,
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'description'); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>500)); ?>
+		<?php echo $form->error($model,'description'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'telephones'); ?>
+		<?php echo $form->textField($model,'telephones',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'telephones'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'emails'); ?>
+		<?php echo $form->textField($model,'emails',array('size'=>60,'maxlength'=>500)); ?>
+		<?php echo $form->error($model,'emails'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'www'); ?>
+		<?php echo $form->textField($model,'www',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'www'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'address'); ?>
+		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'address'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'boss'); ?>
+		<?php echo $form->textField($model,'boss'); ?>
+		<?php echo $form->error($model,'boss'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'buh'); ?>
+		<?php echo $form->textField($model,'buh'); ?>
+		<?php echo $form->error($model,'buh'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'okpo'); ?>
+		<?php echo $form->textField($model,'okpo',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'okpo'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->

@@ -38,6 +38,27 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+
+		/*'clientScript'=>array(
+			'scriptMap' => array(
+            	'jquery.js'=>false,  
+            	'jquery.min.js'=>false,  
+            	'core.css'=>false, 
+            	'styles.css'=>false,  
+            	'pager.css'=>false,   
+            	'default.css'=>false,  
+        	),
+            'packages'=>array(
+                'jquery'=>array(
+                    'baseUrl'=>'js/',
+                    'js'=>array('jquery.js'),
+                ),
+                'script'=>array(
+                    'baseUrl'=>'js/',
+                    'js'=>array('scripts.js'),
+                ),
+            ),            
+        ),*/
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

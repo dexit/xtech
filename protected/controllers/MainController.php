@@ -27,9 +27,20 @@ class MainController extends Controller
 	 */
 	public function actionIndex()
 	{
-		if (!isset($user)) {
-			$this->render('login');
-		}
+		/*if (!isset($user)) {
+			$this->render('index');
+		}*/
+
+		$model = new Organization('search');
+		$model->unsetAttributes();  // clear any default values
+		
+		$organizations = $model->findAll();
+		//var_dump($model);
+		//break;
+
+		$this->render('index',array(
+			'organizations'=>$organizations,
+		));
 		
 	}
 
