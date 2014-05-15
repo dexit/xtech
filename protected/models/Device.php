@@ -58,6 +58,9 @@ class Device extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			//'devicepc' => array(self::BELONGS_TO, 'DevicePc', 'id_device'),
+			'devicepc' => array(self::BELONGS_TO, 'DevicePc', 'id_device'),
+			'devicetype' => array(self::BELONGS_TO, 'DeviceType', 'id_type'),			
 		);
 	}
 

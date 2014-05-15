@@ -80,4 +80,4 @@
 </section> <!-- end of right_col -->
 <div style="clear:both;"></div>
 
-<?php var_dump($organizations); ?>
+<?php var_dump($devices); ?>
