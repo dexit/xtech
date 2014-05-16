@@ -112,46 +112,46 @@
     </tr>
 <?php foreach($devices as $device) { ?>    
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><?php echo $device->id_device;?></td>
+      <td><?php echo $device->organization->name;?></td>
+      <td><?php echo $device->branch->name;?></td>
+      <td><?php echo $device->department->name;?></td>
+      <td><?php echo $device->cabinet->number;?></td>
+      <td><?php echo $device->employee->firstname;?></td>
+      <td><?php echo $device->devicetype->name;?></td>
+      <td><?php echo $device->name;?></td>
+      <td><?php echo $device->description;?></td>
+      <td><?php echo $device->inv_number;?></td>
+      <td><?php echo $device->sn;?></td>
+      <td><?php echo $device->year;?></td>
+      <td><?php echo $device->end_varantly_yesr;?></td>
+      <td><?php echo $device->service;?></td>
+      <td><?php echo $device->expluatation;?></td>
+      <td><?php echo $device->expluatation_data;?></td>
+      <td><?php echo $device->private;?></td>
+      <td><?php echo $device->break;?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->id : ""; ?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->id_device_pc : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->cpu_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->cpu_p : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->hdd_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->hdd_p : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->ram_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->ram_p : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->video_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->video_p : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->cdrom_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->lan_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->os : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->net_name : "";?></td>
+      <td><?php echo isset($device->devicepc) ? $device->devicepc->ip : "";?></td>
     </tr>
 <?php } ?>    
   </table>
 </section> <!-- end of right_col -->
 <div style="clear:both;"></div>
 
-<?php var_dump($devices); ?>
+<?php //ar_dump($devices[0]->department); ?>
 
 <?php 
 

@@ -1,26 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "t_branches".
+ * This is the model class for table "t_departmens".
  *
- * The followings are the available columns in table 't_branches':
+ * The followings are the available columns in table 't_departmens':
+ * @property integer $id_department
  * @property integer $id_branch
  * @property string $name
- * @property integer $id_organization
  * @property string $description
  * @property string $telephones
  * @property string $emails
- * @property string $www
- * @property string $address
+ * @property integer $boss
  */
-class Branch extends CActiveRecord
+class Department extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 't_branches';
+		return 't_departmens';
 	}
 
 	/**
@@ -31,13 +30,13 @@ class Branch extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, id_organization', 'required'),
-			array('id_organization', 'numerical', 'integerOnly'=>true),
-			array('name, telephones, www, address', 'length', 'max'=>255),
+			array('name', 'required'),
+			array('id_branch, boss', 'numerical', 'integerOnly'=>true),
+			array('name, telephones', 'length', 'max'=>255),
 			array('description, emails', 'length', 'max'=>500),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_branch, name, id_organization, description, telephones, emails, www, address', 'safe', 'on'=>'search'),
+			array('id_department, id_branch, name, description, telephones, emails, boss', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,7 +48,7 @@ class Branch extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'device' => array(self::HAS_MANY, 'Device', 'id_branch'),
+			'device' => array(self::HAS_MANY, 'Device', 'id_department'),
 		);
 	}
 
@@ -59,14 +58,13 @@ class Branch extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id_department' => 'Id Department',
 			'id_branch' => 'Id Branch',
 			'name' => 'Name',
-			'id_organization' => 'Id Organization',
 			'description' => 'Description',
 			'telephones' => 'Telephones',
 			'emails' => 'Emails',
-			'www' => 'Www',
-			'address' => 'Address',
+			'boss' => 'Boss',
 		);
 	}
 
@@ -88,14 +86,13 @@ class Branch extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id_department',$this->id_department);
 		$criteria->compare('id_branch',$this->id_branch);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('id_organization',$this->id_organization);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('telephones',$this->telephones,true);
 		$criteria->compare('emails',$this->emails,true);
-		$criteria->compare('www',$this->www,true);
-		$criteria->compare('address',$this->address,true);
+		$criteria->compare('boss',$this->boss);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -106,7 +103,7 @@ class Branch extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Branch the static model class
+	 * @return Department the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -62,6 +62,11 @@ class Device extends CActiveRecord
 			//'devicepc' => array(self::HAS_ONE, 'DevicePc', 'id_device_pc'),
 			'devicepc' => array(self::BELONGS_TO, 'DevicePc', array('id_device'=>'id_device_pc')),
 			'devicetype' => array(self::BELONGS_TO, 'DeviceType', 'id_type'),			
+			'organization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
+			'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
+			'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
+			'cabinet' => array(self::BELONGS_TO, 'Cabinet', 'id_cabinet'),
+			'employee' => array(self::BELONGS_TO, 'Employee', 'id_employee'),
 		);
 	}
 

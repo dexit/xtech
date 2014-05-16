@@ -12,6 +12,9 @@ class BranchController extends Controller
 		$id_organization = (int)$id;
 
 		$model = new Branch;
+		$org->unsetAttributes();
+
+		
 		//var_dump($id);
 		//$this->render('main/index');
 		//$this->forward('main/index');

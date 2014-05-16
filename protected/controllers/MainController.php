@@ -38,7 +38,9 @@ class MainController extends Controller
 		$dev = new Device('search');
 		$dev->unsetAttributes();
 
-		$devices = $dev->with('devicepc','devicetype')->findAll();
+		$rel = array('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee');
+		//$devices = $dev->with('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee')->findAll();
+		$devices = $dev->with($rel)->findAll();
 
 		$this->render('index',array(
 			'organizations'=>$organizations,

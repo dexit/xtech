@@ -53,6 +53,7 @@ class Organization extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'branch' => array(self::HAS_MANY, 'Branch', 'id_organization'),
+			'device' => array(self::HAS_MANY, 'Device', 'id_organization'),
 		);
 	}
 
