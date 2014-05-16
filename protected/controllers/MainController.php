@@ -32,27 +32,17 @@ class MainController extends Controller
 		}*/
 
 		$org = new Organization('search');
-		$org->unsetAttributes();  // clear any default values
-		
+		$org->unsetAttributes();  // clear any default values		
 		$organizations = $org->findAll();
-		//var_dump($model);
-		//break;
+
 		$dev = new Device('search');
 		$dev->unsetAttributes();
 
-		//$dp = new DevicePC('search');
-		//$dp->unsetAttributes();
-		//$d = $dp->findAll();
-		//var_dump($dp);
 		$devices = $dev->with('devicepc','devicetype')->findAll();
-		//$devices = $dev->with('devicetype')->findAll();
-		//$devices = $dev->findAll();
-		//var_dump($devices);
 
 		$this->render('index',array(
 			'organizations'=>$organizations,
 			'devices'=>$devices,
-			//'d'=>$d,
 		));
 		
 	}

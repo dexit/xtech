@@ -38,12 +38,12 @@ class DevicePc extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_device_pc, video_p', 'numerical', 'integerOnly'=>true),
+			array('id', 'id_device_pc, video_p', 'numerical', 'integerOnly'=>true),
 			array('cpu_p, hdd_p, ram_p', 'numerical'),
 			array('mb, cpu_name, hdd_name, ram_name, video_name, cdrom_name, lan_name, os, net_name, ip', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_device_pc, mb, cpu_name, cpu_p, hdd_name, hdd_p, ram_name, ram_p, video_name, video_p, cdrom_name, lan_name, os, net_name, ip', 'safe', 'on'=>'search'),
+			array('id', 'id_device_pc, mb, cpu_name, cpu_p, hdd_name, hdd_p, ram_name, ram_p, video_name, video_p, cdrom_name, lan_name, os, net_name, ip', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +65,7 @@ class DevicePc extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'Id',
 			'id_device_pc' => 'Id Device PC',
 			'mb' => 'Mb',
 			'cpu_name' => 'Cpu Name',
@@ -101,6 +102,7 @@ class DevicePc extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id);
 		$criteria->compare('id_device_pc',$this->id_device_pc);
 		$criteria->compare('mb',$this->mb,true);
 		$criteria->compare('cpu_name',$this->cpu_name,true);
