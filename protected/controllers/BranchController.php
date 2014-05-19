@@ -20,6 +20,20 @@ class BranchController extends Controller
 		//$this->forward('main/index');
 	}
 
+	public function actionLoad($id)
+	{
+		$id_organization = (int)$id;
+
+		$model = new Branch;
+		$model->unsetAttributes();
+
+		$branches = $model->findAllByAttributes('id_organization', $id_organization);
+
+		//$id = (int)$id;
+		//echo $id;
+		
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

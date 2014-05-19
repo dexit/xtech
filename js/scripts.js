@@ -1,3 +1,41 @@
+$(document).ready(function(){
+	//Клик развернуть
+	$('.Expand').bind('click', function(e){		
+		type_id = $(this).parent().attr('id').split('-');
+		type = type_id[0];
+		id = type_id[1];
+		if ($(this).parent().hasClass("ExpandClosed")) {
+			load(type,id);
+		}
+		//alert(id);
+	});
+
+	function load(type, id) {
+		//alert('load');
+		$.ajax({
+			type: 'GET',
+			url: 'index.php?r=branch/load&id='+id,
+			//data: 'id='.id,
+			dataType : 'text',
+			
+			success:function(data) {
+				alert(data);
+			},
+			/*complete: function(data) {
+				alert(data);
+				//$(this).append(data);
+				/*for (d in data){
+					alert(d);
+				}
+			}*/
+			failure: function() {
+                alert("Ajax request broken");
+            }
+		});
+		return false;
+	}
+});
+
 function tree_toggle(event) {
 	event = event || window.event
 	var clickedElem = event.target || event.srcElement

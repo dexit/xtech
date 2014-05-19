@@ -1990,3 +1990,68 @@ Stack trace:
 #15 {main}
 REQUEST_URI=/
 ---
+2014/05/19 12:34:52 [error] [php] Undefined variable: org (C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php:15)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): BranchController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): BranchController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): BranchController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=branch/show&id=1
+in C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php (15)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/19 15:38:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('load')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/load')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/load&1
+HTTP_REFERER=http://xtech/
+---
+2014/05/19 15:38:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('load')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/load')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/load&1
+HTTP_REFERER=http://xtech/
+---
+2014/05/19 15:57:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('load')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/load')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/load
+HTTP_REFERER=http://xtech/
+---
+2014/05/19 15:58:17 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('load')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/load')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/load&
+HTTP_REFERER=http://xtech/
+---

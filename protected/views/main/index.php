@@ -59,7 +59,8 @@
   <div>Дерево</div>
   <ul class="Container">
 <?php foreach ($organizations as $organization) { ?>
-    <li class="Node IsRoot ExpandOpen IsLast">
+    <li class="Node IsRoot ExpandClosed IsLast" 
+        id="org-<?php echo $organization->id_organization; ?>">
       <div class="Expand"></div>
       <input type="checkbox"/>
       <div class="Content">
@@ -74,7 +75,7 @@
 </section> <!-- end of left_col -->
   
 <section id="right_col">
-  <table border="1">
+  <table border="1" id="tree">
     <tr>
       <th>id_device</th>
       <th>id_organization</th>
