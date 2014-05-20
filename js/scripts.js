@@ -5,34 +5,39 @@ $(document).ready(function(){
 		type = type_id[0];
 		id = type_id[1];
 		if ($(this).parent().hasClass("ExpandClosed")) {
-			load(type,id);
+			load(type,id, $(this));
 		}
-		//alert(id);
 	});
 
-	function load(type, id) {
-		//alert('load');
+	function load(type, id, element) {
 		$.ajax({
 			type: 'GET',
 			url: 'index.php?r=branch/load&id='+id,
-			//data: 'id='.id,
-			dataType : 'text',
+			dataType : 'json',
 			
 			success:function(data) {
-				alert(data);
+				if (data) {
+					li = element.parent().append("<ul class='Container Branch'></ul>");
+					
+					$.each(data, function(){
+						ul = li.find('ul');
+						
+						n_div = $("<div class='Expand'></div>");
+						n_cb = $("<input type='checkbox'>");
+						n_content = $("<div class='Content'><a href='index.php?r=branch/show&id="+this.id_branch+"'>"+this.name+"</a></div>");
+						node = $("<li class='Node ExpandClose'></li>").append(n_div)
+													   		 		  .append(n_cb)
+															 		  .append(n_content);
+						ul.append(node);
+					});
+				}				
 			},
-			/*complete: function(data) {
-				alert(data);
-				//$(this).append(data);
-				/*for (d in data){
-					alert(d);
-				}
-			}*/
+
 			failure: function() {
                 alert("Ajax request broken");
             }
 		});
-		return false;
+		//return false;
 	}
 });
 

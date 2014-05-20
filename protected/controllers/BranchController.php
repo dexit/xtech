@@ -9,15 +9,12 @@ class BranchController extends Controller
 
 	public function actionShow($id)
 	{
-		$id_organization = (int)$id;
+		$id_branch = (int)$id;
 
 		$model = new Branch;
-		$org->unsetAttributes();
+		$model->unsetAttributes();
 
-		
-		//var_dump($id);
-		//$this->render('main/index');
-		//$this->forward('main/index');
+		$this->forward('main/index');
 	}
 
 	public function actionLoad($id)
@@ -27,11 +24,9 @@ class BranchController extends Controller
 		$model = new Branch;
 		$model->unsetAttributes();
 
-		$branches = $model->findAllByAttributes('id_organization', $id_organization);
+		$branches = $model->findAllByAttributes(array('id_organization'=>$id_organization));
 
-		//$id = (int)$id;
-		//echo $id;
-		
+		echo CJSON::encode($branches);
 	}
 
 	// Uncomment the following methods and override them if needed

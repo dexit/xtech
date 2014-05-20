@@ -2055,3 +2055,143 @@ Stack trace:
 REQUEST_URI=/index.php?r=branch/load&
 HTTP_REFERER=http://xtech/
 ---
+2014/05/20 10:31:53 [error] [php] Invalid argument supplied for foreach() (C:\WebOpenServer\domains\yii\framework\db\schema\CDbCommandBuilder.php:670)
+Stack trace:
+#0 unknown(0): BranchController->actionLoad()
+#1 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): BranchController->runAction()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): BranchController->runActionWithFilters()
+#6 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): BranchController->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=branch/load&id=1
+in C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php (30)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/20 10:32:30 [error] [php] Invalid argument supplied for foreach() (C:\WebOpenServer\domains\yii\framework\db\schema\CDbCommandBuilder.php:670)
+Stack trace:
+#0 unknown(0): BranchController->actionLoad()
+#1 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): BranchController->runAction()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): BranchController->runActionWithFilters()
+#6 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): BranchController->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=branch/load&id=1
+in C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php (30)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/20 13:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show$id=1".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('show$id=1')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show$id=1')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show$id=...')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=branch/show$id=1
+HTTP_REFERER=http://xtech/
+---
+2014/05/20 13:09:57 [error] [php] Undefined variable: org (C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php:15)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): BranchController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): BranchController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): BranchController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=branch/show&id=1
+in C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php (15)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/20 13:53:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "organizationh/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organizationh/s...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=organizationh/show&id=1
+---
+2014/05/20 13:53:39 [error] [php] include(CDBCriteria.php): failed to open stream: No such file or directory (C:\WebOpenServer\domains\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(17): spl_autoload_call()
+#1 unknown(0): OrganizationController->actionShow()
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=organization/show&id=1
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (17)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/20 13:54:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "organizationh/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organizationh/s...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=organizationh/show&id=1
+---
+2014/05/20 14:10:42 [error] [php] Undefined variable: organizations (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:61)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): OrganizationController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): OrganizationController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(29): OrganizationController->render()
+#3 unknown(0): OrganizationController->actionShow()
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=organization/show&id=1
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (61)
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (29)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/20 14:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "organizationh/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organizationh/s...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=organizationh/show&id=1
+---
+2014/05/20 14:11:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "organizationh/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organizationh/s...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/?r=organizationh/show&id=1
+---
+2014/05/20 14:11:46 [error] [php] Undefined variable: organizations (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:61)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): OrganizationController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): OrganizationController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(29): OrganizationController->render()
+#3 unknown(0): OrganizationController->actionShow()
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/?r=organization/show&id=1
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (61)
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (29)
+in C:\WebOpenServer\domains\xtech\index.php (13)

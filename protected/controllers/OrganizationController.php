@@ -7,6 +7,29 @@ class OrganizationController extends Controller
 		$this->render('index');
 	}
 
+	public function actionShow($id)
+	{
+		$id_organization = (int)$id;
+
+		$model = new Device;
+		$model->unsetAttributes();
+
+		$criteria = new CDbCriteria();
+		//$criteria->addCondition(array('id_organization'=>$id_organization));
+		$criteria->addCondition('id_organization=:id_organization');
+		$criteria->params = array(':id_organization'=>$id_organization);
+		//$devices = $model->findAllByAttributes(array('id_organization'=>$id_organization));
+
+		$dataProvider = new CActiveDataProvider('Organization',array('criteria'=>$criteria));
+		//var_dump($dataProvider);
+
+		$this->render('index',array(
+	        'dataProvider'=>$dataProvider,
+	    ));
+		$this->render('//main/index');
+		//$this->renderFile();
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

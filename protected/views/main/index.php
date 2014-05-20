@@ -64,13 +64,13 @@
       <div class="Expand"></div>
       <input type="checkbox"/>
       <div class="Content">
-          <a href="?r=branch/show&id=<?php echo $organization->id_organization; ?>">
+          <a href="?r=organization/show&id=<?php echo $organization->id_organization; ?>">
                               <?php echo $organization->name; ?></a>
       </div>
-    <li> 
+    </li> 
 <?php } ?>
   </ul>
-<div>
+</div>
 
 </section> <!-- end of left_col -->
   
