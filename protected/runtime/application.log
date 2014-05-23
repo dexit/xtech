@@ -2195,3 +2195,12 @@ REQUEST_URI=/?r=organization/show&id=1
 in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (61)
 in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (29)
 in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/05/23 16:10:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "department/load".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('department/load')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=department/load&id=2
+HTTP_REFERER=http://xtech/
+---

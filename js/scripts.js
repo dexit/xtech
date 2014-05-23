@@ -16,31 +16,22 @@ $(document).ready(function(){
 		id = type_id[1];
 		//alert(type);
 		switch (type) {
-			case (type === "org"):
-				alert("org");
+			case "org":
+				loadBranch(type,id,e);
 				break;
-			case (type === "branch"):
-				alert("branch");
+			case "branch":
+				loadDepartment(type,id,e);
 				break;
+			case "depart":
+				loadCabinet(type,id,e);
+				break;
+			case "cabinet":
+				loadEmployee(type,id,e);
+				break;	
 			default:
 				alert("none"); 		
 		}
-		//alert(type_id);
 	}
-	//Клик развернуть
-	/*$('.Expand').live('click', function(e){		
-		type_id = $(this).parent().attr('id').split('-');
-		type = type_id[0];
-		id = type_id[1];
-		if ($(this).parent().hasClass("ExpandClosed")) {
-			loadBranch(type,id, $(this));
-		}
-		/*if ($(this).parent().hasClass("ExpandClosed") && type == 'branch') {
-			alert('kukuku');
-		}
-		//e.preventDefault();
-		//alert(e);
-	});*/
 
 	function loadBranch(type, id, element) {
 		$.ajax({
@@ -70,7 +61,100 @@ $(document).ready(function(){
                 alert("Ajax request broken");
             }
 		});
-		//return false;
+	}
+
+
+	function loadDepartment(type, id, element) {
+		$.ajax({
+			type: 'GET',
+			url: 'index.php?r=department/load&id='+id,
+			dataType : 'json',
+			
+			success:function(data) {
+				if (data) {
+					//li = element.parent().append("<ul class='Container Department'></ul>");
+					li = element.append("<ul class='Container Department'></ul>");
+					
+					$.each(data, function(){
+						ul = li.find('ul');
+						
+						n_div = $("<div class='Expand'></div>");
+						n_cb = $("<input type='checkbox'>");
+						n_content = $("<div class='Content'><a href='index.php?r=department/show&id="+this.id_department+"'>"+this.name+"</a></div>");
+						node = $("<li id=depart-"+this.id_department+" class='Node ExpandClosed'></li>").append(n_div)
+													   		 		  .append(n_cb)
+															 		  .append(n_content);
+						ul.append(node);
+					});
+				}				
+			},
+
+			failure: function() {
+                alert("Ajax request broken");
+            }
+		});
+	}
+
+	function loadCabinet(type, id, element) {
+			$.ajax({
+			type: 'GET',
+			url: 'index.php?r=cabinet/load&id='+id,
+			dataType : 'json',
+			
+			success:function(data) {
+				if (data) {
+					//li = element.parent().append("<ul class='Container Department'></ul>");
+					li = element.append("<ul class='Container Cabinet'></ul>");
+					
+					$.each(data, function(){
+						ul = li.find('ul');
+						
+						n_div = $("<div class='Expand'></div>");
+						n_cb = $("<input type='checkbox'>");
+						n_content = $("<div class='Content'><a href='index.php?r=cabinet/show&id="+this.id_cabinet+"'>"+this.number+"</a></div>");
+						node = $("<li id=cabinet-"+this.id_cabinet+" class='Node ExpandClosed'></li>").append(n_div)
+													   		 		  .append(n_cb)
+															 		  .append(n_content);
+						ul.append(node);
+					});
+				}				
+			},
+
+			failure: function() {
+                alert("Ajax request broken");
+            }
+		});
+	}
+
+	function loadEmployee(type, id, element) {
+			$.ajax({
+			type: 'GET',
+			url: 'index.php?r=employee/load&id='+id,
+			dataType : 'json',
+			
+			success:function(data) {
+				if (data) {
+					//li = element.parent().append("<ul class='Container Department'></ul>");
+					li = element.append("<ul class='Container Employee'></ul>");
+					
+					$.each(data, function(){
+						ul = li.find('ul');
+						
+						n_div = $("<div class='Expand'></div>");
+						n_cb = $("<input type='checkbox'>");
+						n_content = $("<div class='Content'><a href='index.php?r=employee/show&id="+this.id_employee+"'>"+this.firstname+"</a></div>");
+						node = $("<li id=employee-"+this.id_employee+" class='Node ExpandClosed'></li>").append(n_div)
+													   		 		  .append(n_cb)
+															 		  .append(n_content);
+						ul.append(node);
+					});
+				}				
+			},
+
+			failure: function() {
+                alert("Ajax request broken");
+            }
+		});
 	}
 });
 
