@@ -54,8 +54,8 @@
 </ul>
 </div>
 
-
-<div onclick="tree_toggle(arguments[0])" id="tree">
+<!--onclick="tree_toggle(arguments[0])"-->
+<div  id="tree">
   <div>Дерево</div>
   <ul class="Container">
 <?php foreach ($organizations as $organization) { ?>
