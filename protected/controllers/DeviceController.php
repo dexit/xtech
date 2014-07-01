@@ -7,6 +7,23 @@ class DeviceController extends Controller
 		$this->render('admin');
 	}
 
+	public function actionLoad($id)
+	{
+		$id_employee = (int)$id;
+
+		$model = new Device;
+		$model->unsetAttributes();
+
+		$device = $model->findAllByAttributes(array('id_employee'=>$id_employee));
+
+		echo CJSON::encode($device);
+	}
+
+	public function actionShow()
+	{
+		$this->render('index');
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

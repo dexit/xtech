@@ -2,7 +2,9 @@ $(document).ready(function(){
 
 	$('.Expand').live('click', function(e){
 		if ($(this).parent().hasClass("ExpandOpen")) {
-			$(this).parent().removeClass("ExpandOpen").addClass("ExpandClosed");			
+			$(this).parent().removeClass("ExpandOpen").addClass("ExpandClosed");
+			$(this).nextAll('ul').remove();
+			//console.log($(this).nextAll('ul'));
 		} else {
 			loadData($(this).parent());
 			$(this).parent().removeClass("ExpandClosed").addClass("ExpandOpen");
@@ -14,7 +16,6 @@ $(document).ready(function(){
 		type_id = e.attr('id').split('-');
 		type = type_id[0];
 		id = type_id[1];
-		//alert(type);
 		switch (type) {
 			case "org":
 				loadBranch(type,id,e);
@@ -28,6 +29,9 @@ $(document).ready(function(){
 			case "cabinet":
 				loadEmployee(type,id,e);
 				break;	
+			case "employee":
+				loadDevice(type,id,e);
+				break;		
 			default:
 				alert("none"); 		
 		}
@@ -53,6 +57,7 @@ $(document).ready(function(){
 													   		 		  .append(n_cb)
 															 		  .append(n_content);
 						ul.append(node);
+						//li.append(ul);
 					});
 				}				
 			},
@@ -156,6 +161,38 @@ $(document).ready(function(){
             }
 		});
 	}
+
+	function loadDevice(type, id, element) {
+			$.ajax({
+			type: 'GET',
+			url: 'index.php?r=device/load&id='+id,
+			dataType : 'json',
+			
+			success:function(data) {
+				if (data) {
+					//li = element.parent().append("<ul class='Container Department'></ul>");
+					li = element.append("<ul class='Container Device'></ul>");
+					
+					$.each(data, function(){
+						ul = li.find('ul');
+						
+						n_div = $("<div class='Expand'></div>");
+						n_cb = $("<input type='checkbox'>");
+						n_content = $("<div class='Content'><a href='index.php?r=device/show&id="+this.id_device+"'>"+this.name+"</a></div>");
+						node = $("<li id=device-"+this.id_device+" class='Node ExpandClosed'></li>").append(n_div)
+													   		 		  .append(n_cb)
+															 		  .append(n_content);
+						ul.append(node);
+					});
+				}				
+			},
+
+			failure: function() {
+                alert("Ajax request broken");
+            }
+		});
+	}
+
 });
 
 /*function tree_toggle(event) {

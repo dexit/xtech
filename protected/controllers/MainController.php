@@ -42,6 +42,10 @@ class MainController extends Controller
 		//$devices = $dev->with('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee')->findAll();
 		$devices = $dev->with($rel)->findAll();
 
+		//echo "<pre>";
+		//var_dump($organizations);
+		//echo "</pre>";
+
 		$this->render('index',array(
 			'organizations'=>$organizations,
 			'devices'=>$devices,
@@ -97,4 +101,55 @@ class MainController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	/*public function actionAjaxFillTree()
+	{
+		if (!Yii::app()->request->isAjaxRequest) {
+            exit();
+        }
+
+        /*$data = array(
+			    	array(
+			        'text' => 'Node 1',
+			        'expanded' => false, // будет развернута ветка или нет (по умолчанию)
+			            'children' => array(
+			                 array('text' => 'Node 1.111111',),   
+			                 array('text' => 'Node 1.2',),   
+			                 array('text' => 'Node 1.3',),             
+			            )
+			    	),
+			    	array(
+			        'text' => 'Node 1',
+			        'expanded' => false, // будет развернута ветка или нет (по умолчанию)
+			            'children' => array(
+			                 array('text' => 'Node 1.111111',),   
+			                 array('text' => 'Node 1.2',),   
+			                 array('text' => 'Node 1.3',),             
+			            )
+			    	),
+				);*/
+		/*$org = new Organization('search');
+		$org->unsetAttributes();
+		$organizations = $org->findAll();
+
+		$bran = new Branch('search');
+		$bran->unsetAttributes();
+		$branches = $bran->findAll();
+
+
+
+		$data = array();
+		foreach ($organizations as $organization) {
+			$data[] = array(
+						'text' => CHtml::link($organization->name,'?r=device/show&id_organization='.$organization->id_organization),
+			        	'expanded' => false,
+			        	'children' => $branches,			        		
+			            );
+		}
+
+		
+		
+		echo CTreeView::saveDataAsJson($data);
+		exit();
+	}*/
 }

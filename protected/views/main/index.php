@@ -156,4 +156,34 @@
 
 <?php 
 
+$data = array(
+    array(
+        'text'     => 'Node 1',
+        'expanded' => true, // будет развернута ветка или нет (по умолчанию)
+            'children' => array(
+                 array(
+                    'text'     => 'Node 1.1',
+                 ),   
+                 array(
+                    'text'     => 'Node 1.2',
+                 ),   
+                 array(
+                    'text'     => 'Node 1.3',
+                 ),             
+            )
+    ),
+);
+
+/*$w = $this->widget(
+    'CTreeView', array(
+                  'url' => array('ajaxFillTree'),
+                  'collapsed' => true,
+                  'animated' => 'fast',
+                  //'toggle' => 'js:test',
+                  //'data'=>$data,
+      ));*/
+
+//var_dump($w);
+
+
 ?>
