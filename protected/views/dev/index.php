@@ -1,14 +1,9 @@
 <?php
-/* @var $this OrganizationController */
+/* @var $this DevController */
 
 $this->breadcrumbs=array(
-	'Organization',
+	'Dev',
 );
-
-  $this->renderPartial('//main/_device', array(
-    'dataProvider' => $dataProvider,
-    'grid_id' => $grid_id,
-  ));
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 

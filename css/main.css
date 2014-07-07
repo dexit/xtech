@@ -233,7 +233,7 @@ div.search-form
 {
 	display: block;
 	float:left;
-	width: 250px;
+	width: 300px;
 }
 
 #right_col
@@ -241,6 +241,6 @@ div.search-form
 	display: block;
 	float:left;
 	position: absolute;
-	margin-left: 250px;
-	width: 650px;
+	margin-left: 300px;
+	width: 74%;
 }

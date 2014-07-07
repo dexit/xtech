@@ -19,9 +19,24 @@ class DepartmentController extends Controller
 		echo CJSON::encode($departmens);
 	}
 
-	public function actionShow()
+	public function actionShow($id)
 	{
-		$this->render('index');
+		$id_department = (int)$id;
+
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('id_department=:id_department');
+		$criteria->params = array(':id_department'=>$id_department);
+	
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('//main/_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
 	}
 
 	// Uncomment the following methods and override them if needed

@@ -1,14 +1,9 @@
 <?php
-/* @var $this OrganizationController */
+/* @var $this DeviceTypeController */
 
 $this->breadcrumbs=array(
-	'Organization',
+	'Device Type',
 );
-
-  $this->renderPartial('//main/_device', array(
-    'dataProvider' => $dataProvider,
-    'grid_id' => $grid_id,
-  ));
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 

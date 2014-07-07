@@ -11,7 +11,7 @@ class OrganizationController extends Controller
 	{
 		$id_organization = (int)$id;
 
-		$model = new Device;
+		/*$model = new Device;
 		$model->unsetAttributes();
 
 		$criteria = new CDbCriteria();
@@ -23,11 +23,34 @@ class OrganizationController extends Controller
 		$dataProvider = new CActiveDataProvider('Organization',array('criteria'=>$criteria));
 		//var_dump($dataProvider);
 
+
+
 		$this->render('index',array(
 	        'dataProvider'=>$dataProvider,
 	    ));
 		$this->render('//main/index');
-		//$this->renderFile();
+		//$this->renderFile();*/
+
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('id_organization=:id_organization');
+		$criteria->params = array(':id_organization'=>$id_organization);
+
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+
+		$grid_id = 'device_grid';
+
+		//if (Yii::app()->request->isAjaxRequest && isset($_GET['ajax']) && $_GET['ajax'] === $grid_id) {
+		if (Yii::app()->request->isAjaxRequest) {
+      		//var_dump($this);
+      		$this->renderPartial('//main/_device', array(
+        		'dataProvider' => $dataProvider,
+        		'grid_id' => $grid_id,
+        		false,
+        		true
+      		));
+      		Yii::app()->end();
+    	}
+
 	}
 
 	// Uncomment the following methods and override them if needed

@@ -27,10 +27,6 @@ class MainController extends Controller
 	 */
 	public function actionIndex()
 	{
-		/*if (!isset($user)) {
-			$this->render('index');
-		}*/
-
 		$org = new Organization('search');
 		$org->unsetAttributes();  // clear any default values		
 		$organizations = $org->findAll();
@@ -39,16 +35,13 @@ class MainController extends Controller
 		$dev->unsetAttributes();
 
 		$rel = array('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee');
-		//$devices = $dev->with('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee')->findAll();
 		$devices = $dev->with($rel)->findAll();
 
-		//echo "<pre>";
-		//var_dump($organizations);
-		//echo "</pre>";
-
+		$dataProvider = new CActiveDataProvider('Device');
 		$this->render('index',array(
 			'organizations'=>$organizations,
 			'devices'=>$devices,
+			'dataProvider' => $dataProvider,
 		));
 		
 	}
@@ -102,54 +95,36 @@ class MainController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
-	/*public function actionAjaxFillTree()
+	public function actionShow($id)
 	{
-		if (!Yii::app()->request->isAjaxRequest) {
-            exit();
-        }
+		$id_organization = (int)$id;
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('id_organization=:id_organization');
+		$criteria->params = array(':id_organization'=>$id_organization);
 
-        /*$data = array(
-			    	array(
-			        'text' => 'Node 1',
-			        'expanded' => false, // будет развернута ветка или нет (по умолчанию)
-			            'children' => array(
-			                 array('text' => 'Node 1.111111',),   
-			                 array('text' => 'Node 1.2',),   
-			                 array('text' => 'Node 1.3',),             
-			            )
-			    	),
-			    	array(
-			        'text' => 'Node 1',
-			        'expanded' => false, // будет развернута ветка или нет (по умолчанию)
-			            'children' => array(
-			                 array('text' => 'Node 1.111111',),   
-			                 array('text' => 'Node 1.2',),   
-			                 array('text' => 'Node 1.3',),             
-			            )
-			    	),
-				);*/
-		/*$org = new Organization('search');
-		$org->unsetAttributes();
-		$organizations = $org->findAll();
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
 
-		$bran = new Branch('search');
-		$bran->unsetAttributes();
-		$branches = $bran->findAll();
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
+	}
 
+	public function actionShowAll()
+	{		
+		$dataProvider = new CActiveDataProvider('Device');
 
-
-		$data = array();
-		foreach ($organizations as $organization) {
-			$data[] = array(
-						'text' => CHtml::link($organization->name,'?r=device/show&id_organization='.$organization->id_organization),
-			        	'expanded' => false,
-			        	'children' => $branches,			        		
-			            );
-		}
-
-		
-		
-		echo CTreeView::saveDataAsJson($data);
-		exit();
-	}*/
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
+	}	
 }

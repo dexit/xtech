@@ -11,10 +11,20 @@ class BranchController extends Controller
 	{
 		$id_branch = (int)$id;
 
-		$model = new Branch;
-		$model->unsetAttributes();
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('id_branch=:id_branch');
+		$criteria->params = array(':id_branch'=>$id_branch);
+	
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
 
-		$this->forward('main/index');
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('//main/_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
 	}
 
 	public function actionLoad($id)

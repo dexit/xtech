@@ -2502,3 +2502,870 @@ REQUEST_URI=/?r=organization/show&id=1
 in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (61)
 in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (29)
 in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/01 18:32:13 [error] [exception.CDbException] exception 'CDbException' with message 'Table "t_devices_types" does not have a column named "id_device".' in C:\WebOpenServer\domains\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1535): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php(17): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: DeviceTypeController->actionLoad('1')
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceTypeController), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceTypeController), Object(ReflectionMethod), Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('load')
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('devicetype/load')
+#10 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=devicetype/load&id=1
+HTTP_REFERER=http://xtech/
+---
+2014/07/01 18:33:17 [error] [exception.CDbException] exception 'CDbException' with message 'Table "t_devices_types" does not have a column named "id_device".' in C:\WebOpenServer\domains\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1535): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php(17): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: DeviceTypeController->actionLoad('3')
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceTypeController), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceTypeController), Object(ReflectionMethod), Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('load')
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('devicetype/load')
+#10 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=devicetype/load&id=3
+HTTP_REFERER=http://xtech/
+---
+2014/07/01 18:58:46 [error] [php] Undefined variable: model (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:190)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (190)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/01 19:02:19 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:197)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (197)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/01 19:03:31 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:197)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (197)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/01 19:04:20 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:197)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (197)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/01 19:27:20 [error] [php] array_count_values(): Can only count STRING and INTEGER values! (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:196)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (196)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 13:04:06 [error] [php] Undefined variable: id_device (C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php:17)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DeviceTypeController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DeviceTypeController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DeviceTypeController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=devicetype/load&id=1
+in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php (17)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 13:04:07 [error] [php] Undefined variable: id_device (C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php:17)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DeviceTypeController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DeviceTypeController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DeviceTypeController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=devicetype/load&id=2
+in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php (17)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 14:14:24 [error] [php] Undefined variable: dt (C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php:27)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DeviceTypeController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DeviceTypeController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DeviceTypeController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=devicetype/load&id=2
+in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php (27)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 14:19:10 [error] [php] Undefined variable: dt (C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php:27)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DeviceTypeController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DeviceTypeController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DeviceTypeController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=devicetype/load&id=2
+in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php (27)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 14:22:03 [error] [php] Undefined variable: dt (C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php:27)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DeviceTypeController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DeviceTypeController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DeviceTypeController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=devicetype/load&id=3
+in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceTypeController.php (27)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 16:33:28 [error] [exception.CException] exception 'CException' with message 'MainController cannot find the requested view "view1".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\widgets\CTabView.php(217): CController->renderPartial('view1', Array)
+#1 C:\WebOpenServer\domains\yii\framework\web\widgets\CTabView.php(149): CTabView->renderBody()
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CTabView->run()
+#3 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(115): CBaseController->widget('CTabView', Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#5 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): CController->render('index', Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+---
+2014/07/02 16:41:38 [error] [php] Undefined variable: data (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:108)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (108)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 17:06:26 [error] [php] Undefined variable: data (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:159)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (159)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 17:06:50 [error] [php] Undefined variable: data (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:159)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (159)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 17:09:10 [error] [php] Undefined variable: data (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:159)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (159)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 17:16:32 [error] [exception.CException] exception 'CException' with message 'MainController cannot find the requested view "_device".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(106): CController->renderPartial('_device', Array)
+#1 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(52): CController->render('index', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/
+---
+2014/07/02 17:48:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=organization/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('?r=organization...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=?r=organization/show&id=$organization-%3Eid_organization&_=1404308927178
+HTTP_REFERER=http://xtech/
+---
+2014/07/02 17:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=organization/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('?r=organization...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=?r=organization/show&id=$organization-%3Eid_organization&_=1404308933628
+HTTP_REFERER=http://xtech/
+---
+2014/07/02 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=organization/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('?r=organization...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=?r=organization/show&id=$organization-%3Eid_organization&_=1404308936528
+HTTP_REFERER=http://xtech/
+---
+2014/07/02 17:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=organization/show".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('?r=organization...')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=?r=organization/show&id=$organization-%3Eid_organization&_=1404308938209
+HTTP_REFERER=http://xtech/
+---
+2014/07/02 17:49:26 [error] [php] Undefined variable: organizations (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:6)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): OrganizationController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): OrganizationController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(29): OrganizationController->render()
+#3 unknown(0): OrganizationController->actionShow()
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=organization/show&id=$organization-%3Eid_organization&_=1404308965986
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (6)
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (29)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 17:49:52 [error] [php] Undefined variable: organizations (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:6)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): OrganizationController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): OrganizationController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(29): OrganizationController->render()
+#3 unknown(0): OrganizationController->actionShow()
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=organization/show&id=1&_=1404308991908
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (6)
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (29)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 17:53:05 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#1 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CDataColumn->renderDataCell()
+#2 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(72): MainController->widget()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#13 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(37): MainController->renderPartial()
+#14 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#15 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#18 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(64): MainController->render()
+#19 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#22 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (72)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (37)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (64)
+2014/07/02 17:57:06 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#1 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CDataColumn->renderDataCell()
+#2 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(72): MainController->widget()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#13 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(37): MainController->renderPartial()
+#14 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#15 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#18 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(64): MainController->render()
+#19 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#22 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (72)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (37)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (64)
+2014/07/02 18:20:17 [error] [php] Undefined variable: organizations (C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php:41)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=organization/show&id=1&_=1404310817264
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (41)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 18:21:36 [error] [php] Undefined variable: organizations (C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php:44)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): OrganizationController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=organization/show&id=1&_=1404310896809
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (44)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/02 18:21:58 [error] [exception.CException] exception 'CException' with message 'OrganizationController cannot find the requested view "_device".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(48): CController->renderPartial('_device', Array)
+#1 [internal function]: OrganizationController->actionShow('1')
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organization/sh...')
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=organization/show&id=1&_=1404310918379
+HTTP_REFERER=http://xtech/
+---
+2014/07/02 18:23:02 [error] [exception.CException] exception 'CException' with message 'OrganizationController cannot find the requested view "_device".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(48): CController->renderPartial('_device', Array)
+#1 [internal function]: OrganizationController->actionShow('1')
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organization/sh...')
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=organization/show&id=1&_=1404310982767
+HTTP_REFERER=http://xtech/
+---
+2014/07/02 18:23:29 [error] [exception.CException] exception 'CException' with message 'Property "Organization.organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('organization')
+#1 C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code(1): CActiveRecord->__get('organization')
+#2 C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612): eval()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CDataColumn.php(137): CComponent->evaluateExpression('$data->organiza...', Array)
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent(0, Object(Organization))
+#5 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CGridColumn->renderDataCell(0)
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow(0)
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#8 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#12 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#13 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(72): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#15 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#17 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(48): CController->renderPartial('//main/_device', Array)
+#18 [internal function]: OrganizationController->actionShow('1')
+#19 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#20 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#23 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#25 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organization/sh...')
+#26 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/index.php?r=organization/show&id=1&_=1404311009467
+HTTP_REFERER=http://xtech/
+---
+2014/07/03 11:23:08 [error] [php] Undefined variable: id_organization (C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php:51)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (51)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 11:24:48 [error] [php] Undefined variable: dataProvider (C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php:71)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (71)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 12:17:24 [error] [php] Undefined variable: dataProvider (C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php:74)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (74)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 12:17:41 [error] [php] Undefined variable: grid_id (C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php:75)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (75)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 12:17:48 [error] [php] Undefined variable: dataProvider (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:40)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(76): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (40)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (76)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 12:18:03 [error] [php] Undefined variable: grid_id (C:\WebOpenServer\domains\xtech\protected\views\main\index.php:41)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(76): MainController->render()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (41)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (76)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 12:18:09 [error] [php] Undefined variable: grid_id (C:\WebOpenServer\domains\xtech\protected\views\main\_device.php:6)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(42): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#6 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(76): MainController->render()
+#7 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (6)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (42)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (76)
+2014/07/03 12:18:25 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php:109
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#1 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(147): CGridView->init()
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(72): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#5 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#7 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(42): CController->renderPartial('_device', Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#9 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#12 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(76): CController->render('index', Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#19 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/
+---
+2014/07/03 12:20:55 [error] [php] Undefined variable: id_organization (C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php:14)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&grid_id=device_grid&_=1404375655010
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (14)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/03 12:21:15 [error] [php] Undefined variable: id_organization (C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php:14)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&grid_id=device_grid&_=1404375675792
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (14)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/07/07 12:00:11 [error] [php] Undefined variable: dataProvider (C:\WebOpenServer\domains\xtech\protected\views\main\_device.php:7)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(46): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#6 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(76): MainController->render()
+#7 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (7)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (46)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (76)
+2014/07/07 12:01:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=main/show&_=1404720113460
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 12:02:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=main/show&_=1404720138853
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 12:04:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=main/show&_=1404720253680
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 12:07:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=main/show&_=1404720455667
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 12:12:18 [error] [exception.CException] exception 'CException' with message 'DevController cannot find the requested view "_device".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(24): CController->renderPartial('_device', Array, false, true)
+#1 [internal function]: DevController->actionShow('1')
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1404720737946
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 12:16:37 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#1 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CDataColumn->renderDataCell()
+#2 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(74): MainController->widget()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#13 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(42): MainController->renderPartial()
+#14 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#15 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#18 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(45): MainController->render()
+#19 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#22 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (74)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (42)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (45)
+2014/07/07 13:44:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/show&_=1404726294521
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 13:45:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/show&_=1404726331082
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 13:47:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/show&_=1404726457569
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 15:21:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/show&_=1404732101425
+HTTP_REFERER=http://xtech/
+---
+2014/07/07 15:22:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show')
+#5 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=branch/show&_=1404732160399
+HTTP_REFERER=http://xtech/
+---

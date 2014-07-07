@@ -20,6 +20,10 @@
     background-repeat : repeat-y;
 }
 
+.Node .DeviceType a{
+    margin-left: 18px;
+}
+
 /* это правило - ниже .Node, поэтому имеет больший приоритет */
 .IsLast {
     /* добавить соединительную черточку наверх */
