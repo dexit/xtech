@@ -229,4 +229,28 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('body').on('click','a[id^="cabinet-"]',function(){
+		$.ajax({'url':'/index.php?r=cabinet/show&id='+this.id.split('-')[1],
+				'cache':false,	
+				'success':function(html){
+						$("#data-grid").html(html)}
+					});
+		return false;
+	});
+
+	$('body').on('click','a[id^="employee-"]',function(){
+		$.ajax({'url':'/index.php?r=employee/show&id='+this.id.split('-')[1],
+				'cache':false,	
+				'success':function(html){
+						$("#data-grid").html(html)}
+					});
+		return false;
+	});
+
+	$('#loader').ajaxSend(function(){
+				$(this).show()
+			}).ajaxStop(function(){
+				$(this).hide()
+			});
+
 });

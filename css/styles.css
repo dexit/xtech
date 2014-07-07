@@ -112,3 +112,28 @@
 }
 /* заново переопределим .IsRoot */
 .IsRoot { margin-left: 0; }
+
+#loader {
+  position:fixed; 
+  display:none;
+  top:50%; 
+  left:0;
+  height:100%; 
+  width:50%;
+  /*background:#ccc; */
+  opacity:.9;
+}
+
+#loader span {
+  display:block; 
+  position:absolute; 
+  right:4px; 
+  top:4px;
+  color:#fff; 
+  background:#CCC;
+  padding:5px 10px;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px;
+  border-radius: 5px; 
+  cursor:default;
+}

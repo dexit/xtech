@@ -69,8 +69,31 @@
               'type' => 'raw',
               'value' => '$data->break ? \'Не працює\' : \'Працює\'',
             ),
+            array(
+              'class'=>'CButtonColumn',
+              'template'=>'{view}{update}{delete}',
+              'buttons'=>array(
+                  'view' => array(
+                    'label'=>'Просмотр',
+                    'imageUrl'=>Yii::app()->request->baseUrl.'/images/view.png',
+                    'url'=>'Yii::app()->createUrl("device/view", array("id"=>$data->id_device))',
+                  ),
+                  'update' => array(
+                    'label'=>'Изменить',
+                    'imageUrl'=>Yii::app()->request->baseUrl.'/images/update.png',
+                    'url'=>'Yii::app()->createUrl("device/update", array("id"=>$data->id_device))',
+                  ),
+                  'delete' => array(
+                    'label'=>'Удалить',
+                    'imageUrl'=>Yii::app()->request->baseUrl.'/images/delete.png',
+                    'url'=>'Yii::app()->createUrl("device/delete", array("id"=>$data->id_device))',
+                    'deleteConfirmation'=>"js:'Record will be deleted! Continue?'",
+                  ),
+                ),
+            ),
 
       ),
+
   ));
 
 ?>

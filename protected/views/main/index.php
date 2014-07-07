@@ -1,7 +1,6 @@
 <section id="left_col">
 
 <div  id="tree">
-  <div>Дерево</div>
   <ul class="Container">
 <?php foreach ($organizations as $organization) { ?>
     <li class="Node IsRoot ExpandClosed IsLast" 
@@ -44,6 +43,9 @@
 ?>
 </div>
 </section> <!-- end of right_col -->
+
+<div id="loader"><span>Загрузка...</span></div>
+
 
 <div style="clear:both;"></div>
 

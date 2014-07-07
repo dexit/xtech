@@ -1,7 +1,7 @@
 <?php
 /* @var $this DeviceController */
 /* @var $model Device */
-$model = new Device;
+
 $this->breadcrumbs=array(
 	'Devices'=>array('index'),
 	'Manage',

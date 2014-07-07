@@ -19,35 +19,23 @@ class EmployeeController extends Controller
 		echo CJSON::encode($employee);
 	}
 
-	public function actionShow()
+	public function actionShow($id)
 	{
-		$this->render('index');
-	}
+		$id_employee = (int)$id;
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
-	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('id_employee=:id_employee');
+		$criteria->params = array(':id_employee'=>$id_employee);
+	
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('//main/_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
 	}
-	*/
 }

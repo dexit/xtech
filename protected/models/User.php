@@ -27,10 +27,10 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('login, pass, description', 'length', 'max'=>255),
+			array('username, password, email', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_user, login, pass, description', 'safe', 'on'=>'search'),
+			array('id, username, password, email', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,10 +51,10 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_user' => 'User Id',
-			'login' => 'Login',
-			'pass' => 'Password',
-			'description' => 'Description',
+			'id' => 'User Id',
+			'username' => 'Login',
+			'password' => 'Password',
+			'email' => 'Description',
 		);
 	}
 

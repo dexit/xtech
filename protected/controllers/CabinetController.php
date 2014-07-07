@@ -19,9 +19,24 @@ class CabinetController extends Controller
 		echo CJSON::encode($cabinets);
 	}
 
-	public function actionShow()
+	public function actionShow($id)
 	{
-		$this->render('index');
+		$id_cabinet = (int)$id;
+
+		$criteria = new CDbCriteria();
+		$criteria->addCondition('id_cabinet=:id_cabinet');
+		$criteria->params = array(':id_cabinet'=>$id_cabinet);
+	
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('//main/_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
 	}
 
 	// Uncomment the following methods and override them if needed
