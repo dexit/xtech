@@ -44,11 +44,12 @@ $(document).ready(function(){
 			
 			success:function(data) {
 				if (data) {
-					li = element.parent().append("<ul class='Container Branch'></ul>");
-					
+					li = element.append("<ul class='Container Branch'></ul>");
+					//console.log(type);
+					//console.log(id);
+					console.log(data);
 					$.each(data, function(){
 						ul = li.find('ul');
-						//a = <?php echo 3; ?>;
 						n_div = $("<div class='Expand'></div>");
 						n_cb = $("<input type='checkbox'>");
 						n_content = $("<div class='Content'><a id='branch-"+this.id_branch+"' href='index.php?r=branch/show&id="+this.id_branch+"'>"+this.name+"</a></div>");
@@ -76,6 +77,9 @@ $(document).ready(function(){
 			success:function(data) {
 				if (data) {
 					li = element.append("<ul class='Container Department'></ul>");
+					//console.log(type);
+					//console.log(id);
+					//console.log(element);
 					
 					$.each(data, function(){
 						ul = li.find('ul');
