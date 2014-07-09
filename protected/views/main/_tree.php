@@ -4,13 +4,12 @@
   //var_dump($count);IsLast
   $i = 0;
 ?>
-  
+    <div>Организация</div>
     <ul class="Container">
       <?php foreach ($organizations as $organization): ?>
       <?php 
           if ($i == ($count-1)) {$class = "IsLast";}
           elseif ($i == 0) {$class = "IsFirst";}
-
           $i++;
       ?>
         <li class="Node IsRoot ExpandClosed <?php echo $class; ?>" 

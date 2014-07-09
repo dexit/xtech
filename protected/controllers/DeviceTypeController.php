@@ -11,17 +11,12 @@ class DeviceTypeController extends Controller
 	{
 		$id_employee = (int)$id;
 
-		/*$model = new DeviceType;
-		$model->unsetAttributes();
-
-		$device_type = $model->findAllByAttributes(array('id_device'=>$id_device));*/
 		$d = new Device('search');
 		$d->unsetAttributes();
 		$device = $d->with(array('devicetype'))->findAllByAttributes(array('id_employee'=>$id_employee));
 
 		if ($device) {
 			foreach ($device as $d){
-	    		//$dt[] = array($d->devicetype->id_device_type,$d->devicetype->name);
 	    		$dt[] = $d->devicetype->name;
 			}
 
@@ -38,30 +33,31 @@ class DeviceTypeController extends Controller
 		$this->render('index');
 	}
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
+	public function actionShowByEmployee($id_obj,$id_emp)
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
+		$devicetype_name = $id_obj;
+		$id_employee = (int)$id_emp;
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+		$criteria_devtype = new CDbCriteria();
+		$criteria_devtype->addCondition('name=:name');
+		$criteria_devtype->params = array(':name'=>$devicetype_name);
+		$id_type = DeviceType::model()->find($criteria_devtype)->id_device_type;
+
+		$criteria = new CDbCriteria();
+		$criteria->condition = 'id_employee=:id_employee';
+		$criteria->addCondition('id_type=:id_type','AND');
+		$criteria->params = array(':id_employee'=>$id_employee,
+								  ':id_type'=>$id_type);
+
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+
+		if (Yii::app()->request->isAjaxRequest) {
+      		$this->renderPartial('//main/_device', array(
+        		'dataProvider' => $dataProvider),
+        		false,
+        		true	
+      		);
+      		Yii::app()->end();
+    	}
 	}
-	*/
 }

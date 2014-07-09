@@ -21,7 +21,7 @@
 }
 
 .Node .DeviceType a{
-    margin-left: 18px;
+    /*margin-left: 18px;*/
 }
 
 /* это правило - ниже .Node, поэтому имеет больший приоритет */
@@ -33,8 +33,8 @@
 
 .IsFirst {
     /* добавить соединительную черточку наверх */
-    background-image: url(/images/tree/d_half.gif);
-    background-repeat : no-repeat;    
+    /*background-image: url(/images/tree/d_half.gif);
+    background-repeat : no-repeat;*/
 }
 
 /* Корневой узел от родительского контейнера не отодвинут. 

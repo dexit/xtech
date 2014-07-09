@@ -2,7 +2,7 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Devices'=>array('index'),
 	$model->name=>array('view','id'=>$model->id_device),
 	'Update',
@@ -13,9 +13,9 @@ $this->menu=array(
 	array('label'=>'Create Device', 'url'=>array('create')),
 	array('label'=>'View Device', 'url'=>array('view', 'id'=>$model->id_device)),
 	array('label'=>'Manage Device', 'url'=>array('admin')),
-);
+);*/
 ?>
 
-<h1>Update Device <?php echo $model->id_device; ?></h1>
+<h1>Змінити дані пристрою <?php echo $model->devicetype->name.": "; echo $model->name; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

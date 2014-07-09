@@ -1,12 +1,6 @@
 <?php 
-
-  //$dataProvider=new CActiveDataProvider('Device');
-
   $this->widget('zii.widgets.grid.CGridView', array(
-      //'id' => 'device-grid',
       'dataProvider'=>$dataProvider,
-      //'ajaxUpdate'=>'',
-      //'ajaxUrl' => array('dev/show'),
       'columns'=>array(
             array(
               'name' => 'Организация',
@@ -61,7 +55,6 @@
             array(
               'name' => 'Забалансовий',
               'type' => 'raw',
-              //'value' => '$data->private',
               'value' => '$data->private ? \'Так\' : \'Ні\'',
             ),
             array(

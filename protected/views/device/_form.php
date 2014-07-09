@@ -8,50 +8,80 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'device-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+	
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_organization'); ?>
-		<?php echo $form->textField($model,'id_organization'); ?>
+		<?php //echo $form->textField($model,'id_organization'); ?>
+		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
+		<?php echo $form->dropDownList($model,'id_organization',$list, array(
+									'options'=>array(
+												$model->id_organization=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'id_organization'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_branch'); ?>
-		<?php echo $form->textField($model,'id_branch'); ?>
+		<?php //echo $form->textField($model,'id_branch'); ?>
+		<?php $list = CHtml::listData(Branch::model()->findAll(),'id_branch', 'name');?>
+		<?php echo $form->dropDownList($model,'id_branch',$list, array(
+									'options'=>array(
+												$model->id_branch=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'id_branch'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_department'); ?>
-		<?php echo $form->textField($model,'id_department'); ?>
+		<?php //echo $form->textField($model,'id_department'); ?>
+		<?php $list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');?>
+		<?php echo $form->dropDownList($model,'id_department',$list, array(
+									'options'=>array(
+												$model->id_department=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'id_department'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_cabinet'); ?>
-		<?php echo $form->textField($model,'id_cabinet'); ?>
+		<?php //echo $form->textField($model,'id_cabinet'); ?>
+		<?php $list = CHtml::listData(Cabinet::model()->findAll(),'id_cabinet', 'number');?>
+		<?php echo $form->dropDownList($model,'id_cabinet',$list, array(
+									'options'=>array(
+												$model->id_cabinet=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'id_cabinet'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
-		<?php echo $form->textField($model,'id_employee'); ?>
+		<?php //echo $form->textField($model,'id_employee'); ?>
+		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
+		<?php echo $form->dropDownList($model,'id_employee',$list, array(
+									'options'=>array(
+												$model->id_employee=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'id_employee'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_type'); ?>
-		<?php echo $form->textField($model,'id_type'); ?>
+		<?php //echo $form->textField($model,'id_type'); ?>
+		<?php $list = CHtml::listData(DeviceType::model()->findAll(),'id_device_type', 'name');?>
+		<?php echo $form->dropDownList($model,'id_type',$list, array(
+									'options'=>array(
+												$model->id_type=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'id_type'); ?>
 	</div>
 
@@ -63,7 +93,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'description',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 
@@ -81,48 +111,106 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'year'); ?>
-		<?php echo $form->textField($model,'year'); ?>
+		<?php  
+			$yearNow = date("Y");
+			$yearFrom = 1980;
+			$arrYears = array();
+			foreach (range($yearFrom, $yearNow) as $number) {
+		 		$arrYears[$number] = $number; 
+		 	}
+		 	$arrYears = array_reverse($arrYears, true);
+		?>
+		<?php //echo $form->textField($model,'year'); ?>
+		<?php echo $form->dropDownList($model,'year',$arrYears); ?>
 		<?php echo $form->error($model,'year'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'end_varantly_yesr'); ?>
-		<?php echo $form->textField($model,'end_varantly_yesr'); ?>
+		<?php  
+			$yearNow = date("Y");
+			$yearTo = $yearNow + 5;
+			$yearFrom = 1985;
+			$arrYears = array();
+			foreach (range($yearFrom, $yearTo) as $number) {
+		 		$arrYears[$number] = $number; 
+		 	}
+		 	$arrYears = array_reverse($arrYears, true);
+		?>
+		<?php //echo $form->textField($model,'end_varantly_yesr'); ?>
+		<?php echo $form->dropDownList($model,'end_varantly_yesr',$arrYears); ?>
 		<?php echo $form->error($model,'end_varantly_yesr'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'service'); ?>
-		<?php echo $form->textField($model,'service',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'service',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'service'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'expluatation'); ?>
-		<?php echo $form->textField($model,'expluatation'); ?>
+		<?php echo $form->dropDownList($model,'expluatation', array('0'=>'Ні','1'=>'Так'), array(
+									'options'=>array(
+												$model->expluatation=>array(
+															'selected'=>'selected')))
+										); ?>
 		<?php echo $form->error($model,'expluatation'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'expluatation_data'); ?>
-		<?php echo $form->textField($model,'expluatation_data'); ?>
+		<?php 
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	    			'model' => $model,
+	    			'attribute' => 'expluatation_data',
+	    			'language' => 'uk',
+	    			'options' => array(
+	    				'size' => '10',
+	    				'dateFormat' => 'yy-mm-dd',
+	    				'showButtonPanel' => true,
+	    				'changeYear' => true,           // can change year
+				        'changeMonth' => true,
+				        'showOtherMonths' => true,      // show dates in other months
+				        'selectOtherMonths' => true,
+	    				),
+				));
+		?>
 		<?php echo $form->error($model,'expluatation_data'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'private'); ?>
-		<?php echo $form->textField($model,'private'); ?>
+		<?php echo $form->dropDownList($model,'private', array('0'=>'Ні','1'=>'Так'), array(
+									'options'=>array(
+												$model->private=>array(
+															'selected'=>'selected')))
+										); ?>
+
 		<?php echo $form->error($model,'private'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'break'); ?>
-		<?php echo $form->textField($model,'break'); ?>
+		<?php echo $form->dropDownList($model,'break', array('0'=>'Працює','1'=>'Не працює'), array(
+									'options'=>array(
+												$model->break=>array(
+															'selected'=>'selected')))
+										); ?>
+
 		<?php echo $form->error($model,'break'); ?>
 	</div>
 
+	<div id="dev_pc_data">
+		<?php 
+			$this->renderPartial('_form_pc', 
+				array('model'=>DevicePc::model()->find('id_device_pc='.$model->id_device)));
+		?>
+	<div>
+
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

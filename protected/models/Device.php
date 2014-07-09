@@ -25,6 +25,21 @@
  */
 class Device extends CActiveRecord
 {
+	/*public $mb;
+	public $cpu_name;
+	public $cpu_p;
+	public $hdd_name;
+	public $hdd_p;
+	public $ram_name;
+	public $ram_p;
+	public $video_name;
+	public $video_p;
+	public $cdrom_name;
+	public $lan_name;
+	public $os;
+	public $net_name;
+	public $ip;*/
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -77,23 +92,38 @@ class Device extends CActiveRecord
 	{
 		return array(
 			'id_device' => 'Id Device',
-			'id_organization' => 'Id Organization',
-			'id_branch' => 'Id Branch',
-			'id_department' => 'Id Department',
-			'id_cabinet' => 'Id Cabinet',
-			'id_employee' => 'Id Employee',
-			'id_type' => 'Id Type',
-			'name' => 'Name',
-			'description' => 'Description',
-			'inv_number' => 'Inv Number',
-			'sn' => 'Sn',
-			'year' => 'Year',
-			'end_varantly_yesr' => 'End Varantly Yesr',
-			'service' => 'Service',
-			'expluatation' => 'Expluatation',
-			'expluatation_data' => 'Expluatation Data',
-			'private' => 'Private',
-			'break' => 'Break',
+			'id_organization' => 'Організація',
+			'id_branch' => 'Корпус',
+			'id_department' => 'Відділ',
+			'id_cabinet' => 'Кабінет',
+			'id_employee' => 'Співробітник',
+			'id_type' => 'Тип пристрою',
+			'name' => 'Назва',
+			'description' => 'Опис',
+			'inv_number' => 'Інв. номер',
+			'sn' => 'Серійний номер',
+			'year' => 'Рік випуску',
+			'end_varantly_yesr' => 'Рік закінчення гарантії',
+			'service' => 'Сервісний центр',
+			'expluatation' => 'Введено в експлуатацію',
+			'expluatation_data' => 'Дата введення в експлуатацію',
+			'private' => 'Забалансовий',
+			'break' => 'Стан',
+
+			/*'mb' => 'Материнська плата',
+			'cpu_name' => 'Процесор',
+			'cpu_p' => 'Швидкість процесора',
+			'hdd_name' => 'Жорсткий диск',
+			'hdd_p' => 'Об\'ем жорсткого диску',
+			'ram_name' => 'Оперативна пам\'ять',
+			'ram_p' => 'Об\'ем оперативної пам\'яті',
+			'video_name' => 'Відеоадаптер',
+			'video_p' => 'Об\'ем відеопам\'яті',
+			'cdrom_name' => 'CD/DVD привід',
+			'lan_name' => 'Мережна карта',
+			'os' => 'Операційна система',
+			'net_name' => 'Мережне ім\'я',
+			'ip' => 'IP адреса',*/
 		);
 	}
 
@@ -148,5 +178,10 @@ class Device extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	protected function afterSave()
+	{
+		parent::afterSave();
 	}
 }
