@@ -91,6 +91,7 @@ $this->menu=array(
 )); 
 
 
+
 if ($model->devicetype->id_device_type == 2) {
 	$this->renderPartial('_device_pc', array(
                       'model' => $model,));

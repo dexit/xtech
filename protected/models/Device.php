@@ -25,7 +25,10 @@
  */
 class Device extends CActiveRecord
 {
-	/*public $mb;
+
+	/*public $id;
+	public $id_device_pc;
+	public $mb;
 	public $cpu_name;
 	public $cpu_p;
 	public $hdd_name;
@@ -64,6 +67,15 @@ class Device extends CActiveRecord
 			array('id_device, id_organization, id_branch, id_department, id_cabinet, id_employee, id_type, name, description, inv_number, sn, year, end_varantly_yesr, service, expluatation, expluatation_data, private, break', 'safe', 'on'=>'search'),
 		);
 	}
+
+	/*public function behaviors()
+	{
+	    return array(
+	        'activerecord-relation'=>array(
+	            'class'=>'ext.yiiext.behaviors.activerecord-relation.EActiveRecordRelationBehavior',
+	        ),
+	    );
+	}*/
 
 	/**
 	 * @return array relational rules.
@@ -110,20 +122,22 @@ class Device extends CActiveRecord
 			'private' => 'Забалансовий',
 			'break' => 'Стан',
 
-			/*'mb' => 'Материнська плата',
+			'id' => 'Id',
+			'id_device_pc' => 'Id Device PC',
+			'mb' => 'Материнська плата',
 			'cpu_name' => 'Процесор',
-			'cpu_p' => 'Швидкість процесора',
+			'cpu_p' => 'Швидкість процесора (ГГц)',
 			'hdd_name' => 'Жорсткий диск',
-			'hdd_p' => 'Об\'ем жорсткого диску',
+			'hdd_p' => 'Об\'ем жорсткого диску (Гб)',
 			'ram_name' => 'Оперативна пам\'ять',
-			'ram_p' => 'Об\'ем оперативної пам\'яті',
+			'ram_p' => 'Об\'ем оперативної пам\'яті (Мб)',
 			'video_name' => 'Відеоадаптер',
-			'video_p' => 'Об\'ем відеопам\'яті',
+			'video_p' => 'Об\'ем відеопам\'яті (Мб)',
 			'cdrom_name' => 'CD/DVD привід',
 			'lan_name' => 'Мережна карта',
 			'os' => 'Операційна система',
 			'net_name' => 'Мережне ім\'я',
-			'ip' => 'IP адреса',*/
+			'ip' => 'IP адреса',
 		);
 	}
 
@@ -180,8 +194,20 @@ class Device extends CActiveRecord
 		return parent::model($className);
 	}
 
-	protected function afterSave()
+	/*protected function afterSave()
 	{
-		parent::afterSave();
+		//parent::afterSave();
+		//echo "after";
+
 	}
+
+	protected function beforeSave()
+	{
+		//parent::beforeSave();
+		//echo "before";
+
+		//var_dump($_POST);
+
+		
+	}*/
 }

@@ -18,4 +18,12 @@ $this->menu=array(
 
 <h1>Змінити дані пристрою <?php echo $model->devicetype->name.": "; echo $model->name; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php 
+	if ($model->id_type == 2) {
+		$this->renderPartial('_form_pc', array('model'=>$model)); 
+	} else {
+		$this->renderPartial('_form', array('model'=>$model)); 
+	}
+
+
+?>

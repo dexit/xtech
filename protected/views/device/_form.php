@@ -80,8 +80,8 @@
 		<?php echo $form->dropDownList($model,'id_type',$list, array(
 									'options'=>array(
 												$model->id_type=>array(
-															'selected'=>'selected')))
-										); ?>
+															'selected'=>'selected')),
+									'disabled'=>'disabled')); ?>
 		<?php echo $form->error($model,'id_type'); ?>
 	</div>
 
@@ -200,14 +200,6 @@
 
 		<?php echo $form->error($model,'break'); ?>
 	</div>
-
-	<div id="dev_pc_data">
-		<?php 
-			$this->renderPartial('_form_pc', 
-				array('model'=>DevicePc::model()->find('id_device_pc='.$model->id_device)));
-		?>
-	<div>
-
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>

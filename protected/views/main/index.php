@@ -15,6 +15,9 @@
                       false,
                       true));?>
   </div>
+  <div id="button-add-device">
+    <?php echo CHtml::link('Додати пристрій', array('device/create')); ?>
+  </div>
 </section> <!-- end of right_col -->
 
 <div id="loader"><span>Загрузка...</span></div>

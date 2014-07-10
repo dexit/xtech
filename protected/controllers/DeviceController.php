@@ -98,17 +98,27 @@ class DeviceController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model = $this->loadModel($id);
+		$model_pc = $model->devicepc;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Device']))
+		if(isset($_POST['Device']) && isset($_POST['DevicePc']))
 		{
+			$transaction = Yii::app()->db->beginTransaction();
+			try {
+					$model->attributes=$_POST['Device'];
+					$model_pc->attributes=$_POST['DevicePc'];
+					$model->save();
+					$model_pc->save();
+					$transaction->commit();
+				} catch(Exception $e) { 
+            		$transaction->rollback();
+        		}
+        	$this->redirect(array('view','id'=>$model->id_device));						
+    	} elseif (isset($_POST['Device']) && !isset($_POST['DevicePc'])) {
 			$model->attributes=$_POST['Device'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_device));
-		}
+			$model->save();
+        	$this->redirect(array('view','id'=>$model->id_device));		
+    	}
 
 		$this->render('update',array(
 			'model'=>$model,
