@@ -38,4 +38,18 @@ class EmployeeController extends Controller
       		Yii::app()->end();
     	}
 	}
+
+	public function actionLoadByCabinet()
+	{
+		$id_cabinet = (int)$_POST['id_cabinet'];
+		$employee = Employee::model()->findAll('id_cabinet=:id_cabinet',
+											array('id_cabinet'=>$id_cabinet));
+
+		 $list = CHtml::listData($employee,'id_employee','firstname');
+
+		echo "<option value=''>Виберіть співробітника</option>";
+   		foreach($list as $value=>$employee_firstname)
+   			echo CHtml::tag('option', array('value'=>$value),
+   									  CHtml::encode($employee_firstname),true);
+	}	
 }

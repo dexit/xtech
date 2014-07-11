@@ -72,23 +72,36 @@ class DeviceController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($device_type)
 	{
-		$model=new Device;
+		//CVarDumper::dump($device_type);
+		//var_dump($device_type);
+		$device_type = (int)$device_type;
+
+		$models = array();
+		$models['device_type'] = $device_type;
+		$models['model'] = new Device;
+		//$model=new Device;
+
+		if ($device_type == 2) {
+			$models['model_pc'] = new DevicePc;
+		}
+		
+		//$model_pc=new DevicePC;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Device']))
 		{
+			$model = $models['model'];
 			$model->attributes=$_POST['Device'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id_device));
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+
+		$this->render('create',$models);
 	}
 
 	/**

@@ -39,30 +39,17 @@ class CabinetController extends Controller
     	}
 	}
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
+	public function actionLoadByDepartment()
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
+		$id_department = (int)$_POST['id_department'];
+		$cabinet = Cabinet::model()->findAll('id_department=:id_department',
+											array('id_department'=>$id_department));
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
+		 $list = CHtml::listData($cabinet,'id_cabinet','number');
+
+		echo "<option value=''>Виберіть кабінет</option>";
+   		foreach($list as $value=>$cabinet_number)
+   			echo CHtml::tag('option', array('value'=>$value),
+   									  CHtml::encode($cabinet_number),true);
+	}		
 }

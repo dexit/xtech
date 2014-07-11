@@ -15,4 +15,16 @@ $this->menu=array(
 
 <h1>Додати пристрій</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php 
+
+//var_dump($model_pc);
+
+if (isset($model_pc)) {
+	$this->renderPartial('_form_create_pc', 
+						array('model'=>$model,'model_pc'=>$model_pc,'device_type'=>$device_type));	
+} else {
+	$this->renderPartial('_form_create', 
+						array('model'=>$model,'device_type'=>$device_type));
+}
+
+?>

@@ -15,8 +15,17 @@
                       false,
                       true));?>
   </div>
-  <div id="button-add-device">
-    <?php echo CHtml::link('Додати пристрій', array('device/create')); ?>
+  <div id="add-device">
+    <?php echo CHtml::beginForm(CController::createUrl('device/create'),'get'); ?>
+    <div class="row">
+      <div>Тип пристрою</div>
+      <?php $list = CHtml::listData(DeviceType::model()->findAll(),'id_device_type', 'name');?>
+      <?php echo CHtml::dropDownList('device_type','id_type',$list); ?>
+    </div>
+    <div class="row submit">
+      <?php echo CHtml::submitButton('Додати пристрій'); ?>
+    </div>
+    <?php echo CHtml::endForm(); ?>
   </div>
 </section> <!-- end of right_col -->
 

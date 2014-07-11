@@ -39,30 +39,19 @@ class BranchController extends Controller
 		echo CJSON::encode($branches);
 	}
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
+	public function actionLoadByOrganization()
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
+		$id_organization = (int)$_POST['id_organization'];
+		$branch = Branch::model()->findAll('id_organization=:id_organization',
+											array('id_organization'=>$id_organization));
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+		 $list = CHtml::listData($branch,'id_branch','name');
+
+		echo "<option value=''>Виберіть корпус</option>";
+   		foreach($list as $value=>$branch_name)
+   			echo CHtml::tag('option', array('value'=>$value),
+   									  CHtml::encode($branch_name),true);
+		 //CVarDumper::dump($list,10,true);
+		 //var_dump($list);
 	}
-	*/
 }
