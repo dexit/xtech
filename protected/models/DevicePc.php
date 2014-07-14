@@ -43,7 +43,7 @@ class DevicePc extends CActiveRecord
 			array('mb, cpu_name, hdd_name, ram_name, video_name, cdrom_name, lan_name, os, net_name, ip', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id,id_device_pc, mb, cpu_name, cpu_p, hdd_name, hdd_p, ram_name, ram_p, video_name, video_p, cdrom_name, lan_name, os, net_name, ip', 'safe', 'on'=>'search|save'),
+			array('id,id_device_pc, mb, cpu_name, cpu_p, hdd_name, hdd_p, ram_name, ram_p, video_name, video_p, cdrom_name, lan_name, os, net_name, ip', 'safe', 'on'=>'search|save|insert'),
 		);
 	}
 

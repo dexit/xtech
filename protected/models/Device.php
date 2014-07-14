@@ -64,7 +64,7 @@ class Device extends CActiveRecord
 			array('expluatation_data', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_device, id_organization, id_branch, id_department, id_cabinet, id_employee, id_type, name, description, inv_number, sn, year, end_varantly_yesr, service, expluatation, expluatation_data, private, break', 'safe', 'on'=>'search'),
+			array('id_device, id_organization, id_branch, id_department, id_cabinet, id_employee, id_type, name, description, inv_number, sn, year, end_varantly_yesr, service, expluatation, expluatation_data, private, break', 'safe', 'on'=>'search|insert'),
 		);
 	}
 

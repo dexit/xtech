@@ -2,6 +2,10 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 /* @var $form CActiveForm */
+$model->unsetAttributes();
+$model_pc->unsetAttributes();
+//CVarDumper::dump($model_pc,10,true);
+//var_dump($model);
 ?>
 
 <div class="form">
@@ -207,93 +211,92 @@
 	<div class="row">
 		<?php //var_dump($devicepc); ?>
 		<?php echo $form->labelEx($model_pc,'mb'); ?>
-		<?php echo $form->textField($model_pc->devicepc,'mb',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model_pc->devicepc,'mb'); ?>
+		<?php echo $form->textField($model_pc,'mb',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'mb'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'cpu_name'); ?>
-		<?php echo $form->textField($model_pc->devicepc,'cpu_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model_pc->devicepc,'cpu_name'); ?>
+		<?php echo $form->textField($model_pc,'cpu_name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'cpu_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'cpu_p'); ?>
-		<?php echo $form->textField($model_pc->devicepc,'cpu_p',array('size'=>8,'maxlength'=>10)); ?>
-		<?php echo $form->error($model_pc->devicepc,'cpu_p'); ?>
+		<?php echo $form->textField($model_pc,'cpu_p',array('size'=>8,'maxlength'=>10)); ?>
+		<?php echo $form->error($model_pc,'cpu_p'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'hdd_name'); ?>
-		<?php echo $form->textField($model_pc->devicepc,'hdd_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model_pc->devicepc,'hdd_name'); ?>
+		<?php echo $form->textField($model_pc,'hdd_name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'hdd_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'hdd_p'); ?>
-		<?php echo $form->numberField($model_pc->devicepc,'hdd_p',array('size'=>8,'maxlength'=>255)); ?>
-		<?php echo $form->error($model_pc->devicepc,'hdd_p'); ?>
+		<?php echo $form->numberField($model_pc,'hdd_p',array('size'=>8,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'hdd_p'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'ram_name'); ?>
-		<?php echo $form->textField($model_pc->devicepc,'ram_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model_pc->devicepc,'ram_name'); ?>
+		<?php echo $form->textField($model_pc,'ram_name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'ram_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'ram_p'); ?>
-		<?php echo $form->numberField($model_pc->devicepc,'ram_p',array('size'=>8,'maxlength'=>255)); ?>
-		<?php echo $form->error($model_pc->devicepc,'ram_p'); ?>
+		<?php echo $form->numberField($model_pc,'ram_p',array('size'=>8,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'ram_p'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'video_name'); ?>
-		<?php echo $form->textField($model->devicepc,'video_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'video_name'); ?>
+		<?php echo $form->labelEx($model_pc,'video_name'); ?>
+		<?php echo $form->textField($model_pc,'video_name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'video_name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'video_p'); ?>
-		<?php echo $form->numberField($model->devicepc,'video_p',array('size'=>8,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'video_p'); ?>
+		<?php echo $form->labelEx($model_pc,'video_p'); ?>
+		<?php echo $form->numberField($model_pc,'video_p',array('size'=>8,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'video_p'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'cdrom_name'); ?>
-		<?php echo $form->textField($model->devicepc,'cdrom_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'cdrom_name'); ?>
+		<?php echo $form->labelEx($model_pc,'cdrom_name'); ?>
+		<?php echo $form->textField($model_pc,'cdrom_name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'cdrom_name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'lan_name'); ?>
-		<?php echo $form->textField($model->devicepc,'lan_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'lan_name'); ?>
+		<?php echo $form->labelEx($model_pc,'lan_name'); ?>
+		<?php echo $form->textField($model_pc,'lan_name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'lan_name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'os'); ?>
-		<?php echo $form->textField($model->devicepc,'os',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'os'); ?>
+		<?php echo $form->labelEx($model_pc,'os'); ?>
+		<?php echo $form->textField($model_pc,'os',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'os'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'net_name'); ?>
-		<?php echo $form->textField($model->devicepc,'net_name',array('size'=>30,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'net_name'); ?>
+		<?php echo $form->labelEx($model_pc,'net_name'); ?>
+		<?php echo $form->textField($model_pc,'net_name',array('size'=>30,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'net_name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ip'); ?>
-		<?php echo $form->textField($model->devicepc,'ip',array('size'=>30,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'ip'); ?>
+		<?php echo $form->labelEx($model_pc,'ip'); ?>
+		<?php echo $form->textField($model_pc,'ip',array('size'=>30,'maxlength'=>255)); ?>
+		<?php echo $form->error($model_pc,'ip'); ?>
 	</div>
 
 	<div class="row">
 		<input type="hidden" id="Device_id_type" name="Device[id_type]" value="<?php echo $device_type ?>">
 	</div>
-
-
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>
 	</div>

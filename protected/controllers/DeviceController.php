@@ -74,30 +74,45 @@ class DeviceController extends Controller
 	 */
 	public function actionCreate($device_type)
 	{
-		//CVarDumper::dump($device_type);
-		//var_dump($device_type);
+		
 		$device_type = (int)$device_type;
 
 		$models = array();
 		$models['device_type'] = $device_type;
 		$models['model'] = new Device;
-		//$model=new Device;
 
 		if ($device_type == 2) {
 			$models['model_pc'] = new DevicePc;
 		}
 		
-		//$model_pc=new DevicePC;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Device']))
+		if(isset($_POST['Device']) && !isset($_POST['DevicePc']))
 		{
 			$model = $models['model'];
 			$model->attributes=$_POST['Device'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id_device));
+
+		} elseif (isset($_POST['Device']) && isset($_POST['DevicePc'])) 
+		{
+			$transaction = Yii::app()->db->beginTransaction();
+			try {
+				$model = $models['model'];
+				$model->attributes=$_POST['Device'];
+				$model->save();
+				
+				$model_pc = $models['model_pc'];				
+				$model_pc->attributes=$_POST['DevicePc'];
+				$model_pc->id_device_pc = $model->id_device;
+				$model_pc->save();
+				
+				$transaction->commit();
+				$this->redirect(array('view','id'=>$model->id_device));
+				//$this->redirect(array('/'));
+			} catch(Exception $e) { 
+            		$transaction->rollback();
+            		//var_dump($e);
+            		$error = $e->getMessage();
+        	}			
 		}
 
 
@@ -125,6 +140,7 @@ class DeviceController extends Controller
 					$transaction->commit();
 				} catch(Exception $e) { 
             		$transaction->rollback();
+            		$error = $e->getMessage();
         		}
         	$this->redirect(array('view','id'=>$model->id_device));						
     	} elseif (isset($_POST['Device']) && !isset($_POST['DevicePc'])) {
@@ -145,7 +161,21 @@ class DeviceController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+
+		$model = $this->loadModel($id);
+		$transaction = Yii::app()->db->beginTransaction();
+		//var_dump($model->devicepc);
+		try {
+			if ($model->devicepc) {
+				$model->devicepc->delete();				
+			}
+			$model->delete();				
+			$transaction->commit();
+
+		} catch (Exception $e) {
+            $transaction->rollBack();
+            $error = $e->getMessage();
+        }
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
