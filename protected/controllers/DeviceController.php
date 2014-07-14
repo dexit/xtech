@@ -241,9 +241,36 @@ class DeviceController extends Controller
 		$model_name = explode('_',$id)[2];
 		$id = (int)$val;
 		
-		$model = new $model_name;
+		$model = new $model_name('search');
 
+		$class_name = get_class($model);
+
+		switch ($class_name) {
+			case 'Organization': 
+					$branch = $this->loadList('branch',$id);
+					$department = $this->loadList('department',$id);
+					$cabinet = $this->loadList('cabinet',$id);
+					$employee = $this->loadList('employee',$id);
+					$lists = array($branch,$department,$cabinet,$employee,$employee);
+					break;
+			case 'Branch':;
+					break;		
+			case 'Department':;
+					break;	
+			case 'Cabinet':;
+					break;			
+			case 'Employee':;
+					break;
+			default:
+				throw new Exception('Error');
+		}
+
+		echo CJSON::encode($lists);
+
+		var_dump(get_class($model));
+	}
+
+	protected loadList($name, $id){
 		
-		var_dump($model);
 	}
 }
