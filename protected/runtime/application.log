@@ -7257,3 +7257,134 @@ Stack trace:
 REQUEST_URI=/index.php?ajax=yw0&id=3&r=device%2Fdelete
 HTTP_REFERER=http://xtech/index.php
 ---
+2014/07/14 16:16:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changelist".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('changelist')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changelist".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('changelist')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:01:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\WebOpenServer\domains\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:03:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\WebOpenServer\domains\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:05:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\WebOpenServer\domains\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#9 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:36:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#10 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:37:16 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\WebOpenServer\domains\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#10 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=device/changelist
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---
+2014/07/14 17:40:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php:222
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(244): DeviceController->loadModel('organization')
+#1 [internal function]: DeviceController->actionChangeList('Device_id_organ...', '2')
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('changelist')
+#13 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/changeli...')
+#14 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=device/changelist&id=Device_id_organization&val=2
+HTTP_REFERER=http://xtech/index.php?r=device/update&id=2
+---

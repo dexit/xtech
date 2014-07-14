@@ -37,7 +37,9 @@ class MainController extends Controller
 		$rel = array('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee');
 		$devices = $dev->with($rel)->findAll();
 
-		$dataProvider = new CActiveDataProvider('Device');
+		$dataProvider = new CActiveDataProvider('Device', array('pagination'=>array(
+                        'pageSize'=>20,
+                )));
 		$this->render('index',array(
 			'organizations'=>$organizations,
 			'devices'=>$devices,

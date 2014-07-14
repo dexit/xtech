@@ -28,7 +28,7 @@ class DeviceController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','changelist'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -234,5 +234,16 @@ class DeviceController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionChangeList($id, $val)
+	{
+		$model_name = explode('_',$id)[2];
+		$id = (int)$val;
+		
+		$model = new $model_name;
+
+		
+		var_dump($model);
 	}
 }

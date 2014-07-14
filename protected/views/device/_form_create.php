@@ -2,6 +2,8 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 /* @var $form CActiveForm */
+
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js');
 ?>
 
 <div class="form">
@@ -22,6 +24,7 @@
 													'url'=>Yii::app()->createUrl('branch/loadbyorganization'),
 													'update'=>'#Device_id_branch',
 													'data'=>array('id_organization'=>'js:this.value'),
+													//'success'=>'js:("#Device_id_branch").prop("disabled", false);',
 													),
 											'empty'=>'Виберіть організацію',
 										)); ?>
@@ -37,7 +40,8 @@
 													'update'=>'#Device_id_department',
 													'data'=>array('id_branch'=>'js:this.value'),
 													),
-										'empty'=>'Виберіть корпус'
+										'empty'=>'Виберіть корпус',
+										//'disabled'=>'disabled',
 									)
 										); ?>
 		<?php echo $form->error($model,'id_branch'); ?>
@@ -45,8 +49,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_department'); ?>
-		<?php //echo $form->textField($model,'id_department'); ?>
-		<?php //$list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');?>
 		<?php echo $form->dropDownList($model,'id_department',array(), array(
 									'ajax'=>array(
 													'type'=>'POST',

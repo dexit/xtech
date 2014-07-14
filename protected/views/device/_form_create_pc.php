@@ -6,6 +6,7 @@ $model->unsetAttributes();
 $model_pc->unsetAttributes();
 //CVarDumper::dump($model_pc,10,true);
 //var_dump($model);
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js');
 ?>
 
 <div class="form">

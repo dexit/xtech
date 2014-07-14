@@ -2,6 +2,17 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 /* @var $form CActiveForm */
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_update.js');
+/*Yii::app()->clientScript->registerScript('search', "
+    $.ajax({
+                    url: '".Yii::app()->createUrl("device/changelist")."',
+                    data:'tid='+tname,
+                    success: function(){
+                      alert('success');
+                      return false;
+                    }
+               });
+");*/
 ?>
 
 <div class="form">
@@ -18,10 +29,11 @@
 		<?php //echo $form->textField($model,'id_organization'); ?>
 		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
 		<?php echo $form->dropDownList($model,'id_organization',$list, array(
-									'options'=>array(
+									 'options'=>array(
 												$model->id_organization=>array(
-															'selected'=>'selected')))
-										); ?>
+															'selected'=>'selected')),
+									 	
+												)); ?>
 		<?php echo $form->error($model,'id_organization'); ?>
 	</div>
 
