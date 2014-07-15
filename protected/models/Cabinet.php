@@ -48,6 +48,7 @@ class Cabinet extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_cabinet'),
+			'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
 		);
 	}
 
@@ -58,10 +59,10 @@ class Cabinet extends CActiveRecord
 	{
 		return array(
 			'id_cabinet' => 'Id Cabinet',
-			'id_department' => 'Id Department',
-			'number' => 'Number',
-			'description' => 'Description',
-			'telephones' => 'Telephones',
+			'id_department' => 'Відділ',
+			'number' => 'Номер',
+			'description' => 'Примітка',
+			'telephones' => 'Телефони',
 		);
 	}
 

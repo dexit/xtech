@@ -110,10 +110,4 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
-	public function actionStructure()
-	{
-		
-
-		$this->render('structure');
-	}
 }

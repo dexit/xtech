@@ -64,15 +64,15 @@ class Organization extends CActiveRecord
 	{
 		return array(
 			'id_organization' => 'Id Organization',
-			'name' => 'Name',
-			'description' => 'Description',
-			'telephones' => 'Telephones',
-			'emails' => 'Emails',
-			'www' => 'Www',
-			'address' => 'Address',
-			'boss' => 'Boss',
-			'buh' => 'Buh',
-			'okpo' => 'Okpo',
+			'name' => 'Назва',
+			'description' => 'Примітка',
+			'telephones' => 'Телефони',
+			'emails' => 'Email',
+			'www' => 'Веб-сайт',
+			'address' => 'Адреса',
+			'boss' => 'Керівник',
+			'buh' => 'Головний бухгалтер',
+			'okpo' => 'ОКПО',
 		);
 	}
 

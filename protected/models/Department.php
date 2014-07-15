@@ -49,6 +49,7 @@ class Department extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_department'),
+			'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
 		);
 	}
 
@@ -59,12 +60,12 @@ class Department extends CActiveRecord
 	{
 		return array(
 			'id_department' => 'Id Department',
-			'id_branch' => 'Id Branch',
-			'name' => 'Name',
-			'description' => 'Description',
-			'telephones' => 'Telephones',
-			'emails' => 'Emails',
-			'boss' => 'Boss',
+			'id_branch' => 'Філія',
+			'name' => 'Назва',
+			'description' => 'примітка',
+			'telephones' => 'Телефони',
+			'emails' => 'Email',
+			'boss' => 'Керівник відділу',
 		);
 	}
 

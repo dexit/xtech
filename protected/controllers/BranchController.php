@@ -51,7 +51,5 @@ class BranchController extends Controller
    		foreach($list as $value=>$branch_name)
    			echo CHtml::tag('option', array('value'=>$value),
    									  CHtml::encode($branch_name),true);
-		 //CVarDumper::dump($list,10,true);
-		 //var_dump($list);
-	}
+	}	
 }

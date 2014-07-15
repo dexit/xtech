@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Дані позначені <span class="required">*</span> обов'язкові.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>500)); ?>
+		<?php echo $form->textArea($model,'description',array('cols'=>45, 'rows'=>10,'maxlength'=>500)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 
@@ -57,13 +57,27 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'boss'); ?>
-		<?php echo $form->textField($model,'boss'); ?>
+		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
+		<?php echo $form->dropDownList($model,'boss',$list, array(
+									 'options'=>array(
+												$model->boss=>array(
+															'selected'=>'selected')),
+									 	
+									'empty'=>'Виберіть керівника',
+												)); ?>
 		<?php echo $form->error($model,'boss'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'buh'); ?>
-		<?php echo $form->textField($model,'buh'); ?>
+		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
+		<?php echo $form->dropDownList($model,'buh',$list, array(
+									 'options'=>array(
+												$model->buh=>array(
+															'selected'=>'selected')),
+									 	
+									'empty'=>'Виберіть головного бухгалтера',			
+												)); ?>
 		<?php echo $form->error($model,'buh'); ?>
 	</div>
 
@@ -74,7 +88,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Додати' : 'Зберегти'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

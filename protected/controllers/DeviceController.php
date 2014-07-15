@@ -262,15 +262,15 @@ class DeviceController extends Controller
 			case 'Employee':;
 					break;
 			default:
-				throw new Exception('Error');
+				throw new CException('Error');
 		}
 
 		echo CJSON::encode($lists);
 
-		var_dump(get_class($model));
+		//var_dump(get_class($model));
 	}
 
-	protected loadList($name, $id){
-		
+	protected function loadList($name, $id){
+		//$model = $name::model()->
 	}
 }

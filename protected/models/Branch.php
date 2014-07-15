@@ -50,6 +50,7 @@ class Branch extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_branch'),
+			'organization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
 		);
 	}
 
@@ -60,13 +61,13 @@ class Branch extends CActiveRecord
 	{
 		return array(
 			'id_branch' => 'Id Branch',
-			'name' => 'Name',
-			'id_organization' => 'Id Organization',
-			'description' => 'Description',
-			'telephones' => 'Telephones',
-			'emails' => 'Emails',
-			'www' => 'Www',
-			'address' => 'Address',
+			'name' => 'Назва',
+			'id_organization' => 'Організація',
+			'description' => 'Примітка',
+			'telephones' => 'Телефони',
+			'emails' => 'Email',
+			'www' => 'Веб-сайт',
+			'address' => 'Адреса',
 		);
 	}
 
@@ -112,4 +113,16 @@ class Branch extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	/*TODO for cascade update*/
+	public function searchIncludingPermissions($org_parentID)
+    {
+        $criteria=new CDbCriteria;
+        $criteria->condition = 'id_organization = :org_parentID';
+        $criteria->params = array(':org_parentID'=>$org_parentID);
+ 
+        return new CActiveDataProvider($this, array(
+            'criteria'=>$criteria,
+        ));
+    }
 }
