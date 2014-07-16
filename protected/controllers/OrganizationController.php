@@ -110,11 +110,47 @@ class OrganizationController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
+		//$this->loadModel($id)->delete();
+		$transaction = Yii::app()->db->beginTransaction();
+		
+		try {			
+			$organization = $this->loadModel($id);			
+			if ($organization) {				
+				$branches = $organization->branch;				
+				if ($branches) {
+					foreach ($branches as $branch) {
+						$departments = $branch->department;
+						foreach ($departments as $department) {				
+							$cabinets = $department->cabinet;
+							foreach ($cabinets as $cabinet){						
+								$employees = $cabinet->employee;
+								foreach ($employees as $employee) {
+									$employee->id_organization = null;
+									$employee->id_branch = null;
+									$employee->id_department = null;
+									$employee->id_cabinet = null;
+									$employee->save();
+								}
+								$cabinet->delete();
+							}
+							$department->delete();
+						}
+						$branch->delete();
+					}
+				}
+				$organization->delete();
+				$transaction->commit();
+			}
+		} catch(Exception $e) { 
+            		$transaction->rollback();
+            		$error = $e->getMessage();
+        }
+		
+		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+
 	}
 
 	/**

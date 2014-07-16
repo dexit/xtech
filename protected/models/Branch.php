@@ -51,6 +51,7 @@ class Branch extends CActiveRecord
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_branch'),
 			'organization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
+			'department' => array(self::HAS_MANY, 'Department', 'id_branch'),
 		);
 	}
 

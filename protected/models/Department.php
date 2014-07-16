@@ -50,6 +50,7 @@ class Department extends CActiveRecord
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_department'),
 			'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
+			'cabinet' => array(self::HAS_MANY, 'Cabinet', 'id_department'),
 		);
 	}
 

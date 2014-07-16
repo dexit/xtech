@@ -49,6 +49,7 @@ class Cabinet extends CActiveRecord
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_cabinet'),
 			'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
+			'employee' => array(self::HAS_MANY, 'Employee', 'id_cabinet'),
 		);
 	}
 
