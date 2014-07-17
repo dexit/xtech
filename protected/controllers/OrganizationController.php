@@ -110,7 +110,6 @@ class OrganizationController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		//$this->loadModel($id)->delete();
 		$transaction = Yii::app()->db->beginTransaction();
 		
 		try {			
@@ -120,20 +119,26 @@ class OrganizationController extends Controller
 				if ($branches) {
 					foreach ($branches as $branch) {
 						$departments = $branch->department;
-						foreach ($departments as $department) {				
-							$cabinets = $department->cabinet;
-							foreach ($cabinets as $cabinet){						
-								$employees = $cabinet->employee;
-								foreach ($employees as $employee) {
-									$employee->id_organization = null;
-									$employee->id_branch = null;
-									$employee->id_department = null;
-									$employee->id_cabinet = null;
-									$employee->save();
+						if ($departments) { 
+							foreach ($departments as $department) {				
+								$cabinets = $department->cabinet;
+								if ($cabinets) {
+									foreach ($cabinets as $cabinet){						
+										$employees = $cabinet->employee;
+										if ($employees) {
+											foreach ($employees as $employee) {
+												$employee->id_organization = null;
+												$employee->id_branch = null;
+												$employee->id_department = null;
+												$employee->id_cabinet = null;
+												$employee->save();
+											}
+										}
+										$cabinet->delete();
+									}
 								}
-								$cabinet->delete();
+								$department->delete();
 							}
-							$department->delete();
 						}
 						$branch->delete();
 					}
@@ -148,8 +153,9 @@ class OrganizationController extends Controller
 		
 		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		/*if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));*/
+			$this->redirect('?r=structure/index');
 
 	}
 

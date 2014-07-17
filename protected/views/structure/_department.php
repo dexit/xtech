@@ -10,6 +10,16 @@
                 'type' => 'html',
             ),
             array(
+                'name' => 'Організація',
+                'value' => '$data->branch->organization->name',
+                'type' => 'html',
+            ),
+            array(
+                'name' => 'Кількість кабінетів',
+                'value' => 'count($data->cabinet)',
+                'type' => 'html',
+            ),
+            array(
               'class'=>'CButtonColumn',
               'template'=>'{view}{update}{delete}',
               'buttons'=>array(
@@ -34,3 +44,7 @@
         ),
     ));
 ?>
+
+<div>
+  <?php echo CHtml::link('Додати відділ', Yii::app()->createUrl('department/create')); ?>
+</div>

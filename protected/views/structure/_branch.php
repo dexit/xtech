@@ -23,6 +23,12 @@
                 'value' => '$data->organization->name',
                 'type' => 'html',
             ),
+            'address',
+            array(
+                'name' => 'Кількість відділів',
+                'value' => 'count($data->department)',
+                'type' => 'html',
+            ),
             array(
               'class'=>'CButtonColumn',
               'template'=>'{view}{update}{delete}',
@@ -48,3 +54,8 @@
         ),
     ));
 ?>
+
+
+<div>
+  <?php echo CHtml::link('Додати філію', Yii::app()->createUrl('branch/create')); ?>
+</div>

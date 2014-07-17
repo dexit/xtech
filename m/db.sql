@@ -53,14 +53,14 @@ CREATE TABLE IF NOT EXISTS `t_branches` (
   `www` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_branch`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table xtech.t_branches: ~2 rows (approximately)
 DELETE FROM `t_branches`;
 /*!40000 ALTER TABLE `t_branches` DISABLE KEYS */;
 INSERT INTO `t_branches` (`id_branch`, `name`, `id_organization`, `description`, `telephones`, `emails`, `www`, `address`) VALUES
-	(2, 'mira', 1, 'Branch on Mira', '40977', 'pfu@i.ua', NULL, '52501, Sinelnikovo, Mira, 27'),
-	(3, 'engelsa', 1, 'Branch on Engelsa street', '41382', 'pfupp@i.ua', NULL, '52500, Sinelnikovo, Engelsa, 3a');
+	(2, 'Миру 27', 1, 'Branch on Mira', '40977', 'pfu@i.ua', 'www.pfu.dp.ua', '52501, Sinelnikovo, Mira, 27'),
+	(3, 'Енгельса 3а', 1, 'Branch on Engelsa street', '41382', 'pfupp@i.ua', '', '52500, Sinelnikovo, Engelsa, 3a');
 /*!40000 ALTER TABLE `t_branches` ENABLE KEYS */;
 
 
@@ -95,15 +95,16 @@ CREATE TABLE IF NOT EXISTS `t_departmens` (
   `emails` varchar(500) DEFAULT NULL,
   `boss` int(2) DEFAULT NULL,
   PRIMARY KEY (`id_department`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_departmens: ~2 rows (approximately)
+-- Dumping data for table xtech.t_departmens: ~4 rows (approximately)
 DELETE FROM `t_departmens`;
 /*!40000 ALTER TABLE `t_departmens` DISABLE KEYS */;
 INSERT INTO `t_departmens` (`id_department`, `id_branch`, `name`, `description`, `telephones`, `emails`, `boss`) VALUES
 	(1, 2, 'ispz', 'ispz department', '40692', NULL, NULL),
 	(2, 2, 'zagal', 'zagal department', '41162', NULL, NULL),
-	(3, 3, 'zvern', 'zvern department', '43045', NULL, NULL);
+	(3, 3, 'zvern', 'zvern department', '43045', NULL, NULL),
+	(4, 3, 'Призначення', '', '', '', 5);
 /*!40000 ALTER TABLE `t_departmens` ENABLE KEYS */;
 
 
@@ -128,17 +129,24 @@ CREATE TABLE IF NOT EXISTS `t_devices` (
   `private` tinyint(1) DEFAULT NULL,
   `break` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_device`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_devices: ~5 rows (approximately)
+-- Dumping data for table xtech.t_devices: ~12 rows (approximately)
 DELETE FROM `t_devices`;
 /*!40000 ALTER TABLE `t_devices` DISABLE KEYS */;
 INSERT INTO `t_devices` (`id_device`, `id_organization`, `id_branch`, `id_department`, `id_cabinet`, `id_employee`, `id_type`, `name`, `description`, `inv_number`, `sn`, `year`, `end_varantly_yesr`, `service`, `expluatation`, `expluatation_data`, `private`, `break`) VALUES
 	(1, 1, 2, 1, 2, 1, 2, 'bms', 'desc 1', 1130100, 'AA100', 2008, 2009, 'dervice BMS1', 1, '2008-12-14', 0, 0),
 	(2, 1, 2, 1, 2, 1, 1, 'lg flatroneeeee', 'descwefwefwef', 1130101, 'BB100', 2008, 2009, 'dervice LG', 1, '2008-12-14', 0, 0),
-	(3, 1, 2, 1, 2, 2, 3, 'xerox', 'such', 1130856, 'wefwef', 2010, 2011, NULL, 1, '2014-07-02', 0, 0),
 	(4, 1, 2, 2, 4, 4, 3, 'asus', 'bad book', 10480098, 'sa1564785112', 2013, 2015, 'asus', 1, '2013-10-16', 0, 0),
-	(5, 1, 2, 1, 2, 1, 11, 'a4tech', '', 10450085, 'wefwefwef', 2012, 2012, '', 1, '2011-07-08', 0, 0);
+	(5, 1, 2, 1, 2, 1, 11, 'a4tech', '', 10450085, 'wefwefwef', 2012, 2012, '', 1, '2011-07-08', 0, 0),
+	(6, 1, 2, 2, 3, 3, 6, 'zerox a3', 'regergerg', 2147483647, '456456456', 2012, 2013, 'rthrtht', 1, '2013-07-31', 0, 0),
+	(7, 1, 2, 2, 3, 3, 2, 'bms', 'weqdwefwe', 45345, 'trhtrh', 2014, 2019, 'rthtrhtrh', 1, '2014-07-02', 0, 0),
+	(8, 1, 2, 2, 3, 3, 2, 'bms', 'ewfwefwef', 45345, '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
+	(9, 1, 2, 2, 3, 3, 2, 'bms', 'ewfwefwef', 45345, '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
+	(20, 1, 2, 2, 3, 3, 2, 'dfgdfg', 'dfgfg', 56456, '456456', 2014, 2019, '4564545fbdb', 0, '0000-00-00', 0, 0),
+	(22, 1, 2, 1, 2, 2, 1, 'lg', 'descr', 1048002, 'df8845654', 2010, 2011, 'lg sc', 1, '2010-01-01', 0, 0),
+	(23, 1, 2, 1, 2, 2, 11, 'a4tech', 'descr', NULL, '', 2010, 2010, '', 1, '0000-00-00', 0, 0),
+	(24, 1, 2, 1, 2, 2, 12, 'a4tech', 'descr', NULL, '', 2010, 2010, '', 1, '0000-00-00', 0, 0);
 /*!40000 ALTER TABLE `t_devices` ENABLE KEYS */;
 
 
@@ -171,7 +179,7 @@ INSERT INTO `t_devices_types` (`id_device_type`, `name`, `description`) VALUES
 
 -- Dumping structure for table xtech.t_device_pc
 CREATE TABLE IF NOT EXISTS `t_device_pc` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_device_pc` int(11) DEFAULT NULL,
   `mb` varchar(255) DEFAULT NULL,
   `cpu_name` varchar(255) DEFAULT NULL,
@@ -190,13 +198,14 @@ CREATE TABLE IF NOT EXISTS `t_device_pc` (
   PRIMARY KEY (`id`),
   KEY `FK_t_device_pc_t_devices` (`id_device_pc`),
   CONSTRAINT `FK_t_device_pc_t_devices` FOREIGN KEY (`id_device_pc`) REFERENCES `t_devices` (`id_device`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_device_pc: ~1 rows (approximately)
+-- Dumping data for table xtech.t_device_pc: ~3 rows (approximately)
 DELETE FROM `t_device_pc`;
 /*!40000 ALTER TABLE `t_device_pc` DISABLE KEYS */;
 INSERT INTO `t_device_pc` (`id`, `id_device_pc`, `mb`, `cpu_name`, `cpu_p`, `hdd_name`, `hdd_p`, `ram_name`, `ram_p`, `video_name`, `video_p`, `cdrom_name`, `lan_name`, `os`, `net_name`, `ip`) VALUES
-	(0, 1, 'gigabyte 3a11122233456', 'intel', 1.6, 'maxtor', 250, 'hynix2', 1024, 'nvidia', 256, 'nec cd', 'realtek11122233333', 'windows 7 ultimate 9000', 'nach_ispz', '172.40.96.163');
+	(1, 1, 'gigabyte 3a11122233456', 'intel', 1.6, 'maxtor', 250, 'hynix2', 1024, 'nvidia', 128, 'nec cd', 'realtek11122233333', 'windows 7 ultimate 9000', 'nach_ispz', '172.40.96.163'),
+	(2, 20, 'dfgdfg', 'dfgfdg', 44, 'dfg', 456, 'dfgdfg', 34, 'dfgg', 45, 'dfg', 'gdf', 'dfg', 'd', '');
 /*!40000 ALTER TABLE `t_device_pc` ENABLE KEYS */;
 
 
@@ -222,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `t_employees` (
   `fired` tinyint(1) DEFAULT NULL,
   `dof` date DEFAULT NULL,
   PRIMARY KEY (`id_employee`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table xtech.t_employees: ~4 rows (approximately)
 DELETE FROM `t_employees`;
@@ -231,7 +240,9 @@ INSERT INTO `t_employees` (`id_employee`, `id_organization`, `id_branch`, `id_de
 	(1, 1, 2, 1, 2, 'Galushko', 'Dmitro', 'Oleksandrovich', 'cool men', '0664297689', NULL, 'sinelnikovodima@mail.ru', 'jazzz', 111, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
 	(2, 1, 2, 1, 2, 'Monah', 'San', 'Vas', 'the', '0661565648', NULL, 'mon@mail.ru', 'monah', 222, 'USA', '1980-05-15', 'AK 555555', 0, NULL),
 	(3, 1, 2, 2, 3, 'Zaika', 'Lil', 'Sergo', 'girl', '05648548545', NULL, 'mail@mail.ru', 'lilo', 333, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
-	(4, 1, 2, 1, 4, 'Reutova', 'Luda', 'Oleksandrovich', 'the', '0664297689', NULL, 'luda@mail.ru', 'reut', 4444, 'USSR', '1983-04-05', 'AK 156156', 0, NULL);
+	(4, 1, 2, 1, 4, 'Reutova', 'Luda', 'Oleksandrovich', 'the', '0664297689', NULL, 'luda@mail.ru', 'reut', 4444, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
+	(5, NULL, NULL, NULL, NULL, 'a', 'b', 'c', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	(6, NULL, NULL, NULL, NULL, 'aa', 'bb', 'cc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `t_employees` ENABLE KEYS */;
 
 
@@ -250,12 +261,12 @@ CREATE TABLE IF NOT EXISTS `t_organizations` (
   PRIMARY KEY (`id_organization`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_organizations: ~0 rows (approximately)
+-- Dumping data for table xtech.t_organizations: ~2 rows (approximately)
 DELETE FROM `t_organizations`;
 /*!40000 ALTER TABLE `t_organizations` DISABLE KEYS */;
 INSERT INTO `t_organizations` (`id_organization`, `name`, `description`, `telephones`, `emails`, `www`, `address`, `boss`, `buh`, `okpo`) VALUES
-	(1, 'Pens fond of Ukraine', 'Pens fond of Ukraine is very big big big organization', '0664297689, 40692', 'pfumail@mail.com', 'http://www.pfusin.gov.ua', '52500, Sinelnikovo, Mira, 27', 0, 0, '1564676'),
-	(2, 'Obl PFU', 'la la la', '1567895', 'gupfu@obl.ua', NULL, '49000, Dnepropetrovsk', NULL, NULL, '12345678');
+	(1, 'УПФУ в м. Синельниковому та Синельниківському районі', 'Pens fond of Ukraine is very big big big organization', '0664297689, 40692, 40429', 'pfumail44@mail.com', 'http://www.pfusin.gov.ua', '52500, Sinelnikovo, Mira, 27', 3, 2, '15646761'),
+	(2, 'ПФУ в Дніпропетровській області', 'la la la', '1567895', 'gupfu@obl.ua', '', '49000, Dnepropetrovsk', NULL, NULL, '12345678');
 /*!40000 ALTER TABLE `t_organizations` ENABLE KEYS */;
 
 

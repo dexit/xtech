@@ -9,6 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'xTech',
 	'defaultController'=>'main',
+	'language'=>'uk',
 
 
 	// preloading 'log' component
@@ -37,6 +38,13 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+		),
+		'widgetFactory'=>array(
+      		'widgets'=>array(
+      		 'CGridView'=>array(
+      			'summaryText' => 'Записи з {start} по {end}. Всього {count}',            
+      			)
+       		),      	
 		),
 
 		/*'clientScript'=>array(
@@ -110,4 +118,6 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+
+	
 );

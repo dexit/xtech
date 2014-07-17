@@ -1,13 +1,20 @@
 <?php
 /* @var $this DepartmentController */
+/* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Department',
+	'Departments',
+);
+
+$this->menu=array(
+	array('label'=>'Create Department', 'url'=>array('create')),
+	array('label'=>'Manage Department', 'url'=>array('admin')),
 );
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+<h1>Departments</h1>
+
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>

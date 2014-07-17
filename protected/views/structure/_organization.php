@@ -3,7 +3,13 @@
         'id'=>'organization-grid',
         'dataProvider'=>$organization,
         'columns'=>array(
-            'name',        
+            'name',
+            'address',
+            array(
+              'name'=> 'Кількість філій',
+              'value'=>'count($data->branch)',
+              'type'=>'html',
+            ),
             array(
               'class'=>'CButtonColumn',
               'template'=>'{view}{update}{delete}',
