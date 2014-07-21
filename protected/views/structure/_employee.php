@@ -6,7 +6,8 @@
         'columns'=>array(
             'firstname',            
             'lastname',
-            'surname',            
+            'surname', 
+                       
             array(
               'class'=>'CButtonColumn',
               'template'=>'{view}{update}{delete}',
@@ -32,3 +33,7 @@
         ),
     ));
 ?>
+
+<div>
+  <?php echo CHtml::link('Додати співробітника', Yii::app()->createUrl('employee/create')); ?>
+</div>
