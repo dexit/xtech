@@ -24,7 +24,7 @@ class DeviceController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+	/*public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
@@ -43,7 +43,7 @@ class DeviceController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}
+	}*/
 
 	public function actionLoad($id)
 	{

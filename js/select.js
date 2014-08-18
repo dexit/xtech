@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
 	function disable_all(start){
-		console.log(start);
+		//console.log(start);
 		$("select[id^='Device_id_']").each(function(index){
 			if (($.inArray(index, start)) == -1) $(this).attr('disabled', true);
 		});	

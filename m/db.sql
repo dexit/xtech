@@ -11,6 +11,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping structure for table xtech.tbl_migration
+DROP TABLE IF EXISTS `tbl_migration`;
 CREATE TABLE IF NOT EXISTS `tbl_migration` (
   `version` varchar(255) NOT NULL,
   `apply_time` int(11) DEFAULT NULL,
@@ -43,6 +44,7 @@ INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 
 
 -- Dumping structure for table xtech.t_branches
+DROP TABLE IF EXISTS `t_branches`;
 CREATE TABLE IF NOT EXISTS `t_branches` (
   `id_branch` int(2) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -53,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `t_branches` (
   `www` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_branch`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table xtech.t_branches: ~2 rows (approximately)
 DELETE FROM `t_branches`;
@@ -65,6 +67,7 @@ INSERT INTO `t_branches` (`id_branch`, `name`, `id_organization`, `description`,
 
 
 -- Dumping structure for table xtech.t_cabinets
+DROP TABLE IF EXISTS `t_cabinets`;
 CREATE TABLE IF NOT EXISTS `t_cabinets` (
   `id_cabinet` int(2) NOT NULL AUTO_INCREMENT,
   `id_department` int(2) DEFAULT NULL,
@@ -86,6 +89,7 @@ INSERT INTO `t_cabinets` (`id_cabinet`, `id_department`, `number`, `description`
 
 
 -- Dumping structure for table xtech.t_departmens
+DROP TABLE IF EXISTS `t_departmens`;
 CREATE TABLE IF NOT EXISTS `t_departmens` (
   `id_department` int(2) NOT NULL AUTO_INCREMENT,
   `id_branch` int(2) DEFAULT NULL,
@@ -95,20 +99,20 @@ CREATE TABLE IF NOT EXISTS `t_departmens` (
   `emails` varchar(500) DEFAULT NULL,
   `boss` int(2) DEFAULT NULL,
   PRIMARY KEY (`id_department`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_departmens: ~4 rows (approximately)
+-- Dumping data for table xtech.t_departmens: ~3 rows (approximately)
 DELETE FROM `t_departmens`;
 /*!40000 ALTER TABLE `t_departmens` DISABLE KEYS */;
 INSERT INTO `t_departmens` (`id_department`, `id_branch`, `name`, `description`, `telephones`, `emails`, `boss`) VALUES
 	(1, 2, 'ispz', 'ispz department', '40692', NULL, NULL),
 	(2, 2, 'zagal', 'zagal department', '41162', NULL, NULL),
-	(3, 3, 'zvern', 'zvern department', '43045', NULL, NULL),
-	(4, 3, 'Призначення', '', '', '', 5);
+	(3, 3, 'zvern', 'zvern department', '43045', NULL, NULL);
 /*!40000 ALTER TABLE `t_departmens` ENABLE KEYS */;
 
 
 -- Dumping structure for table xtech.t_devices
+DROP TABLE IF EXISTS `t_devices`;
 CREATE TABLE IF NOT EXISTS `t_devices` (
   `id_device` int(11) NOT NULL AUTO_INCREMENT,
   `id_organization` int(2) DEFAULT NULL,
@@ -151,6 +155,7 @@ INSERT INTO `t_devices` (`id_device`, `id_organization`, `id_branch`, `id_depart
 
 
 -- Dumping structure for table xtech.t_devices_types
+DROP TABLE IF EXISTS `t_devices_types`;
 CREATE TABLE IF NOT EXISTS `t_devices_types` (
   `id_device_type` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
@@ -178,6 +183,7 @@ INSERT INTO `t_devices_types` (`id_device_type`, `name`, `description`) VALUES
 
 
 -- Dumping structure for table xtech.t_device_pc
+DROP TABLE IF EXISTS `t_device_pc`;
 CREATE TABLE IF NOT EXISTS `t_device_pc` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_device_pc` int(11) DEFAULT NULL,
@@ -210,6 +216,7 @@ INSERT INTO `t_device_pc` (`id`, `id_device_pc`, `mb`, `cpu_name`, `cpu_p`, `hdd
 
 
 -- Dumping structure for table xtech.t_employees
+DROP TABLE IF EXISTS `t_employees`;
 CREATE TABLE IF NOT EXISTS `t_employees` (
   `id_employee` int(11) NOT NULL AUTO_INCREMENT,
   `id_organization` int(2) DEFAULT NULL,
@@ -247,6 +254,7 @@ INSERT INTO `t_employees` (`id_employee`, `id_organization`, `id_branch`, `id_de
 
 
 -- Dumping structure for table xtech.t_organizations
+DROP TABLE IF EXISTS `t_organizations`;
 CREATE TABLE IF NOT EXISTS `t_organizations` (
   `id_organization` int(2) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -271,6 +279,7 @@ INSERT INTO `t_organizations` (`id_organization`, `name`, `description`, `teleph
 
 
 -- Dumping structure for table xtech.t_users
+DROP TABLE IF EXISTS `t_users`;
 CREATE TABLE IF NOT EXISTS `t_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(128) DEFAULT NULL,

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	//tree
 	$('.Expand').live('click', function(e){
 		if ($(this).parent().hasClass("ExpandOpen")) {
 			$(this).parent().removeClass("ExpandOpen").addClass("ExpandClosed");
@@ -218,6 +218,9 @@ $(document).ready(function(){
 		});
 	}
 
+	//tree<end>
+
+	//On create change lists
 	$('body').on('click','a[id^="branch-"]',function(){
 		$.ajax({'url':'/index.php?r=branch/show&id='+this.id.split('-')[1],
 				'cache':false,	
@@ -270,5 +273,7 @@ $(document).ready(function(){
 			}).ajaxStop(function(){
 				$(this).hide()
 			});
+
+	//On create change lists<end>
 
 });
