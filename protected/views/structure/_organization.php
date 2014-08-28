@@ -2,6 +2,7 @@
     $this->widget('zii.widgets.grid.CGridView', array(
         'id'=>'organization-grid',
         'dataProvider'=>$organization,
+        //'ajaxUpdate'=>'true',
         'columns'=>array(
             'name',
             'address',
@@ -28,7 +29,7 @@
                     'label'=>'Видалити',
                     'imageUrl'=>Yii::app()->request->baseUrl.'/images/delete.png',
                     'url'=>'Yii::app()->createUrl("organization/delete", array("id"=>$data->id_organization))',
-                    'deleteConfirmation'=>"js:'Ви дійсно бажаєте видалити цей запис?'",
+                    'deleteConfirmation'=>"js:'Ви дійсно бажаєте видалити цей запис? Це призведе до втрати всіх п\'овязаних даних'",
                   ),
                 ),
             ),
@@ -39,3 +40,4 @@
 <div>
   <?php echo CHtml::link('Додати організацію', Yii::app()->createUrl('organization/create')); ?>
 </div>
+<hr>

@@ -150,12 +150,11 @@ class OrganizationController extends Controller
             		$transaction->rollback();
             		$error = $e->getMessage();
         }
-		
-		
+
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		/*if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));*/
-			$this->redirect('?r=structure/index');
+		if(!isset($_GET['ajax']))
+			//$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		$this->redirect(Yii::app()->createUrl('structure/index'));
 
 	}
 
@@ -219,7 +218,51 @@ class OrganizationController extends Controller
 
 		$criteria = new CDbCriteria();
 		$criteria->addCondition('id_organization=:id_organization');
+        //$criteria->addCondition('id_organization=:id_organization');
 		$criteria->params = array(':id_organization'=>$id_organization);
+
+        /*//$criteria->together = true;
+        //$criteria->with = array('t_departmens','t_branches','t_cabinets','t_employees');
+        $criteria->with = array('Department d','Branch b','Cabinet c','Employee e');
+        $criteria->condition('t_branches.id_organization=:id_organization');
+
+        $criteria->compare('t_departmens.id_branch','t_branches.id_branch');
+        $criteria->compare('t_cabinets.id_department','t_departmens.id_department');
+        $criteria->compare('t_employees.id_cabinet', 't_cabinets.id_cabinet');
+        $criteria->compare('t_devices.id_employee','t_employees.id_employee');
+
+        $criteria->params = array(':id_organization'=>$id_organization);*/
+
+        /*$criteria->select = '*';
+        $criteria->with = array(
+            'Department'=>array(
+                'together'=>true,
+                'condition'=>'id_branch = t_branches.id_branch',
+            ),
+            'Cabinet'=>array(
+                'together'=>true,
+                'condition'=>'id_department = t_departmens.id_department',
+            ),
+            'Employee'=>array(
+                'together'=>true,
+                'condition'=>'id_cabinet = t_cabinets.id_cabinet',
+            ),
+            'Organization'=>array(
+                'together'=>true,
+                'condition'=>'id_organization = '.$id_organization,
+            ),
+        );*/
+       // var_dump($criteria);
+        //break;
+
+        /*$criteria->select('t_devices.*');
+        $criteria->from('t_departmens, t_branches, t_cabinets, t_employees, t_devices');
+        $criteria->condition('t_branches.id_organization = 1
+            and t_departmens.id_branch = t_branches.id_branch
+            and t_cabinets.id_department = t_departmens.id_department
+            and t_employees.id_cabinet = t_cabinets.id_cabinet
+            and t_devices.id_employee = t_employees.id_employee
+        ');*/
 
 		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
 

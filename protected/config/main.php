@@ -9,7 +9,8 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'xTech',
 	'defaultController'=>'main',
-	'language'=>'uk',
+	//'language'=>'uk',
+    'language'=>'en',
 
 
 	// preloading 'log' component

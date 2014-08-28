@@ -34,7 +34,8 @@ class MainController extends Controller
 		$dev = new Device('search');
 		$dev->unsetAttributes();
 
-		$rel = array('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee');
+		//$rel = array('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee');
+        $rel = array('devicepc','devicetype','employee');
 		$devices = $dev->with($rel)->findAll();
 
 		$dataProvider = new CActiveDataProvider('Device', array('pagination'=>array(

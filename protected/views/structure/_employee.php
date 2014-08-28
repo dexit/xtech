@@ -1,13 +1,20 @@
 <?php
+    //var_dump($employee->data[0]->cabinet->number);
     $this->widget('zii.widgets.grid.CGridView', array(
         'id'=>'employee-grid',
         'dataProvider'=>$employee,
-        //'filter'=>$branch,
         'columns'=>array(
             'firstname',            
             'lastname',
-            'surname', 
-                       
+            'surname',
+            array(
+                'name' => 'Кабінет',
+                //'value' => '$data->cabinet->number',
+                //'value' => '$data->cabinet->number',//todo
+                //'value' => 'count($data->cabinet)',
+                //'value' => '$data->getRelated(\'cabinet\')->number',
+                'type' => 'html',
+            ),
             array(
               'class'=>'CButtonColumn',
               'template'=>'{view}{update}{delete}',

@@ -5,22 +5,26 @@
             array(
               'name' => 'Организация',
               'type' => 'raw',
-              'value' => '$data->organization->name',
+              //'value' => '$data->organization->name',
+              'value' => '$data->employee->cabinet->department->branch->organization->name',
             ),
             array(
               'name' => 'Подразделение',
               'type' => 'raw',
-              'value' => '$data->branch->name',
+              //'value' => '$data->branch->name',
+              'value' => '$data->employee->cabinet->department->branch->name',
             ),
             array(
               'name' => 'Отдел',
               'type' => 'raw',
-              'value' => '$data->department->name',
+              //'value' => '$data->department->name',
+              'value' => '$data->employee->cabinet->department->name',
             ),
             array(
               'name' => 'Кабинет',
               'type' => 'raw',
-              'value' => '$data->cabinet->number',
+              //'value' => '$data->cabinet->number',
+              'value' => '$data->employee->cabinet->number',
             ),
             array(
               'name' => 'Сотрудник',

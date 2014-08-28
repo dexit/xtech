@@ -63,6 +63,10 @@ class Employee extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_employee'),
+            'cabinet' => array(self::BELONGS_TO, 'Cabinet', 'id_cabinet'),
+            'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
+            'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
+            'oprganization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
 		);
 	}
 

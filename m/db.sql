@@ -267,13 +267,13 @@ CREATE TABLE IF NOT EXISTS `t_organizations` (
   `buh` int(10) DEFAULT NULL,
   `okpo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_organization`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table xtech.t_organizations: ~2 rows (approximately)
 DELETE FROM `t_organizations`;
 /*!40000 ALTER TABLE `t_organizations` DISABLE KEYS */;
 INSERT INTO `t_organizations` (`id_organization`, `name`, `description`, `telephones`, `emails`, `www`, `address`, `boss`, `buh`, `okpo`) VALUES
-	(1, 'УПФУ в м. Синельниковому та Синельниківському районі', 'Pens fond of Ukraine is very big big big organization', '0664297689, 40692, 40429', 'pfumail44@mail.com', 'http://www.pfusin.gov.ua', '52500, Sinelnikovo, Mira, 27', 3, 2, '15646761'),
+	(1, 'УПФУ в м. Синельниковому та Синельниківському районі', 'Pens fond of Ukraine is very big big big organization111111111', '0664297689, 40692, 40429', 'pfumail44@mail.com', 'http://www.pfusin.gov.ua', '52500, Sinelnikovo, Mira, 27', 3, 2, '15646761'),
 	(2, 'ПФУ в Дніпропетровській області', 'la la la', '1567895', 'gupfu@obl.ua', '', '49000, Dnepropetrovsk', NULL, NULL, '12345678');
 /*!40000 ALTER TABLE `t_organizations` ENABLE KEYS */;
 
