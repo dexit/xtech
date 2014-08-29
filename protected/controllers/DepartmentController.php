@@ -110,17 +110,10 @@ class DepartmentController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		//$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		/*if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));*/
 		$transaction = Yii::app()->db->beginTransaction();
 		
 		try {									
-			//$branch = $this->loadModel($id);
-				
-			$department = $this->loadModel($id);				
+			$department = $this->loadModel($id);
 			$cabinets = $department->cabinet;
 				if ($cabinets) {
 					foreach ($cabinets as $cabinet){						
@@ -217,13 +210,7 @@ class DepartmentController extends Controller
 
 	public function actionShow($id)
 	{
-		$id_department = (int)$id;
-
-		$criteria = new CDbCriteria();
-		$criteria->addCondition('id_department=:id_department');
-		$criteria->params = array(':id_department'=>$id_department);
-	
-		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+        $dataProvider = DevShowGrid::getData('t_departmens', (int)$id);
 
 		if (Yii::app()->request->isAjaxRequest) {
       		$this->renderPartial('//main/_device', array(

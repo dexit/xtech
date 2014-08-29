@@ -32,5 +32,3 @@
 <div id="loader"><span>Загрузка...</span></div>
 
 <div style="clear:both;"></div>
-
-

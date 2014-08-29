@@ -115,10 +115,6 @@ INSERT INTO `t_departmens` (`id_department`, `id_branch`, `name`, `description`,
 DROP TABLE IF EXISTS `t_devices`;
 CREATE TABLE IF NOT EXISTS `t_devices` (
   `id_device` int(11) NOT NULL AUTO_INCREMENT,
-  `id_organization` int(2) DEFAULT NULL,
-  `id_branch` int(2) DEFAULT NULL,
-  `id_department` int(2) DEFAULT NULL,
-  `id_cabinet` int(2) DEFAULT NULL,
   `id_employee` int(2) DEFAULT NULL,
   `id_type` int(2) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -138,19 +134,19 @@ CREATE TABLE IF NOT EXISTS `t_devices` (
 -- Dumping data for table xtech.t_devices: ~12 rows (approximately)
 DELETE FROM `t_devices`;
 /*!40000 ALTER TABLE `t_devices` DISABLE KEYS */;
-INSERT INTO `t_devices` (`id_device`, `id_organization`, `id_branch`, `id_department`, `id_cabinet`, `id_employee`, `id_type`, `name`, `description`, `inv_number`, `sn`, `year`, `end_varantly_yesr`, `service`, `expluatation`, `expluatation_data`, `private`, `break`) VALUES
-	(1, 1, 2, 1, 2, 1, 2, 'bms', 'desc 1', 1130100, 'AA100', 2008, 2009, 'dervice BMS1', 1, '2008-12-14', 0, 0),
-	(2, 1, 2, 1, 2, 1, 1, 'lg flatroneeeee', 'descwefwefwef', 1130101, 'BB100', 2008, 2009, 'dervice LG', 1, '2008-12-14', 0, 0),
-	(4, 1, 2, 2, 4, 4, 3, 'asus', 'bad book', 10480098, 'sa1564785112', 2013, 2015, 'asus', 1, '2013-10-16', 0, 0),
-	(5, 1, 2, 1, 2, 1, 11, 'a4tech', '', 10450085, 'wefwefwef', 2012, 2012, '', 1, '2011-07-08', 0, 0),
-	(6, 1, 2, 2, 3, 3, 6, 'zerox a3', 'regergerg', 2147483647, '456456456', 2012, 2013, 'rthrtht', 1, '2013-07-31', 0, 0),
-	(7, 1, 2, 2, 3, 3, 2, 'bms', 'weqdwefwe', 45345, 'trhtrh', 2014, 2019, 'rthtrhtrh', 1, '2014-07-02', 0, 0),
-	(8, 1, 2, 2, 3, 3, 2, 'bms', 'ewfwefwef', 45345, '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
-	(9, 1, 2, 2, 3, 3, 2, 'bms', 'ewfwefwef', 45345, '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
-	(20, 1, 2, 2, 3, 3, 2, 'dfgdfg', 'dfgfg', 56456, '456456', 2014, 2019, '4564545fbdb', 0, '0000-00-00', 0, 0),
-	(22, 1, 2, 1, 2, 2, 1, 'lg', 'descr', 1048002, 'df8845654', 2010, 2011, 'lg sc', 1, '2010-01-01', 0, 0),
-	(23, 1, 2, 1, 2, 2, 11, 'a4tech', 'descr', NULL, '', 2010, 2010, '', 1, '0000-00-00', 0, 0),
-	(24, 1, 2, 1, 2, 2, 12, 'a4tech', 'descr', NULL, '', 2010, 2010, '', 1, '0000-00-00', 0, 0);
+INSERT INTO `t_devices` (`id_device`, `id_employee`, `id_type`, `name`, `description`, `inv_number`, `sn`, `year`, `end_varantly_yesr`, `service`, `expluatation`, `expluatation_data`, `private`, `break`) VALUES
+	(1, 1, 2, 'bms', 'desc 1', 1130100, 'AA100', 2008, 2009, 'dervice BMS1', 1, '2008-12-14', 0, 0),
+	(2, 1, 1, 'lg flatroneeeee', 'descwefwefwef', 1130101, 'BB100', 2008, 2009, 'dervice LG', 1, '2008-12-14', 0, 0),
+	(4, 4, 3, 'asus', 'bad book', 10480098, 'sa1564785112', 2013, 2015, 'asus', 1, '2013-10-16', 0, 0),
+	(5, 1, 11, 'a4tech', '', 10450085, 'wefwefwef', 2012, 2012, '', 1, '2011-07-08', 0, 0),
+	(6, 3, 6, 'zerox a3', 'regergerg', 2147483647, '456456456', 2012, 2013, 'rthrtht', 1, '2013-07-31', 0, 0),
+	(7, 3, 2, 'bms', 'weqdwefwe', 45345, 'trhtrh', 2014, 2019, 'rthtrhtrh', 1, '2014-07-02', 0, 0),
+	(8, 3, 2, 'bms', 'ewfwefwef', 45345, '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
+	(9, 3, 2, 'bms', 'ewfwefwef', 45345, '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
+	(20, 3, 2, 'dfgdfg', 'dfgfg', 56456, '456456', 2014, 2019, '4564545fbdb', 0, '0000-00-00', 0, 0),
+	(22, 2, 1, 'lg', 'descr', 1048002, 'df8845654', 2010, 2011, 'lg sc', 1, '2010-01-01', 0, 0),
+	(23, 2, 11, 'a4tech', 'descr', NULL, '', 2010, 2010, '', 1, '0000-00-00', 0, 0),
+	(24, 2, 12, 'a4tech', 'descr', NULL, '', 2010, 2010, '', 1, '0000-00-00', 0, 0);
 /*!40000 ALTER TABLE `t_devices` ENABLE KEYS */;
 
 
@@ -219,9 +215,6 @@ INSERT INTO `t_device_pc` (`id`, `id_device_pc`, `mb`, `cpu_name`, `cpu_p`, `hdd
 DROP TABLE IF EXISTS `t_employees`;
 CREATE TABLE IF NOT EXISTS `t_employees` (
   `id_employee` int(11) NOT NULL AUTO_INCREMENT,
-  `id_organization` int(2) DEFAULT NULL,
-  `id_branch` int(2) DEFAULT NULL,
-  `id_department` int(2) DEFAULT NULL,
   `id_cabinet` int(2) DEFAULT NULL,
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
@@ -240,16 +233,16 @@ CREATE TABLE IF NOT EXISTS `t_employees` (
   PRIMARY KEY (`id_employee`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_employees: ~4 rows (approximately)
+-- Dumping data for table xtech.t_employees: ~6 rows (approximately)
 DELETE FROM `t_employees`;
 /*!40000 ALTER TABLE `t_employees` DISABLE KEYS */;
-INSERT INTO `t_employees` (`id_employee`, `id_organization`, `id_branch`, `id_department`, `id_cabinet`, `firstname`, `lastname`, `surname`, `description`, `telephones`, `post`, `email`, `login`, `tab_number`, `home_address`, `dob`, `pasp`, `fired`, `dof`) VALUES
-	(1, 1, 2, 1, 2, 'Galushko', 'Dmitro', 'Oleksandrovich', 'cool men', '0664297689', NULL, 'sinelnikovodima@mail.ru', 'jazzz', 111, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
-	(2, 1, 2, 1, 2, 'Monah', 'San', 'Vas', 'the', '0661565648', NULL, 'mon@mail.ru', 'monah', 222, 'USA', '1980-05-15', 'AK 555555', 0, NULL),
-	(3, 1, 2, 2, 3, 'Zaika', 'Lil', 'Sergo', 'girl', '05648548545', NULL, 'mail@mail.ru', 'lilo', 333, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
-	(4, 1, 2, 1, 4, 'Reutova', 'Luda', 'Oleksandrovich', 'the', '0664297689', NULL, 'luda@mail.ru', 'reut', 4444, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
-	(5, NULL, NULL, NULL, NULL, 'a', 'b', 'c', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-	(6, NULL, NULL, NULL, NULL, 'aa', 'bb', 'cc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `t_employees` (`id_employee`, `id_cabinet`, `firstname`, `lastname`, `surname`, `description`, `telephones`, `post`, `email`, `login`, `tab_number`, `home_address`, `dob`, `pasp`, `fired`, `dof`) VALUES
+	(1, 2, 'Galushko', 'Dmitro', 'Oleksandrovich', 'cool men', '0664297689', NULL, 'sinelnikovodima@mail.ru', 'jazzz', 111, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
+	(2, 2, 'Monah', 'San', 'Vas', 'the', '0661565648', NULL, 'mon@mail.ru', 'monah', 222, 'USA', '1980-05-15', 'AK 555555', 0, NULL),
+	(3, 3, 'Zaika', 'Lil', 'Sergo', 'girl', '05648548545', NULL, 'mail@mail.ru', 'lilo', 333, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
+	(4, 4, 'Reutova', 'Luda', 'Oleksandrovich', 'the', '0664297689', NULL, 'luda@mail.ru', 'reut', 4444, 'USSR', '1983-04-05', 'AK 156156', 0, NULL),
+	(5, NULL, 'a', 'b', 'c', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	(6, NULL, 'aa', 'bb', 'cc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `t_employees` ENABLE KEYS */;
 
 
@@ -267,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `t_organizations` (
   `buh` int(10) DEFAULT NULL,
   `okpo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_organization`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table xtech.t_organizations: ~2 rows (approximately)
 DELETE FROM `t_organizations`;

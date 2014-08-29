@@ -185,13 +185,15 @@ class CabinetController extends Controller
 
 	public function actionShow($id)
 	{
-		$id_cabinet = (int)$id;
+		/*$id_cabinet = (int)$id;
 
 		$criteria = new CDbCriteria();
 		$criteria->addCondition('id_cabinet=:id_cabinet');
 		$criteria->params = array(':id_cabinet'=>$id_cabinet);
 	
-		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));*/
+
+        $dataProvider = DevShowGrid::getData('t_cabinets', (int)$id);
 
 		if (Yii::app()->request->isAjaxRequest) {
       		$this->renderPartial('//main/_device', array(

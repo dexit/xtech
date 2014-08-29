@@ -11328,3 +11328,1000 @@ Stack trace:
 REQUEST_URI=/index.php?r=dev/show&id=1&_=1409230965259
 HTTP_REFERER=http://xtech/index.php
 ---
+2014/08/29 10:47:48 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "t_departmens" is not defined in active record class "Device".' in C:\WebOpenServer\domains\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveFinder.php(296): CActiveFinder->buildJoinTree(Object(CJoinElement), 't_departmens')
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Device), Array)
+#3 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getActiveFinder(Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\WebOpenServer\domains\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\WebOpenServer\domains\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\WebOpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(147): CGridView->init()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(94): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#14 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#15 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#16 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(55): CController->renderPartial('//main/_device', Array, false, true)
+#17 [internal function]: DevController->actionShow('1')
+#18 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#19 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#22 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#24 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#25 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409294868126
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:38:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2).
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (26)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:38:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(26): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: DevController->actionShow('1')
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409297896923
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:39:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2).
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (26)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:39:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(26): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: DevController->actionShow('1')
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409297989767
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:43:31 [error] [php] Array to string conversion (C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:275)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\schema\CDbCommandBuilder.php(100): CMysqlCommandBuilder->bindValues()
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1350): CMysqlCommandBuilder->createFindCommand()
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1470): Department->query()
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(26): Department->findAll()
+#4 unknown(0): DevController->actionShow()
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409298211562
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (26)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:44:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2).
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (26)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:44:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(26): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: DevController->actionShow('1')
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409298242303
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:44:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2).
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (27)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:44:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(27): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: DevController->actionShow('1')
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409298273739
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:45:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2).
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (27)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:45:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `t_departmens` `t` WHERE id_branch IN (:ycp1, :ycp2)' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(27): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: DevController->actionShow('1')
+#5 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#12 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409298322325
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:57:22 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 't_devices'. The SQL statement executed was: SELECT `t_devices`.*
+FROM `t_departmens`, `t_branches`, `t_cabinets`, `t_employees`, `t_devices` ``
+WHERE t_branches.id_organization=:id_organization
+                    AND t_departmens.id_branch = t_branches.id_branch
+                    AND t_cabinets.id_department = t_departmens.id_department
+                    AND t_employees.id_cabinet = t_cabinets.id_cabinet
+                    AND t_devices.id_employee = t_employees.id_employee.
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (47)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 11:57:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 't_devices'. The SQL statement executed was: SELECT `t_devices`.*
+FROM `t_departmens`, `t_branches`, `t_cabinets`, `t_employees`, `t_devices` ``
+WHERE t_branches.id_organization=:id_organization
+                    AND t_departmens.id_branch = t_branches.id_branch
+                    AND t_cabinets.id_department = t_departmens.id_department
+                    AND t_employees.id_cabinet = t_cabinets.id_cabinet
+                    AND t_devices.id_employee = t_employees.id_employee' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(47): CDbCommand->queryRow()
+#2 [internal function]: DevController->actionShow('1')
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DevController), Array)
+#4 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DevController), Object(ReflectionMethod), Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#9 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('dev/show')
+#10 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409299042170
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 11:58:45 [error] [php] Undefined variable: dataProvider (C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php:52)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409299125034
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:03:22 [error] [php] Undefined variable: dataProvider (C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php:52)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409299402428
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (52)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:04:28 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#1 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CDataColumn->renderDataCell()
+#2 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(94): DevController->widget()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): DevController->renderInternal()
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): DevController->renderFile()
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(56): DevController->renderPartial()
+#14 unknown(0): DevController->actionShow()
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#19 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#20 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409299467723
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (94)
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (56)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:06:43 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#1 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CDataColumn->renderDataCell()
+#2 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(94): DevController->widget()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): DevController->renderInternal()
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): DevController->renderFile()
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(56): DevController->renderPartial()
+#14 unknown(0): DevController->actionShow()
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#19 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#20 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409299603217
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (94)
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (56)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:08:26 [error] [php] Trying to get property of non-object (C:\WebOpenServer\domains\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#1 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(616): CDataColumn->renderDataCell()
+#2 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow()
+#3 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#4 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(135): CGridView->renderContent()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(94): DevController->widget()
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): DevController->renderInternal()
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): DevController->renderFile()
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php(60): DevController->renderPartial()
+#14 unknown(0): DevController->actionShow()
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#19 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#20 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=1&_=1409299705980
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (94)
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (60)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:14:11 [error] [php] Undefined variable: id_devices (C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php:55)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=2&_=1409300051863
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (55)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:19:57 [error] [php] Undefined variable: id_devices (C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php:56)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): DevController->runAction()
+#3 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DevController->runActionWithFilters()
+#4 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DevController->run()
+#5 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=dev/show&id=2&_=1409300397289
+in C:\WebOpenServer\domains\xtech\protected\controllers\DevController.php (56)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:31:02 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_branch' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `t_devices` `t` WHERE id_branch=:id_branch.
+in C:\WebOpenServer\domains\xtech\protected\views\main\_device.php (94)
+in C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php (227)
+in C:\WebOpenServer\domains\xtech\index.php (13)
+2014/08/29 12:31:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_branch' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `t_devices` `t` WHERE id_branch=:id_branch' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\WebOpenServer\domains\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\WebOpenServer\domains\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\WebOpenServer\domains\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\WebOpenServer\domains\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\WebOpenServer\domains\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\WebOpenServer\domains\yii\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#8 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(147): CGridView->init()
+#9 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\WebOpenServer\domains\xtech\protected\views\main\_device.php(94): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#12 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#13 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#14 C:\WebOpenServer\domains\xtech\protected\controllers\BranchController.php(227): CController->renderPartial('//main/_device', Array, false, true)
+#15 [internal function]: BranchController->actionShow('2')
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BranchController), Array)
+#17 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BranchController), Object(ReflectionMethod), Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('show')
+#27 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('branch/show')
+#28 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/index.php?r=branch/show&id=2&_=1409301062293
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 16:11:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT `t_devices`.*
+FROM `t_devices`, `t_employees`, `t_cabinets`, `t_departmens`
+WHERE t_departmens.id_branch=:id_branch
+                    AND t_cabinets.id_department = t_departmens.id_department
+                    AND t_employees.id_cabinet = t_cabinets.id_cabinet
+                    AND t_devices.id_employee = t_employees.id_employee.
+in C:\WebOpenServer\domains\xtech\protected\components\DevShowGrid.php (68)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (38)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (48)
+2014/08/29 16:11:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT `t_devices`.*
+FROM `t_devices`, `t_employees`, `t_cabinets`, `t_departmens`
+WHERE t_departmens.id_branch=:id_branch
+                    AND t_cabinets.id_department = t_departmens.id_department
+                    AND t_employees.id_cabinet = t_cabinets.id_cabinet
+                    AND t_devices.id_employee = t_employees.id_employee' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\xtech\protected\components\DevShowGrid.php(68): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(38): DevShowGrid::getData('t_branches', 1)
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#4 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(48): CController->render('index', Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php
+---
+2014/08/29 16:11:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT `t_devices`.*
+FROM `t_devices`, `t_employees`, `t_cabinets`, `t_departmens`
+WHERE t_departmens.id_branch=:id_branch
+                    AND t_cabinets.id_department = t_departmens.id_department
+                    AND t_employees.id_cabinet = t_cabinets.id_cabinet
+                    AND t_devices.id_employee = t_employees.id_employee.
+in C:\WebOpenServer\domains\xtech\protected\components\DevShowGrid.php (68)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (38)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (48)
+2014/08/29 16:11:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT `t_devices`.*
+FROM `t_devices`, `t_employees`, `t_cabinets`, `t_departmens`
+WHERE t_departmens.id_branch=:id_branch
+                    AND t_cabinets.id_department = t_departmens.id_department
+                    AND t_employees.id_cabinet = t_cabinets.id_cabinet
+                    AND t_devices.id_employee = t_employees.id_employee' in C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\WebOpenServer\domains\xtech\protected\components\DevShowGrid.php(68): CDbCommand->queryAll()
+#2 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(38): DevShowGrid::getData('t_branches', 2)
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#4 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(48): CController->render('index', Array)
+#8 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php
+---
+2014/08/29 16:48:16 [error] [exception.CException] exception 'CException' with message 'Property "Device.organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('organization')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\view.php(32): CActiveRecord->__get('organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(68): CController->render('view', Array)
+#7 [internal function]: DeviceController->actionView('1')
+#8 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/view')
+#20 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=device/view&id=1
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 16:49:43 [error] [exception.CException] exception 'CException' with message 'Property "Device.branch" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('branch')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\view.php(37): CActiveRecord->__get('branch')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(68): CController->render('view', Array)
+#7 [internal function]: DeviceController->actionView('1')
+#8 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/view')
+#20 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=device/view&id=1
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 16:51:07 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form_pc.php(22): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(23): CController->renderPartial('_form_pc', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('1')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=1
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:08:50 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(23): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:13:40 [error] [php] Missing argument 2 for CHtml::label(), called in C:\WebOpenServer\domains\xtech\protected\views\device\_form.php on line 19 and defined (C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php:562)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): DeviceController->renderInternal()
+#1 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): DeviceController->renderFile()
+#2 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): DeviceController->renderPartial()
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#4 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): DeviceController->renderInternal()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): DeviceController->renderFile()
+#6 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): DeviceController->renderPartial()
+#7 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): DeviceController->render()
+#8 unknown(0): DeviceController->actionUpdate()
+#9 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): DeviceController->runAction()
+#13 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): DeviceController->filterAccessControl()
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): DeviceController->runActionWithFilters()
+#19 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): DeviceController->run()
+#20 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\WebOpenServer\domains\xtech\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=device/update&id=5
+in C:\WebOpenServer\domains\xtech\protected\views\device\_form.php (19)
+in C:\WebOpenServer\domains\xtech\protected\views\device\update.php (25)
+in C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php (154)
+2014/08/29 17:14:40 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(23): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:16:51 [error] [exception.CException] exception 'CException' with message 'Property "Branch.jrganization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('jrganization')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(24): CActiveRecord->__get('jrganization')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:17:02 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Device), 'id_organization')
+#3 C:\WebOpenServer\domains\yii\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Device), 'id_organization', Array, Array)
+#4 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(27): CActiveForm->dropDownList(Object(Device), 'id_organization', Array, Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#14 [internal function]: DeviceController->actionUpdate('5')
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#26 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#27 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:18:50 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Device), 'id_organization')
+#3 C:\WebOpenServer\domains\yii\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Device), 'id_organization', Array, Array)
+#4 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(27): CActiveForm->dropDownList(Object(Device), 'id_organization', Array, Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#14 [internal function]: DeviceController->actionUpdate('5')
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#26 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#27 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:18:57 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Device), 'id_organization')
+#3 C:\WebOpenServer\domains\yii\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Device), 'id_organization', Array, Array)
+#4 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(27): CActiveForm->dropDownList(Object(Device), 'id_organization', Array, Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#14 [internal function]: DeviceController->actionUpdate('5')
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#26 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#27 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:19:34 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_organization" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_organization')
+#1 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('id_organization')
+#2 C:\WebOpenServer\domains\yii\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Device), 'id_organization')
+#3 C:\WebOpenServer\domains\yii\framework\web\widgets\CActiveForm.php(847): CHtml::activeDropDownList(Object(Device), 'id_organization', Array, Array)
+#4 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(27): CActiveForm->dropDownList(Object(Device), 'id_organization', Array, Array)
+#5 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#9 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#10 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#12 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#13 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#14 [internal function]: DeviceController->actionUpdate('5')
+#15 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#16 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#26 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#27 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:20:19 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_branch" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_branch')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(37): CActiveRecord->__get('id_branch')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:20:41 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_branch" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_branch')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(37): CActiveRecord->__get('id_branch')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:21:36 [error] [exception.CException] exception 'CException' with message 'Property "Organization.id_branch" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_branch')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(37): CActiveRecord->__get('id_branch')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:21:53 [error] [exception.CException] exception 'CException' with message 'Property "Organization.id_branch" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_branch')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(37): CActiveRecord->__get('id_branch')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:22:08 [error] [exception.CException] exception 'CException' with message 'Property "Device.id_department" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_department')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(49): CActiveRecord->__get('id_department')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---
+2014/08/29 17:24:20 [error] [exception.CException] exception 'CException' with message 'Property "Organization.id_department" is not defined.' in C:\WebOpenServer\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_department')
+#1 C:\WebOpenServer\domains\xtech\protected\views\device\_form.php(49): CActiveRecord->__get('id_department')
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#5 C:\WebOpenServer\domains\xtech\protected\views\device\update.php(25): CController->renderPartial('_form', Array)
+#6 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require('C:\WebOpenServe...')
+#7 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\WebOpenServe...', Array, true)
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\WebOpenServe...', Array, true)
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\WebOpenServer\domains\xtech\protected\controllers\DeviceController.php(154): CController->render('update', Array)
+#11 [internal function]: DeviceController->actionUpdate('5')
+#12 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DeviceController), Array)
+#13 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DeviceController), Object(ReflectionMethod), Array)
+#14 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('device/update')
+#24 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php?r=device/update&id=5
+HTTP_REFERER=http://xtech/index.php
+---

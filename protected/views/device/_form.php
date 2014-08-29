@@ -3,16 +3,6 @@
 /* @var $model Device */
 /* @var $form CActiveForm */
 Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_update.js');
-/*Yii::app()->clientScript->registerScript('search', "
-    $.ajax({
-                    url: '".Yii::app()->createUrl("device/changelist")."',
-                    data:'tid='+tname,
-                    success: function(){
-                      alert('success');
-                      return false;
-                    }
-               });
-");*/
 ?>
 
 <div class="form">
@@ -25,64 +15,65 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_organization'); ?>
-		<?php //echo $form->textField($model,'id_organization'); ?>
-		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
-		<?php echo $form->dropDownList($model,'id_organization',$list, array(
+		<?php echo $form->labelEx($model->employee->cabinet->department->branch->organization,'id_organization'); ?>
+        <?php //echo CHtml::label(CHtml::encode('Організація'),'id_organization'); ?>
+		<?php $list = CHtml::listData(Organization::model()->findAll(),
+                                                        'id_organization', 'name');?>
+		<?php echo $form->dropDownList($model->employee->cabinet->department->branch->organization,'id_organization',$list, array(
 									 'options'=>array(
-												$model->id_organization=>array(
+												$model->employee->cabinet->department->branch->organization->id_organization=>array(
 															'selected'=>'selected')),
 									 	
 												)); ?>
-		<?php echo $form->error($model,'id_organization'); ?>
+		<?php echo $form->error($model->employee->cabinet->department->branch->organization,'id_organization'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_branch'); ?>
+		<?php echo $form->labelEx($model->employee->cabinet->department->branch,'id_branch'); ?>
 		<?php //echo $form->textField($model,'id_branch'); ?>
 		<?php $list = CHtml::listData(Branch::model()->findAll(),'id_branch', 'name');?>
-		<?php echo $form->dropDownList($model,'id_branch',$list, array(
+		<?php echo $form->dropDownList($model->employee->cabinet->department->branch,'id_branch',$list, array(
 									'options'=>array(
-												$model->id_branch=>array(
+												$model->employee->cabinet->department->branch->id_branch=>array(
 															'selected'=>'selected')))
 										); ?>
-		<?php echo $form->error($model,'id_branch'); ?>
+		<?php echo $form->error($model->employee->cabinet->department->branch,'id_branch'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_department'); ?>
+		<?php echo $form->labelEx($model->employee->cabinet->department,'id_department'); ?>
 		<?php //echo $form->textField($model,'id_department'); ?>
 		<?php $list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');?>
-		<?php echo $form->dropDownList($model,'id_department',$list, array(
+		<?php echo $form->dropDownList($model->employee->cabinet->department,'id_department',$list, array(
 									'options'=>array(
-												$model->id_department=>array(
+												$model->employee->cabinet->department->id_department=>array(
 															'selected'=>'selected')))
 										); ?>
-		<?php echo $form->error($model,'id_department'); ?>
+		<?php echo $form->error($model->employee->cabinet->department,'id_department'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_cabinet'); ?>
+		<?php echo $form->labelEx($model->employee->cabinet,'id_cabinet'); ?>
 		<?php //echo $form->textField($model,'id_cabinet'); ?>
 		<?php $list = CHtml::listData(Cabinet::model()->findAll(),'id_cabinet', 'number');?>
-		<?php echo $form->dropDownList($model,'id_cabinet',$list, array(
+		<?php echo $form->dropDownList($model->employee->cabinet,'id_cabinet',$list, array(
 									'options'=>array(
-												$model->id_cabinet=>array(
+												$model->employee->cabinet->id_cabinet=>array(
 															'selected'=>'selected')))
 										); ?>
-		<?php echo $form->error($model,'id_cabinet'); ?>
+		<?php echo $form->error($model->employee->cabinet,'id_cabinet'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_employee'); ?>
+		<?php echo $form->labelEx($model->employee,'id_employee'); ?>
 		<?php //echo $form->textField($model,'id_employee'); ?>
 		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
-		<?php echo $form->dropDownList($model,'id_employee',$list, array(
+		<?php echo $form->dropDownList($model->employee,'id_employee',$list, array(
 									'options'=>array(
-												$model->id_employee=>array(
+												$model->employee->id_employee=>array(
 															'selected'=>'selected')))
 										); ?>
-		<?php echo $form->error($model,'id_employee'); ?>
+		<?php echo $form->error($model->employee,'id_employee'); ?>
 	</div>
 
 	<div class="row">

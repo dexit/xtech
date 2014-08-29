@@ -185,13 +185,15 @@ class EmployeeController extends Controller
 
 	public function actionShow($id)
 	{
-		$id_employee = (int)$id;
+		/*$id_employee = (int)$id;
 
 		$criteria = new CDbCriteria();
 		$criteria->addCondition('id_employee=:id_employee');
 		$criteria->params = array(':id_employee'=>$id_employee);
 	
-		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));*/
+
+        $dataProvider = DevShowGrid::getData('t_employees', (int)$id);
 
 		if (Yii::app()->request->isAjaxRequest) {
       		$this->renderPartial('//main/_device', array(

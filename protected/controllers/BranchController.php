@@ -110,12 +110,6 @@ class BranchController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		//$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		/*if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));*/
-
 		$transaction = Yii::app()->db->beginTransaction();
 		
 		try {									
@@ -211,13 +205,7 @@ class BranchController extends Controller
 
 	public function actionShow($id)
 	{
-		$id_branch = (int)$id;
-
-		$criteria = new CDbCriteria();
-		$criteria->addCondition('id_branch=:id_branch');
-		$criteria->params = array(':id_branch'=>$id_branch);
-	
-		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));
+        $dataProvider = DevShowGrid::getData('t_branches', (int)$id);
 
 		if (Yii::app()->request->isAjaxRequest) {
       		$this->renderPartial('//main/_device', array(

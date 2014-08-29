@@ -24,43 +24,36 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		//'id_device',
-		//'id_organization',
 		array(
 			'name' => 'Організація',
 			'type' => 'raw',
-            'value' => $model->organization->name,          
+            'value' => $model->employee->cabinet->department->branch->organization->name,
 		),
 		array(
 			'name' => 'Відділення',
 			'type' => 'raw',
-            'value' => $model->branch->name,          
+            'value' => $model->employee->cabinet->department->branch->name,
 		),
-		//'id_branch',
 		array(
 			'name' => 'Відділ',
 			'type' => 'raw',
-            'value' => $model->department->name,          
+            'value' => $model->employee->cabinet->department->name,
 		),
-		//'id_department',
 		array(
 			'name' => 'Кабінет',
 			'type' => 'raw',
-            'value' => $model->cabinet->number,          
+            'value' => $model->employee->cabinet->number,
 		),
-		//'id_cabinet',
 		array(
 			'name' => 'Співробітник',
 			'type' => 'raw',
             'value' => $model->employee->firstname." ".$model->employee->lastname." ".$model->employee->surname,          
 		),
-		//'id_employee',
 		array(
 			'name' => 'Тип пристрою',
 			'type' => 'raw',
             'value' => $model->devicetype->name,          
 		),
-		//'id_type',
 		'name',
 		'description',
 		'inv_number',
@@ -68,20 +61,17 @@ $this->menu=array(
 		'year',
 		'end_varantly_yesr',
 		'service',
-		//'expluatation',
 		array(
 			'name' => 'Введення в експлуатацію',
 			'type' => 'raw',
             'value' => ($model->expluatation)?"Введено":"Не введено",          
 		),
 		'expluatation_data',
-		//'private',
 		array(
 			'name' => 'Забалансовий',
 			'type' => 'raw',
             'value' => ($model->private)?"Так":"Ні",          
 		),
-		//'break',
 		array(
 			'name' => 'Стан',
 			'type' => 'raw',
@@ -89,8 +79,6 @@ $this->menu=array(
 		),
 	),
 )); 
-
-
 
 if ($model->devicetype->id_device_type == 2) {
 	$this->renderPartial('_device_pc', array(
