@@ -5,10 +5,6 @@
  *
  * The followings are the available columns in table 't_devices':
  * @property integer $id_device
- * @property integer $id_organization
- * @property integer $id_branch
- * @property integer $id_department
- * @property integer $id_cabinet
  * @property integer $id_employee
  * @property integer $id_type
  * @property string $name
@@ -26,23 +22,6 @@
 class Device extends CActiveRecord
 {
 
-	/*public $id;
-	public $id_device_pc;
-	public $mb;
-	public $cpu_name;
-	public $cpu_p;
-	public $hdd_name;
-	public $hdd_p;
-	public $ram_name;
-	public $ram_p;
-	public $video_name;
-	public $video_p;
-	public $cdrom_name;
-	public $lan_name;
-	public $os;
-	public $net_name;
-	public $ip;*/
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -59,12 +38,12 @@ class Device extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_organization, id_branch, id_department, id_cabinet, id_employee, id_type, inv_number, year, end_varantly_yesr, expluatation, private, break', 'numerical', 'integerOnly'=>true),
+			array('id_employee, id_type, inv_number, year, end_varantly_yesr, expluatation, private, break', 'numerical', 'integerOnly'=>true),
 			array('name, description, sn, service', 'length', 'max'=>255),
 			array('expluatation_data', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_device, id_organization, id_branch, id_department, id_cabinet, id_employee, id_type, name, description, inv_number, sn, year, end_varantly_yesr, service, expluatation, expluatation_data, private, break', 'safe', 'on'=>'search|insert'),
+			array('id_device, id_employee, id_type, name, description, inv_number, sn, year, end_varantly_yesr, service, expluatation, expluatation_data, private, break', 'safe', 'on'=>'search|insert'),
 		);
 	}
 
@@ -104,10 +83,6 @@ class Device extends CActiveRecord
 	{
 		return array(
 			'id_device' => 'Id Device',
-			'id_organization' => 'Організація',
-			'id_branch' => 'Корпус',
-			'id_department' => 'Відділ',
-			'id_cabinet' => 'Кабінет',
 			'id_employee' => 'Співробітник',
 			'id_type' => 'Тип пристрою',
 			'name' => 'Назва',
@@ -160,10 +135,6 @@ class Device extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id_device',$this->id_device);
-		$criteria->compare('id_organization',$this->id_organization);
-		$criteria->compare('id_branch',$this->id_branch);
-		$criteria->compare('id_department',$this->id_department);
-		$criteria->compare('id_cabinet',$this->id_cabinet);
 		$criteria->compare('id_employee',$this->id_employee);
 		$criteria->compare('id_type',$this->id_type);
 		$criteria->compare('name',$this->name,true);

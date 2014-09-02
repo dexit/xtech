@@ -14,11 +14,12 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 )); ?>
 	
 	<?php echo $form->errorSummary($model); ?>
-
+<?php /*
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_organization'); ?>
+		<?php //echo $form->labelEx($model,'id_organization'); ?>
+        <?php echo $form->labelEx(Organization::model(),'id_organization'); ?>
 		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
-		<?php echo $form->dropDownList($model,'id_organization',$list, array(
+		<?php echo $form->dropDownList(Organization::model(),'id_organization',$list, array(
 											'ajax'=>array(
 													'type'=>'POST',
 													'url'=>Yii::app()->createUrl('branch/loadbyorganization'),
@@ -27,13 +28,14 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 													//'success'=>'js:("#Device_id_branch").prop("disabled", false);',
 													),
 											'empty'=>'Виберіть організацію',
+                                            'id'=>'Device_id_organization',
 										)); ?>
-		<?php echo $form->error($model,'id_organization'); ?>
+		<?php echo $form->error(Organization::model(),'id_organization'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_branch'); ?>		
-		<?php echo $form->dropDownList($model,'id_branch',array(), array(
+		<?php echo $form->labelEx(Branch::model(),'id_branch'); ?>
+		<?php echo $form->dropDownList(Branch::model(),'id_branch',array(), array(
 										'ajax'=>array(
 													'type'=>'POST',
 													'url'=>Yii::app()->createUrl('department/loadbybranch'),
@@ -41,49 +43,53 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 													'data'=>array('id_branch'=>'js:this.value'),
 													),
 										'empty'=>'Виберіть корпус',
+                                        'id'=>'Device_id_branch',
 										//'disabled'=>'disabled',
 									)
 										); ?>
-		<?php echo $form->error($model,'id_branch'); ?>
+		<?php echo $form->error(Branch::model(),'id_branch'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_department'); ?>
-		<?php echo $form->dropDownList($model,'id_department',array(), array(
+		<?php echo $form->labelEx(Department::model(),'id_department'); ?>
+		<?php echo $form->dropDownList(Department::model(),'id_department',array(), array(
 									'ajax'=>array(
 													'type'=>'POST',
 													'url'=>Yii::app()->createUrl('cabinet/loadbydepartment'),
 													'update'=>'#Device_id_cabinet',
 													'data'=>array('id_department'=>'js:this.value'),
 													),
-									'empty'=>'Виберіть відділ')
+									'empty'=>'Виберіть відділ',
+                                    'id'=>'Device_id_department',)
 										); ?>
-		<?php echo $form->error($model,'id_department'); ?>
+		<?php echo $form->error(Department::model(),'id_department'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_cabinet'); ?>
+		<?php echo $form->labelEx(Cabinet::model(),'id_cabinet'); ?>
 		<?php //echo $form->textField($model,'id_cabinet'); ?>
 		<?php //$list = CHtml::listData(Cabinet::model()->findAll(),'id_cabinet', 'number');?>
-		<?php echo $form->dropDownList($model,'id_cabinet',array(), array(
+		<?php echo $form->dropDownList(Cabinet::model(),'id_cabinet',array(), array(
 									'ajax'=>array(
 													'type'=>'POST',
 													'url'=>Yii::app()->createUrl('employee/loadbycabinet'),
 													'update'=>'#Device_id_employee',
 													'data'=>array('id_cabinet'=>'js:this.value'),
 													),
-									'empty'=>'Виберіть кабінет')
+									'empty'=>'Виберіть кабінет',
+                                    'id'=>'Device_id_cabinet',)
 										); ?>
-		<?php echo $form->error($model,'id_cabinet'); ?>
+		<?php echo $form->error(Cabinet::model(),'id_cabinet'); ?>
 	</div>
-
+*/?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
 		<?php //echo $form->textField($model,'id_employee'); ?>
-		<?php //$list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
-		<?php echo $form->dropDownList($model,'id_employee',array(), array(
-										'empty'=>'Виберіть кабінет')
-										); ?>
+		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
+		<?php echo $form->dropDownList($model,'id_employee',$list, array(
+										'empty'=>'Оберіть співробітника',
+                                         //'id'=>'Device_id_employee',
+                                        )); ?>
 		<?php echo $form->error($model,'id_employee'); ?>
 	</div>
 

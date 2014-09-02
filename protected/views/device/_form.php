@@ -13,7 +13,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 )); ?>
 	
 	<?php echo $form->errorSummary($model); ?>
-
+<?php /*
 	<div class="row">
 		<?php echo $form->labelEx($model->employee->cabinet->department->branch->organization,'id_organization'); ?>
         <?php //echo CHtml::label(CHtml::encode('Організація'),'id_organization'); ?>
@@ -63,17 +63,17 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 										); ?>
 		<?php echo $form->error($model->employee->cabinet,'id_cabinet'); ?>
 	</div>
-
+*/?>
 	<div class="row">
-		<?php echo $form->labelEx($model->employee,'id_employee'); ?>
+		<?php echo $form->labelEx($model,'id_employee'); ?>
 		<?php //echo $form->textField($model,'id_employee'); ?>
 		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
-		<?php echo $form->dropDownList($model->employee,'id_employee',$list, array(
+		<?php echo $form->dropDownList($model,'id_employee',$list, array(
 									'options'=>array(
-												$model->employee->id_employee=>array(
+												$model->id_employee=>array(
 															'selected'=>'selected')))
 										); ?>
-		<?php echo $form->error($model->employee,'id_employee'); ?>
+		<?php echo $form->error($model,'id_employee'); ?>
 	</div>
 
 	<div class="row">

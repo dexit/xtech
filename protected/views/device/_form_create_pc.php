@@ -18,7 +18,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 	
 	<?php echo $form->errorSummary($model); ?>
 
-	
+	<?php /*
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_organization'); ?>
 		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
@@ -80,13 +80,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 										); ?>
 		<?php echo $form->error($model,'id_cabinet'); ?>
 	</div>
-
+*/?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
 		<?php //echo $form->textField($model,'id_employee'); ?>
-		<?php //$list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
-		<?php echo $form->dropDownList($model,'id_employee',array(), array(
-										'empty'=>'Виберіть кабінет')
+		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
+		<?php echo $form->dropDownList($model,'id_employee',$list, array(
+										'empty'=>'Оберіть співробітника')
 										); ?>
 		<?php echo $form->error($model,'id_employee'); ?>
 	</div>

@@ -15,4 +15,4 @@ $this->breadcrumbs=array(
 
 <h1>Додати відділ</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'parent' => $parent,)); ?>

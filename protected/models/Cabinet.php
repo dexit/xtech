@@ -47,7 +47,7 @@ class Cabinet extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'device' => array(self::HAS_MANY, 'Device', 'id_cabinet'),
+			//'device' => array(self::HAS_MANY, 'Device', 'id_cabinet'),
 			'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
 			'employee' => array(self::HAS_MANY, 'Employee', 'id_cabinet'),
 		);

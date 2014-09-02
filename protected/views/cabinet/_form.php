@@ -27,27 +27,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_department'); ?>
-		<?php //echo $form->textField($model,'id_department'); ?>
-		<?php if (!$model->isNewRecord) { 
-			  $criteria = new CDbCriteria();
-			  $criteria->addCondition("id_organization = :id_organization");
-			  //var_dump($model->department->branch->organization->id_organization);
-		 	  //break;
-			  $criteria->params = array(':id_organization'=>$model->department->branch->organization->id_organization);
-		 
-		 	  $list = CHtml::listData(Department::model()->findAll($criteria),'id_department', 'name');
-		 	  var_dump($list);
-		 	  break;
+		<?php if (!$model->isNewRecord) {
+		 	  $list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');
 		 	  echo $form->dropDownList($model,'id_department',$list, array(
 									 'options'=>array(
-												$model->department=>array(
+												$model->id_department=>array(
 															'selected'=>'selected')),									 	
 									 'empty'=>'Виберіть відділ')); 
 		 	} else {
+                $model->id_department = $parent;
 		 		$list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');
 		 		echo $form->dropDownList($model,'id_department',$list, array(
 									 'options'=>array(
-												$model->department=>array(
+												$model->id_department => array(
 															'selected'=>'selected')),									 	
 									 'empty'=>'Виберіть відділ')); 
 		 	}

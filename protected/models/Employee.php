@@ -5,9 +5,6 @@
  *
  * The followings are the available columns in table 't_employees':
  * @property integer $id_employee
- * @property integer $id_organization
- * @property integer $id_branch
- * @property integer $id_department
  * @property integer $id_cabinet
  * @property string $firstname
  * @property string $lastname
@@ -43,14 +40,14 @@ class Employee extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('firstname, lastname, surname', 'required'),
-			array('id_organization, id_branch, id_department, id_cabinet, tab_number, fired', 'numerical', 'integerOnly'=>true),
+			array('id_cabinet, tab_number, fired', 'numerical', 'integerOnly'=>true),
 			array('firstname, lastname, surname', 'length', 'max'=>20),
 			array('description, telephones, post, home_address, pasp', 'length', 'max'=>255),
 			array('email, login', 'length', 'max'=>50),
 			array('dob, dof', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_employee, id_organization, id_branch, id_department, id_cabinet, firstname, lastname, surname, description, telephones, post, email, login, tab_number, home_address, dob, pasp, fired, dof', 'safe', 'on'=>'search'),
+			array('id_employee, id_cabinet, firstname, lastname, surname, description, telephones, post, email, login, tab_number, home_address, dob, pasp, fired, dof', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,9 +61,9 @@ class Employee extends CActiveRecord
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_employee'),
             'cabinet' => array(self::BELONGS_TO, 'Cabinet', 'id_cabinet'),
-            'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
-            'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
-            'oprganization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
+            //'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
+            //'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
+            //'oprganization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
 		);
 	}
 
@@ -77,9 +74,6 @@ class Employee extends CActiveRecord
 	{
 		return array(
 			'id_employee' => 'Id Employee',
-			'id_organization' => 'Організація',
-			'id_branch' => 'Філія',
-			'id_department' => 'Відділ',
 			'id_cabinet' => 'Кабінет',
 			'firstname' => 'Прізвище',
 			'lastname' => 'Ім\'я',
@@ -117,9 +111,6 @@ class Employee extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id_employee',$this->id_employee);
-		$criteria->compare('id_organization',$this->id_organization);
-		$criteria->compare('id_branch',$this->id_branch);
-		$criteria->compare('id_department',$this->id_department);
 		$criteria->compare('id_cabinet',$this->id_cabinet);
 		$criteria->compare('firstname',$this->firstname,true);
 		$criteria->compare('lastname',$this->lastname,true);

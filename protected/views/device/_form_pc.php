@@ -12,7 +12,7 @@
 )); ?>
 	
 	<?php echo $form->errorSummary($model); ?>
-
+<?php /*
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_organization'); ?>
 		<?php //echo $form->textField($model,'id_organization'); ?>
@@ -60,7 +60,7 @@
 										); ?>
 		<?php echo $form->error($model,'id_cabinet'); ?>
 	</div>
-
+*/?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
 		<?php //echo $form->textField($model,'id_employee'); ?>

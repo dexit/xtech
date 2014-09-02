@@ -60,9 +60,11 @@ class BranchController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($parent)
 	{
-		$model=new Branch;
+		$model = new Branch;
+        //var_dump($parent);
+
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -75,7 +77,8 @@ class BranchController extends Controller
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model' => $model,
+            'parent' => (int)$parent,
 		));
 	}
 

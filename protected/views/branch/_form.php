@@ -28,6 +28,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_organization'); ?>
 		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
+        <?php if ($model->isNewRecord) $model->id_organization = $parent; ?>
 		<?php echo $form->dropDownList($model,'id_organization',$list, array(
 									 'options'=>array(
 												$model->id_organization=>array(

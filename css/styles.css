@@ -143,3 +143,43 @@
   border-radius: 5px; 
   cursor:default;
 }
+
+/*tree menu styles*/
+.tree-menu {
+    display: block;
+    position: absolute;
+    border: 1px solid #333;
+    visibility: hidden;
+    background-color: #c3d9ff;
+    -moz-box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
+    box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
+}
+.tree-menu-add, .tree-menu-edit, .tree-menu-delete{
+    visibility: hidden;
+}
+.tree-menu ul li {
+    list-style-type: none;
+}
+
+.tree-menu ul li a:hover {
+    color: #eee;
+}
+
+.show {
+    visibility: visible;
+}
+
+.tree-menu-button a {
+    display: block;
+}
+div[class^="tree-menu-button"] a{
+    display: block;
+    margin-left: 18px;
+    float: left;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #7c9cff;
+    background-color: #4F81BD;
+}

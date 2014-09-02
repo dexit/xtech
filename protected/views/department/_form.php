@@ -27,7 +27,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_branch'); ?>
-		<?php if (!$model->isNewRecord) { 
+		<?php if (!$model->isNewRecord) {
+
 			  $criteria = new CDbCriteria();
 			  $criteria->addCondition("id_organization = :id_organization");
 			  $criteria->params = array(':id_organization'=>$model->branch->organization->id_organization);
@@ -39,10 +40,11 @@
 															'selected'=>'selected')),									 	
 									 'empty'=>'Виберіть філію')); 
 		 	} else {
+                $model->id_branch = $parent;
 		 		$list = CHtml::listData(Branch::model()->findAll(),'id_branch', 'name');
 		 		echo $form->dropDownList($model,'id_branch',$list, array(
 									 'options'=>array(
-												$model->boss=>array(
+												$model->id_branch => array(
 															'selected'=>'selected')),									 	
 									 'empty'=>'Виберіть філію')); 
 		 	}

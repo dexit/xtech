@@ -6,30 +6,34 @@
               'name' => 'Организация',
               'type' => 'raw',
               //'value' => '$data->organization->name',
-              'value' => '$data->employee->cabinet->department->branch->organization->name',
+              'value' => '(isset($data->employee->cabinet->department->branch->organization->name))?
+                          $data->employee->cabinet->department->branch->organization->name:\'Не визначено\'',
             ),
             array(
               'name' => 'Подразделение',
               'type' => 'raw',
               //'value' => '$data->branch->name',
-              'value' => '$data->employee->cabinet->department->branch->name',
+              'value' => '(isset($data->employee->cabinet->department->branch->name))?
+                           $data->employee->cabinet->department->branch->name:\'Не визначено\'',
             ),
             array(
               'name' => 'Отдел',
               'type' => 'raw',
               //'value' => '$data->department->name',
-              'value' => '$data->employee->cabinet->department->name',
+              'value' => '(isset($data->employee->cabinet->department->name))?
+                          $data->employee->cabinet->department->name:\'Не визначено\'',
             ),
             array(
               'name' => 'Кабинет',
               'type' => 'raw',
               //'value' => '$data->cabinet->number',
-              'value' => '$data->employee->cabinet->number',
+              'value' => '(isset($data->employee->cabinet->number))?
+                          $data->employee->cabinet->number:\'Не визначено\'',
             ),
             array(
               'name' => 'Сотрудник',
               'type' => 'raw',
-              'value' => '$data->employee->firstname',
+              'value' => '(isset($data->employee->firstname))?$data->employee->firstname:\'Не визначено\'',
             ),
             array(
               'name' => 'Устройство',

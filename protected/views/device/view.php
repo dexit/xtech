@@ -15,7 +15,8 @@ $this->menu=array(
 	array('label'=>'Manage Device', 'url'=>array('admin')),
 );
 */
-//var_dump($model->organization->name);
+//var_dump($model->employee);
+//break;
 ?>
 
 <h1>Данні пристрою <?php echo $model->devicetype->name.": "; echo $model->name; ?></h1>
@@ -27,22 +28,26 @@ $this->menu=array(
 		array(
 			'name' => 'Організація',
 			'type' => 'raw',
-            'value' => $model->employee->cabinet->department->branch->organization->name,
+            'value' => (isset($model->employee->cabinet->department->branch->organization->name))?
+                $model->employee->cabinet->department->branch->organization->name:'Не визначено',
 		),
 		array(
 			'name' => 'Відділення',
 			'type' => 'raw',
-            'value' => $model->employee->cabinet->department->branch->name,
+            'value' => (isset($model->employee->cabinet->department->branch->name))?
+                        $model->employee->cabinet->department->branch->name:'Не визначено',
 		),
 		array(
 			'name' => 'Відділ',
 			'type' => 'raw',
-            'value' => $model->employee->cabinet->department->name,
+            'value' => (isset($model->employee->cabinet->department->name))?
+                        $model->employee->cabinet->department->name:'Не визначено',
 		),
 		array(
 			'name' => 'Кабінет',
 			'type' => 'raw',
-            'value' => $model->employee->cabinet->number,
+            'value' => (isset($model->employee->cabinet->number))?
+                $model->employee->cabinet->number:'Не визначено',
 		),
 		array(
 			'name' => 'Співробітник',

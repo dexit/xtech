@@ -60,7 +60,7 @@ class EmployeeController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($parent)
 	{
 		$model=new Employee;
 
@@ -76,6 +76,7 @@ class EmployeeController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+            'parent' => (int)$parent,
 		));
 	}
 
