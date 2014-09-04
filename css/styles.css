@@ -154,7 +154,39 @@
     -moz-box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
     -webkit-box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
     box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    z-index: 100;
+    padding: 10px 0;
 }
+.tree-menu ul {
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+}
+.tree-menu div{
+    display: block;
+    float: left;
+    width: 20px;
+}
+.tree-menu div a{
+    background: none repeat scroll 0 0 #0099ff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    content: "X";
+    display: block;
+    font-weight: bold;
+    padding: 1px;
+    position: absolute;
+    right: -10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    top: -10px;
+    width: 1.2em;
+}
+
 .tree-menu-add,
 .tree-menu-edit,
 .tree-menu-delete,
@@ -163,6 +195,7 @@
 }
 .tree-menu ul li {
     list-style-type: none;
+    line-height: 20px;
 }
 
 .tree-menu ul li a:hover {
@@ -178,11 +211,122 @@
 }
 div[class^="tree-menu-button"] a{
     display: block;
-    margin-left: 18px;
+    /*margin-left: 18px;*/
     float: left;
     position: absolute;
     height: 15px;
     width: 15px;
     border: 1px solid #7c9cff;
     background-color: #4F81BD;
+}
+
+
+.grid-view table.table-striped {
+    background: white;
+    border-collapse: collapse;
+    width: 100%;
+    /*border: 1px #D0E3EF solid;*/
+}
+
+.grid-view table.table-striped th, .grid-view table.items td {
+    border: 1px solid white;
+    font-size: 0.9em;
+    padding: 0.3em;
+}
+
+.grid-view table.table-striped th
+{
+    color: white;
+    background-color: #666666;
+    text-align: center;
+}
+
+.grid-view table.table-striped th a
+{
+    color: #EEE;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.grid-view table.table-striped th a.asc
+{
+    background:url(up.gif) right center no-repeat;
+    padding-right: 10px;
+}
+
+.grid-view table.table-striped th a.desc
+{
+    background:url(down.gif) right center no-repeat;
+    padding-right: 10px;
+}
+
+.grid-view table.table-striped tr.even
+{
+    background: #F8F8F8;
+}
+
+.grid-view table.table-striped tr.odd
+{
+    background: #E5F1F4;
+}
+
+.grid-view table.table-striped tr.selected
+{
+    background: #BCE774;
+}
+
+.grid-view table.table-striped tr:hover.selected
+{
+    background: #CCFF66;
+}
+
+.grid-view table.table-striped tbody tr:hover
+{
+    background: #ECFBD4;
+}
+
+.grid-view .link-column img
+{
+    border: 0;
+}
+
+.grid-view .button-column
+{
+    text-align: center;
+    width: 60px;
+}
+
+.grid-view .button-column img
+{
+    border: 0;
+}
+
+.grid-view .checkbox-column
+{
+    width: 15px;
+}
+
+.grid-view .summary
+{
+    margin: 0 0 5px 0;
+    text-align: right;
+}
+
+.grid-view .pager
+{
+    margin: 5px 0 0 0;
+    text-align: right;
+}
+
+.grid-view .empty
+{
+    font-style: italic;
+}
+
+.grid-view .filters input,
+.grid-view .filters select
+{
+    width: 100%;
+    border: 1px solid #ccc;
 }

@@ -34,13 +34,28 @@ class MainController extends Controller
 		$dev = new Device('search');
 		$dev->unsetAttributes();
 
-		//$rel = array('devicepc','devicetype','organization', 'branch', 'department','cabinet', 'employee');
         $rel = array('devicepc','devicetype','employee');
 		$devices = $dev->with($rel)->findAll();
 
-		$dataProvider = new CActiveDataProvider('Device', array('pagination'=>array(
-                        'pageSize'=>20,
-                )));
+        $sort = new CSort();
+        $sort->attributes = array(
+            'defaultOrder'=>'name DESC',
+            'type'=>array(
+                'asc'=>'id_type',
+                'desc'=>'id_type DESC',
+            ),
+            'inv'=>array(
+                'asc'=>'inv_number',
+                'desc'=>'inv_number DESC',
+            ),
+            '*'
+        );
+
+		$dataProvider = new CActiveDataProvider('Device', array(
+                            'pagination'=>array('pageSize'=>20),
+                            'sort' => $sort,
+                        ));
+
 		$this->render('index',array(
 			'organizations'=>$organizations,
 			'devices'=>$devices,

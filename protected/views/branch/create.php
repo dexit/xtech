@@ -2,10 +2,10 @@
 /* @var $this BranchController */
 /* @var $model Branch */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Структура'=>array('structure/index'),
 	'Додати філію',
-);
+);*/
 
 /*$this->menu=array(
 	array('label'=>'List Branch', 'url'=>array('index')),

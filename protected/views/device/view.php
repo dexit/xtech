@@ -6,20 +6,17 @@ $this->breadcrumbs=array(
 	'Devices'=>array('index'),
 	$model->name,
 );
-
-$this->menu=array(
-	array('label'=>'List Device', 'url'=>array('index')),
-	array('label'=>'Create Device', 'url'=>array('create')),
-	array('label'=>'Update Device', 'url'=>array('update', 'id'=>$model->id_device)),
-	array('label'=>'Delete Device', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_device),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Device', 'url'=>array('admin')),
-);
 */
-//var_dump($model->employee);
-//break;
+$this->menu=array(
+	//array('label'=>'List Device', 'url'=>array('index')),
+	//array('label'=>'Create Device', 'url'=>array('create')),
+	array('label'=>'Редагувати', 'url'=>array('update', 'id'=>$model->id_device)),
+	array('label'=>'Видалити', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_device),'confirm'=>'Ви впевнені, що бажаєте незворотньо видалити дані цього пристрою?')),
+	//array('label'=>'Manage Device', 'url'=>array('admin')),
+);
 ?>
 
-<h1>Данні пристрою <?php echo $model->devicetype->name.": "; echo $model->name; ?></h1>
+<h1>Дані пристрою: <?php echo $model->devicetype->name." - "; echo $model->name; ?></h1>
 <div id="device_info">
 
 <?php $this->widget('zii.widgets.CDetailView', array(

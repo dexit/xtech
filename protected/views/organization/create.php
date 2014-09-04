@@ -2,10 +2,10 @@
 /* @var $this OrganizationController */
 /* @var $model Organization */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Структура'=>array('structure/index'),
 	'Додати організацію',
-);
+);*/
 /*
 $this->menu=array(
 	array('label'=>'List Organization', 'url'=>array('index')),

@@ -13,7 +13,7 @@ $this->menu=array(
 );*/
 ?>
 
-<h1>Додати пристрій</h1>
+<h1>Додати пристрій: <?php echo DeviceType::model()->findByPk($device_type)->name; ?></h1>
 
 <?php 
 

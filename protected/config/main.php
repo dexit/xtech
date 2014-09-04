@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'xTech',
+	'name'=>'Облік комп\'ютерної техніки',
 	'defaultController'=>'main',
 	//'language'=>'uk',
     'language'=>'en',

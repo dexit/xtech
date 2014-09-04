@@ -2,10 +2,10 @@
 /* @var $this DepartmentController */
 /* @var $model Department */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Структура'=>array('structure/index'),
 	'Додати відділ',
-);
+);*/
 
 /*$this->menu=array(
 	array('label'=>'List Department', 'url'=>array('index')),

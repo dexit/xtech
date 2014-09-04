@@ -1,72 +1,83 @@
-<?php 
-  $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+//var_dump($dataProvider);
+$this->widget('zii.widgets.grid.CGridView', array(
       'dataProvider'=>$dataProvider,
+      'pager' => array(
+          'pageSize' => '20',
+          'maxButtonCount'=>'10',
+          'header'=>'',
+          'firstPageLabel'=>'Перша',
+          'prevPageLabel'=>'Попередня',
+          'nextPageLabel'=>'Наступна',
+          'lastPageLabel'=>'Остання',
+      ),
+      'itemsCssClass'=>'table-striped',
       'columns'=>array(
             array(
-              'name' => 'Организация',
+              'name' => 'Організація',
               'type' => 'raw',
               //'value' => '$data->organization->name',
               'value' => '(isset($data->employee->cabinet->department->branch->organization->name))?
                           $data->employee->cabinet->department->branch->organization->name:\'Не визначено\'',
             ),
             array(
-              'name' => 'Подразделение',
+              'name' => 'Філія',
               'type' => 'raw',
               //'value' => '$data->branch->name',
               'value' => '(isset($data->employee->cabinet->department->branch->name))?
                            $data->employee->cabinet->department->branch->name:\'Не визначено\'',
             ),
             array(
-              'name' => 'Отдел',
+              'name' => 'Відділ',
               'type' => 'raw',
               //'value' => '$data->department->name',
               'value' => '(isset($data->employee->cabinet->department->name))?
                           $data->employee->cabinet->department->name:\'Не визначено\'',
             ),
             array(
-              'name' => 'Кабинет',
+              'name' => 'Кабінет',
               'type' => 'raw',
               //'value' => '$data->cabinet->number',
               'value' => '(isset($data->employee->cabinet->number))?
                           $data->employee->cabinet->number:\'Не визначено\'',
             ),
             array(
-              'name' => 'Сотрудник',
+              'name' => 'Співробітник',
               'type' => 'raw',
               'value' => '(isset($data->employee->firstname))?$data->employee->firstname:\'Не визначено\'',
             ),
             array(
-              'name' => 'Устройство',
+              'name' => 'Пристрій',
               'type' => 'raw',
               'value' => '$data->devicetype->name',
             ),
             array(
-              'name' => 'Инв номер',
+              'name' => 'Інв №',
               'type' => 'raw',
               'value' => '$data->inv_number',
             ),
             array(
-              'name' => 'Название',
+              'name' => 'Назва',
               'type' => 'raw',
               'value' => '$data->name',
             ),
             array(
-              'name' => 'Серийный',
+              'name' => 'Серійний №',
               'type' => 'raw',
               'value' => '$data->sn',
             ),            
             array(
-              'name' => 'Год выпуска',
+              'name' => 'Рік випуску',
               'type' => 'raw',
               'value' => '$data->year',
             ),
             array(
-              'name' => 'Забалансовий',
+              'name' => 'Забаланс',
               'type' => 'raw',
               'value' => '$data->private ? \'Так\' : \'Ні\'',
             ),
             array(
-              'name' => 'Состояние',
+              'name' => 'Стан',
               'type' => 'raw',
               'value' => '$data->break ? \'Не працює\' : \'Працює\'',
             ),
@@ -88,7 +99,7 @@
                     'label'=>'Удалить',
                     'imageUrl'=>Yii::app()->request->baseUrl.'/images/delete.png',
                     'url'=>'Yii::app()->createUrl("device/delete", array("id"=>$data->id_device))',
-                    'deleteConfirmation'=>"js:'Record will be deleted! Continue?'",
+                    'deleteConfirmation'=>"js:'Ви дійсно бажаєте видалити даний пристрій?'",
                   ),
                 ),
             ),

@@ -12,58 +12,8 @@
 )); ?>
 	
 	<?php echo $form->errorSummary($model); ?>
-<?php /*
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_organization'); ?>
-		<?php //echo $form->textField($model,'id_organization'); ?>
-		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
-		<?php echo $form->dropDownList($model,'id_organization',$list, array(
-									'options'=>array(
-												$model->id_organization=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model,'id_organization'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_branch'); ?>
-		<?php //echo $form->textField($model,'id_branch'); ?>
-		<?php $list = CHtml::listData(Branch::model()->findAll(),'id_branch', 'name');?>
-		<?php echo $form->dropDownList($model,'id_branch',$list, array(
-									'options'=>array(
-												$model->id_branch=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model,'id_branch'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_department'); ?>
-		<?php //echo $form->textField($model,'id_department'); ?>
-		<?php $list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');?>
-		<?php echo $form->dropDownList($model,'id_department',$list, array(
-									'options'=>array(
-												$model->id_department=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model,'id_department'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_cabinet'); ?>
-		<?php //echo $form->textField($model,'id_cabinet'); ?>
-		<?php $list = CHtml::listData(Cabinet::model()->findAll(),'id_cabinet', 'number');?>
-		<?php echo $form->dropDownList($model,'id_cabinet',$list, array(
-									'options'=>array(
-												$model->id_cabinet=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model,'id_cabinet'); ?>
-	</div>
-*/?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
-		<?php //echo $form->textField($model,'id_employee'); ?>
 		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
 		<?php echo $form->dropDownList($model,'id_employee',$list, array(
 									'options'=>array(
@@ -75,7 +25,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_type'); ?>
-		<?php //echo $form->textField($model,'id_type'); ?>
 		<?php $list = CHtml::listData(DeviceType::model()->findAll(),'id_device_type', 'name');?>
 		<?php echo $form->dropDownList($model,'id_type',$list, array(
 									'options'=>array(

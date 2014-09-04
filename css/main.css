@@ -9,7 +9,7 @@ body
 
 #page
 {
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 	margin-bottom: 5px;
 	background: white;
 	border: 1px solid #C9E0ED;
@@ -19,13 +19,13 @@ body
 {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	/*border-top: 3px solid #C9E0ED;*/
 }
 
 #content
 {
     padding: 20px;
-    min-height: 50px;
+    min-height: 10px;
 }
 
 #sidebar
@@ -50,7 +50,8 @@ body
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	/*background:white url(bg.gif) repeat-x left top;*/
+    background-color: #666677;
 }
 
 #mainmenu ul
@@ -233,7 +234,7 @@ div.search-form
 {
 	display: block;
 	float:left;
-	width: 300px;
+	width: 320px;
     overflow: hidden;
 }
 
@@ -242,6 +243,6 @@ div.search-form
 	display: block;
 	float:left;
 	position: absolute;
-	margin-left: 300px;
-	width: 74%;
+	margin-left: 330px;
+	width: 70%;
 }
