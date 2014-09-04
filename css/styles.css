@@ -155,7 +155,10 @@
     -webkit-box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
     box-shadow: -5px 2px 10px rgba(0,0,0,0.5);
 }
-.tree-menu-add, .tree-menu-edit, .tree-menu-delete{
+.tree-menu-add,
+.tree-menu-edit,
+.tree-menu-delete,
+.tree-menu-addchild{
     visibility: hidden;
 }
 .tree-menu ul li {

@@ -13323,3 +13323,58 @@ Stack trace:
 REQUEST_URI=/index.php?r=employee/create&parent=3
 HTTP_REFERER=http://xtech/index.php?r=employee/create&parent=3
 ---
+2014/09/03 16:57:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/delete')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=main/delete&id=
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/03 16:58:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/delete')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=main/delete&id=4
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/03 16:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/delete')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=main/delete&id=4
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/03 16:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/delete')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=main/delete&id=
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/03 16:59:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('main/delete')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=main/delete&id=
+HTTP_REFERER=http://xtech/index.php
+---

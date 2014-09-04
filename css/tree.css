@@ -1,0 +1,73 @@
+#tree {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: rgba(200,200,200,.2);
+}
+
+#tree div.tree-title {
+    border-bottom: 1px solid gray;
+    font-size: 1.5em;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+#tree ul li {
+
+}
+
+#tree a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#tree > ul.Container {
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+#tree #show_all{
+    margin: 15px auto 10px;
+
+}
+
+#tree #show_all input{
+    position: relative;
+    display: inline-block;
+    /*width: 6em;*/
+    height: 2.5em;
+    line-height: 2.4em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: #F8F8F8;
+    outline: none;
+    border: 1px solid rgba(110,121,128,.8);
+    border-top-color: rgba(0,0,0,.3);
+    border-radius: 5px;
+    background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(89,106,114));
+    box-shadow:
+        0 -1px rgba(10,21,28,.9) inset,
+        0 1px rgba(255,255,255,.5) inset;
+    cursor: pointer;
+}
+
+#tree #show_all input:hover{
+    background: linear-gradient(#d2dfea, #71828c);
+}
+
+#tree #show_all input:active {
+    line-height: 2.6em;
+    background: linear-gradient(#bac6cf, #c5d3de 20%, #71828c);
+    box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+#tree #show_all input:before {
+    content: "";
+    position: absolute;
+    top: -10px; right: -10px; bottom: -10px; left: -10px;
+    z-index: -1;
+    border-radius: 8px;
+    background: linear-gradient(rgba(200,200,200,.5), rgba(240,240,240,.5));
+}

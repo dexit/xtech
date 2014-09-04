@@ -234,6 +234,7 @@ div.search-form
 	display: block;
 	float:left;
 	width: 300px;
+    overflow: hidden;
 }
 
 #right_col
