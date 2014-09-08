@@ -5,85 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e7a06e-bc93-472a-90f1-a036a60db293" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\dev\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\deviceType\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\main\login.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\structure\_branch.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\structure\_cabinet.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\structure\_department.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\structure\_employee.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\structure\_organization.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\WebOpenServer\domains\xtech\protected\controllers\StructureController.php" afterPath="$PROJECT_DIR$/protected/controllers/ReportsController.php" />
-      <change type="MOVED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\structure\index.php" afterPath="$PROJECT_DIR$/protected/views/reports/index.php" />
+      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\m\classes.rar" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\m\tech.mdb" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\m\tech.zargo" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\organization\_view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebOpenServer\domains\xtech\protected\views\organization\index.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/BranchController.php" afterPath="$PROJECT_DIR$/protected/controllers/BranchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Controller.php" afterPath="$PROJECT_DIR$/protected/components/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DepartmentController.php" afterPath="$PROJECT_DIR$/protected/controllers/DepartmentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DevController.php" afterPath="$PROJECT_DIR$/protected/controllers/DevController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DeviceController.php" afterPath="$PROJECT_DIR$/protected/controllers/DeviceController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/MainController.php" afterPath="$PROJECT_DIR$/protected/controllers/MainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/OrganizationController.php" afterPath="$PROJECT_DIR$/protected/controllers/OrganizationController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/_device.php" afterPath="$PROJECT_DIR$/protected/views/main/_device.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/cabinet/_form.php" afterPath="$PROJECT_DIR$/protected/views/cabinet/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/employee/_form.php" afterPath="$PROJECT_DIR$/protected/views/employee/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/_form_create.php" afterPath="$PROJECT_DIR$/protected/views/device/_form_create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/_form_pc.php" afterPath="$PROJECT_DIR$/protected/views/device/_form_pc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/column2.php" afterPath="$PROJECT_DIR$/protected/views/layouts/column2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/branch/create.php" afterPath="$PROJECT_DIR$/protected/views/branch/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/cabinet/create.php" afterPath="$PROJECT_DIR$/protected/views/cabinet/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/department/create.php" afterPath="$PROJECT_DIR$/protected/views/department/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/create.php" afterPath="$PROJECT_DIR$/protected/views/device/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/employee/create.php" afterPath="$PROJECT_DIR$/protected/views/employee/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/organization/create.php" afterPath="$PROJECT_DIR$/protected/views/organization/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/organization/_form.php" afterPath="$PROJECT_DIR$/protected/views/organization/_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/_tree.php" afterPath="$PROJECT_DIR$/protected/views/main/_tree.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" afterPath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/index.php" afterPath="$PROJECT_DIR$/protected/views/main/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/screen.css" afterPath="$PROJECT_DIR$/css/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts.js" afterPath="$PROJECT_DIR$/js/scripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tree.css" afterPath="$PROJECT_DIR$/css/tree.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/branch/update.php" afterPath="$PROJECT_DIR$/protected/views/branch/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/cabinet/update.php" afterPath="$PROJECT_DIR$/protected/views/cabinet/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/department/update.php" afterPath="$PROJECT_DIR$/protected/views/department/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/update.php" afterPath="$PROJECT_DIR$/protected/views/device/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/organization/update.php" afterPath="$PROJECT_DIR$/protected/views/organization/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/branch/view.php" afterPath="$PROJECT_DIR$/protected/views/branch/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/cabinet/view.php" afterPath="$PROJECT_DIR$/protected/views/cabinet/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/department/view.php" afterPath="$PROJECT_DIR$/protected/views/department/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/view.php" afterPath="$PROJECT_DIR$/protected/views/device/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/employee/view.php" afterPath="$PROJECT_DIR$/protected/views/employee/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/organization/view.php" afterPath="$PROJECT_DIR$/protected/views/organization/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xtech.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409812110328" ignored="false" />
+    <file path="/Dummy.txt" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410168035578" ignored="false" />
     <file path="$PROJECT_DIR$/../yiiblog/protected/views/post/index.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1408623606968" ignored="false" />
-    <file path="/index.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409840245375" ignored="false" />
+    <file path="/index.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410181107937" ignored="false" />
     <file path="$PROJECT_DIR$/../yiiblog/protected/controllers/PostController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1408623468296" ignored="false" />
     <file path="/PostController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1408623465250" ignored="false" />
     <file path="$PROJECT_DIR$/../yiiblog/protected/views/layouts/main.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1408625140109" ignored="false" />
-    <file path="/main.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409833704687" ignored="false" />
+    <file path="/main.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410168596953" ignored="false" />
     <file path="/_employee.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409150167265" ignored="false" />
     <file path="/_organization.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409213941093" ignored="false" />
-    <file path="/OrganizationController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409648763687" ignored="false" />
-    <file path="/DevController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409821418546" ignored="false" />
-    <file path="/BranchController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409658487437" ignored="false" />
+    <file path="/OrganizationController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410186559921" ignored="false" />
+    <file path="/DevController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410184921296" ignored="false" />
+    <file path="/BranchController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410182950640" ignored="false" />
     <file path="/DevShowGrid.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409314206156" ignored="false" />
     <file path="/view.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409836352640" ignored="false" />
-    <file path="/_form.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409836053562" ignored="false" />
+    <file path="/_form.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410186702421" ignored="false" />
     <file path="/_form_create.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409834541906" ignored="false" />
     <file path="/_form_create_pc.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409571056875" ignored="false" />
     <file path="/_form_pc.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409577257203" ignored="false" />
-    <file path="/_tree.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409756864062" ignored="false" />
+    <file path="/_tree.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410184590125" ignored="false" />
     <file path="/styles.css" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409826125859" ignored="false" />
-    <file path="/scripts.js" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409653528296" ignored="false" />
+    <file path="/scripts.js" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410179338203" ignored="false" />
     <file path="/create.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409835966343" ignored="false" />
-    <file path="/DepartmentController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409659050328" ignored="false" />
+    <file path="/DepartmentController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410183022500" ignored="false" />
     <file path="/CabinetController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409659263750" ignored="false" />
     <file path="/EmployeeController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409659430109" ignored="false" />
     <file path="/update.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409835891921" ignored="false" />
-    <file path="/tree.css" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409816338031" ignored="false" />
+    <file path="/tree.css" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410189466062" ignored="false" />
     <file path="/_device.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409833059062" ignored="false" />
     <file path="/MainController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409822501640" ignored="false" />
     <file path="/main.css" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409825601234" ignored="false" />
     <file path="/a.dummy" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409838732093" ignored="false" />
     <file path="/ReportsController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409838744843" ignored="false" />
+    <file path="/DeviceController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410183057125" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,19 +89,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ReportsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/ReportsController.php">
+      <file leaf-file-name="_form.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/organization/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="-5.8846154">
+            <state line="58" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="-22.23077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/views/reports/index.php">
+      <file leaf-file-name="tree.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/tree.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.23404256">
+            <state line="31" column="12" selection-start="622" selection-end="622" vertical-scroll-proportion="0.4739394">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganizationController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/OrganizationController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="34" selection-start="749" selection-end="749" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
@@ -144,22 +134,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/views/branch/view.php" />
-        <option value="$PROJECT_DIR$/protected/views/branch/update.php" />
-        <option value="$PROJECT_DIR$/protected/views/department/create.php" />
-        <option value="$PROJECT_DIR$/protected/views/department/view.php" />
-        <option value="$PROJECT_DIR$/protected/views/department/update.php" />
-        <option value="$PROJECT_DIR$/protected/views/cabinet/create.php" />
-        <option value="$PROJECT_DIR$/protected/views/cabinet/_form.php" />
-        <option value="$PROJECT_DIR$/protected/views/cabinet/view.php" />
-        <option value="$PROJECT_DIR$/protected/views/cabinet/update.php" />
-        <option value="$PROJECT_DIR$/protected/views/employee/create.php" />
-        <option value="$PROJECT_DIR$/protected/views/employee/_form.php" />
-        <option value="$PROJECT_DIR$/protected/views/employee/view.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ReportsController.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/column2.php" />
         <option value="$PROJECT_DIR$/protected/views/main/index.php" />
-        <option value="$PROJECT_DIR$/protected/views/reports/index.php" />
+        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/protected/components/FirePHPCore/fb.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/BranchController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/DepartmentController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/DeviceController.php" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/protected/views/main/_tree.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/DevController.php" />
+        <option value="$PROJECT_DIR$/protected/views/main/_device.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/MainController.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/OrganizationController.php" />
+        <option value="$PROJECT_DIR$/protected/views/organization/_form.php" />
+        <option value="$PROJECT_DIR$/css/tree.css" />
       </list>
     </option>
   </component>
@@ -193,13 +183,13 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents ProjectPane="true" />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollToSource ProjectPane="false" />
+      <autoscrollFromSource ProjectPane="false" />
       <sortByType />
     </navigator>
     <panes>
@@ -313,7 +303,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="organization" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,7 +329,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -374,6 +364,46 @@
               <option name="myItemId" value="xtech" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -386,8 +416,8 @@
     <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../yii/framework" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="xtech" serverId="915cb729-5efb-4959-bc6c-5c714ab13799">
     <servers>
@@ -423,6 +453,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="69e7a06e-bc93-472a-90f1-a036a60db293" name="Default" comment="" />
@@ -460,7 +507,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.6002401" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2350081" sideWeight="0.6713781" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23905997" sideWeight="0.6702002" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44057623" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286219" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -538,114 +585,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/department/view.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/CabinetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="55" selection-start="663" selection-end="692" vertical-scroll-proportion="0.40425533">
+        <state line="115" column="53" selection-start="2877" selection-end="2877" vertical-scroll-proportion="0.3412798">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/department/create.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/DepartmentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="164" selection-end="164" vertical-scroll-proportion="0.14893617">
+        <state line="137" column="24" selection-start="3459" selection-end="3459" vertical-scroll-proportion="0.6185696">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/employee/view.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/DeviceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="10" selection-start="973" selection-end="973" vertical-scroll-proportion="0.4974293">
+        <state line="176" column="24" selection-start="4585" selection-end="4585" vertical-scroll-proportion="0.5545797">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/employee/_form.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EmployeeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="4" selection-start="2775" selection-end="2775" vertical-scroll-proportion="0.32262212">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.855709">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/employee/create.php">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="312" selection-end="312" vertical-scroll-proportion="0.31914893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/cabinet/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="55" selection-start="555" selection-end="555" vertical-scroll-proportion="0.38297874">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/cabinet/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="10" selection-start="834" selection-end="947" vertical-scroll-proportion="0.65957445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/cabinet/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="83" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.7659575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/cabinet/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="20" selection-start="333" selection-end="333" vertical-scroll-proportion="0.3617021">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="34" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.27878788">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ReportsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="-5.8846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/column1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/column2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="181" selection-end="181" vertical-scroll-proportion="0.12765957">
+        <state line="244" column="25" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/main/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.65957445">
+        <state line="31" column="0" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.6612296">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/organization/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="27" selection-start="2311" selection-end="2311" vertical-scroll-proportion="0.63829786">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17021276">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/reports/index.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/DevController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="242" selection-end="242" vertical-scroll-proportion="0.23404256">
+        <state line="25" column="10" selection-start="649" selection-end="649" vertical-scroll-proportion="-16.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="18" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.65957445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="30" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.7984981">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/main/_device.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="157" selection-end="157" vertical-scroll-proportion="0.10638298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/main/_tree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="16" selection-start="5109" selection-end="5109" vertical-scroll-proportion="1.2853566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/organization/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/OrganizationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="34" selection-start="749" selection-end="749" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/organization/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="2039" selection-end="2039" vertical-scroll-proportion="-22.23077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/tree.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="12" selection-start="622" selection-end="622" vertical-scroll-proportion="0.4739394">
           <folding />
         </state>
       </provider>

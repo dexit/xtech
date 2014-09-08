@@ -114,10 +114,11 @@
         <li class="tree-menu-addchild"><a href="#">Додати +</a></li>
         <li class="tree-menu-edit"><a href="#">Редагувати</a></li>
         <li class="tree-menu-delete"><a href="#">Видалити</a></li>
-             <?php /*echo CHtml::link('Видалити', '#',
+        <!--<li>
+            <?php echo CHtml::link('Видалити', '#',
                     array('submit'=>array('delete','id'=>''),
-                          'confirm'=>'Ви впевнені?')); */?>
-        </li>
+                          'confirm'=>'Ви впевнені?')); ?>
+        </li>-->
     </ul>
     <div><a href="#" onClick="$(this).parent().removeClass('show');">X</a></div>
 </div>

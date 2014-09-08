@@ -19,6 +19,15 @@ class OrganizationController extends Controller
 		);
 	}
 
+    public function rules(){
+        return array(
+            array('name', 'required'),
+            array('name, description, telephones, address, emails', 'length', 'max'=>255),
+            array('www', 'url'),
+            array('boss, buh, okpo', 'numerical', 'integerOnly'),
+        );
+    }
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -111,11 +120,11 @@ class OrganizationController extends Controller
 	public function actionDelete($id)
 	{
 		$transaction = Yii::app()->db->beginTransaction();
-		
-		try {			
-			$organization = $this->loadModel($id);			
+
+		try {
+			$organization = $this->loadModel($id);
 			if ($organization) {				
-				$branches = $organization->branch;				
+				$branches = $organization->branch;
 				if ($branches) {
 					foreach ($branches as $branch) {
 						$departments = $branch->department;
@@ -127,9 +136,6 @@ class OrganizationController extends Controller
 										$employees = $cabinet->employee;
 										if ($employees) {
 											foreach ($employees as $employee) {
-												$employee->id_organization = null;
-												$employee->id_branch = null;
-												$employee->id_department = null;
 												$employee->id_cabinet = null;
 												$employee->save();
 											}
@@ -147,14 +153,15 @@ class OrganizationController extends Controller
 				$transaction->commit();
 			}
 		} catch(Exception $e) { 
-            		$transaction->rollback();
-            		$error = $e->getMessage();
+            $transaction->rollback();
+            $error = $e->getMessage();
+            echo $error;
         }
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			//$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-		$this->redirect(Yii::app()->createUrl('structure/index'));
+		    $this->redirect(Yii::app()->createUrl('/'));
 
 	}
 

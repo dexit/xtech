@@ -3,7 +3,7 @@
 $this->widget('zii.widgets.grid.CGridView', array(
       'dataProvider'=>$dataProvider,
       'pager' => array(
-          'pageSize' => '20',
+          //'pageSize' => '20',
           'maxButtonCount'=>'10',
           'header'=>'',
           'firstPageLabel'=>'Перша',

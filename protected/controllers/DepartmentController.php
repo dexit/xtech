@@ -121,9 +121,6 @@ class DepartmentController extends Controller
 						$employees = $cabinet->employee;
 						if ($employees) {
 							foreach ($employees as $employee) {
-								$employee->id_organization = null;
-								$employee->id_branch = null;
-								$employee->id_department = null;
 								$employee->id_cabinet = null;
 								$employee->save();
 							}
@@ -138,6 +135,7 @@ class DepartmentController extends Controller
 		} catch(Exception $e) { 
             		$transaction->rollback();
             		$error = $e->getMessage();
+            echo $error;
         }
 		
 		$this->redirect('?r=structure/index');	

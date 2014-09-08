@@ -37,7 +37,7 @@ class MainController extends Controller
         $rel = array('devicepc','devicetype','employee');
 		$devices = $dev->with($rel)->findAll();
 
-        $sort = new CSort();
+        /*$sort = new CSort();
         $sort->attributes = array(
             'defaultOrder'=>'name DESC',
             'type'=>array(
@@ -49,11 +49,11 @@ class MainController extends Controller
                 'desc'=>'inv_number DESC',
             ),
             '*'
-        );
+        );*/
 
 		$dataProvider = new CActiveDataProvider('Device', array(
-                            'pagination'=>array('pageSize'=>20),
-                            'sort' => $sort,
+                            //'pagination'=>array('pageSize'=>20),
+                            //'sort' => $sort,
                         ));
 
 		$this->render('index',array(

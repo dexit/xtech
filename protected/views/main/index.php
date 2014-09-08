@@ -30,6 +30,8 @@
 
 </section> <!-- end of right_col -->
 
-<div id="loader"><span>Загрузка...</span></div>
+<div id="loader">
+        <span>Загрузка...</span>
+</div>
 
 <div style="clear:both;"></div>

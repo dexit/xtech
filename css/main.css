@@ -241,8 +241,8 @@ div.search-form
 #right_col
 {
 	display: block;
-	float:left;
-	position: absolute;
+	/*float:left;
+	position: absolute;*/
 	margin-left: 330px;
 	width: 70%;
 }

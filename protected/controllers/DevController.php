@@ -9,7 +9,7 @@ class DevController extends Controller
 
 	public function actionShow($id)
 	{
-        $sort = new CSort();
+        /*$sort = new CSort();
         $sort->attributes = array(
             'defaultOrder'=>'t.id_device',
             'id_type'=>array(
@@ -20,11 +20,11 @@ class DevController extends Controller
                 'asc'=>'t.inv_number',
                 'desc'=>'t.inv_number DESC',
             ),
-        );
+        );*/
         $dataProvider = DevShowGrid::getData('t_organizations', (int)$id);
-        $dataProvider->sort = $sort;
+        //$dataProvider->sort = $sort;
+        //$dataProvider->pagination->pageSize = 20;
 
-        //var_dump($dataProvider);
 		if (Yii::app()->request->isAjaxRequest) {
       		$this->renderPartial('//main/_device', array(
         		'dataProvider' => $dataProvider),

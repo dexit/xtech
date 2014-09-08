@@ -164,7 +164,6 @@ class DeviceController extends Controller
 
 		$model = $this->loadModel($id);
 		$transaction = Yii::app()->db->beginTransaction();
-		//var_dump($model->devicepc);
 		try {
 			if ($model->devicepc) {
 				$model->devicepc->delete();				
@@ -175,6 +174,7 @@ class DeviceController extends Controller
 		} catch (Exception $e) {
             $transaction->rollBack();
             $error = $e->getMessage();
+            echo $error;
         }
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

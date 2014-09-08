@@ -20,6 +20,19 @@
 	<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/scripts.js',CClientScript::POS_HEAD);?>
 	<?php Yii::app()->clientScript->registerCoreScript('jquery');?>
 	<?php Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/styles.css');?>
+    <?php Yii::app()->clientScript->registerScript('
+        $("#loader").ajaxSend(function(){
+            $(this).show();
+            console.log("show");
+        }).ajaxStop(function(){
+            $(this).hide();
+            console.log("hide");
+        });
+    ', CClientScript::POS_READY); ?>
+
+
+
+
 	
 </head>
 

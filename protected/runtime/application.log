@@ -13913,3 +13913,140 @@ Stack trace:
 REQUEST_URI=/index.php?r=reports/types
 HTTP_REFERER=http://xtech/index.php?r=reports/index
 ---
+2014/09/08 13:17:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "structure/index".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('structure/index')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=structure/index
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/08 13:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "structure/index".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('structure/index')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=structure/index
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/08 13:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "types".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('types')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('types')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reports/types')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=reports/types
+HTTP_REFERER=http://xtech/index.php?r=reports/index
+---
+2014/09/08 13:19:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "structure/index".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('structure/index')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=structure/index
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/08 16:34:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "structure/index".' in C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('structure/index')
+#1 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\WebOpenServer\domains\xtech\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=structure/index
+HTTP_REFERER=http://xtech/index.php
+---
+2014/09/08 16:53:11 [error] [php] include(FirePHP.php): failed to open stream: No such file or directory (C:\WebOpenServer\domains\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\WebOpenServer\domains\xtech\protected\components\FirePHPCore\fb.php(45): class_exists()
+#2 C:\WebOpenServer\domains\yii\framework\YiiBase.php(320): require()
+#3 C:\WebOpenServer\domains\xtech\index.php(16): import()
+REQUEST_URI=/index.php
+in C:\WebOpenServer\domains\xtech\protected\components\FirePHPCore\fb.php (45)
+in C:\WebOpenServer\domains\xtech\index.php (16)
+2014/09/08 16:53:14 [error] [php] include(FirePHP.php): failed to open stream: No such file or directory (C:\WebOpenServer\domains\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\WebOpenServer\domains\xtech\protected\components\FirePHPCore\fb.php(45): class_exists()
+#2 C:\WebOpenServer\domains\yii\framework\YiiBase.php(320): require()
+#3 C:\WebOpenServer\domains\xtech\index.php(16): import()
+REQUEST_URI=/index.php
+in C:\WebOpenServer\domains\xtech\protected\components\FirePHPCore\fb.php (45)
+in C:\WebOpenServer\domains\xtech\index.php (16)
+2014/09/08 16:54:12 [error] [php] include(FirePHP.php): failed to open stream: No such file or directory (C:\WebOpenServer\domains\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\WebOpenServer\domains\xtech\protected\components\FirePHPCore\fb.php(45): class_exists()
+#2 C:\WebOpenServer\domains\yii\framework\YiiBase.php(320): require()
+#3 C:\WebOpenServer\domains\xtech\index.php(16): import()
+REQUEST_URI=/index.php
+in C:\WebOpenServer\domains\xtech\protected\components\FirePHPCore\fb.php (45)
+in C:\WebOpenServer\domains\xtech\index.php (16)
+2014/09/08 17:03:21 [error] [php] Undefined variable: a (C:\WebOpenServer\domains\xtech\protected\views\main\_tree.php:126)
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#1 C:\WebOpenServer\domains\xtech\protected\views\main\index.php(5): MainController->renderPartial()
+#2 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(126): require()
+#3 C:\WebOpenServer\domains\yii\framework\web\CBaseController.php(95): MainController->renderInternal()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(869): MainController->renderFile()
+#5 C:\WebOpenServer\domains\yii\framework\web\CController.php(782): MainController->renderPartial()
+#6 C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php(63): MainController->render()
+#7 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#8 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\WebOpenServer\domains\yii\framework\web\CController.php(286): MainController->runAction()
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): MainController->runActionWithFilters()
+#11 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): MainController->run()
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\WebOpenServer\domains\xtech\index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php
+in C:\WebOpenServer\domains\xtech\protected\views\main\_tree.php (126)
+in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (5)
+in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (63)
+2014/09/08 17:14:13 [error] [php] Cannot modify header information - headers already sent by (output started at C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php:117) (C:\WebOpenServer\domains\yii\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(159): OrganizationController->redirect()
+#1 unknown(0): OrganizationController->actionDelete()
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): OrganizationController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): OrganizationController->filterAccessControl()
+#9 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#13 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\WebOpenServer\domains\xtech\index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=organization/delete&id=3
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (159)
+in C:\WebOpenServer\domains\xtech\index.php (19)
+2014/09/08 17:15:02 [error] [php] Cannot modify header information - headers already sent by (output started at C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php:128) (C:\WebOpenServer\domains\yii\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php(159): OrganizationController->redirect()
+#1 unknown(0): OrganizationController->actionDelete()
+#2 C:\WebOpenServer\domains\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\WebOpenServer\domains\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\WebOpenServer\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(133): OrganizationController->runAction()
+#6 C:\WebOpenServer\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\WebOpenServer\domains\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\WebOpenServer\domains\yii\framework\web\filters\CInlineFilter.php(58): OrganizationController->filterAccessControl()
+#9 C:\WebOpenServer\domains\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\WebOpenServer\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\WebOpenServer\domains\yii\framework\web\CController.php(265): OrganizationController->runActionWithFilters()
+#12 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): OrganizationController->run()
+#13 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\WebOpenServer\domains\xtech\index.php(19): CWebApplication->run()
+REQUEST_URI=/index.php?r=organization/delete&id=3
+in C:\WebOpenServer\domains\xtech\protected\controllers\OrganizationController.php (159)
+in C:\WebOpenServer\domains\xtech\index.php (19)

@@ -26,12 +26,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('cols'=>45, 'rows'=>10,'maxlength'=>500)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'telephones'); ?>
 		<?php echo $form->textField($model,'telephones',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telephones'); ?>
@@ -87,9 +81,17 @@
 		<?php echo $form->error($model,'okpo'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'description'); ?>
+        <?php echo $form->textArea($model,'description',array('cols'=>45, 'rows'=>10,'maxlength'=>500)); ?>
+        <?php echo $form->error($model,'description'); ?>
+    </div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Додати' : 'Зберегти'); ?>
 	</div>
+
+
 
 <?php $this->endWidget(); ?>
 

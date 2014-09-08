@@ -20,4 +20,13 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+
+    public function init(){
+        parent::init();
+        if(YII_DEBUG){
+            spl_autoload_unregister(array('YiiBase','autoload'));
+            require_once (dirname(__FILE__).'/../components/FirePHPCore/fb.php');
+            spl_autoload_register(array('YiiBase', 'autoload'));
+        }
+    }
 }

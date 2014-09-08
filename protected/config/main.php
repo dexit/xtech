@@ -44,7 +44,7 @@ return array(
       		'widgets'=>array(
       		 'CGridView'=>array(
       			'summaryText' => 'Записи з {start} по {end}. Всього {count}',            
-      			)
+      			),
        		),      	
 		),
 
