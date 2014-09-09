@@ -19,15 +19,6 @@ class OrganizationController extends Controller
 		);
 	}
 
-    public function rules(){
-        return array(
-            array('name', 'required'),
-            array('name, description, telephones, address, emails', 'length', 'max'=>255),
-            array('www', 'url'),
-            array('boss, buh, okpo', 'numerical', 'integerOnly'),
-        );
-    }
-
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.

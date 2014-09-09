@@ -31,6 +31,16 @@ class Employee extends CActiveRecord
 		return 't_employees';
 	}
 
+    public function behaviors()
+    {
+        return array(
+            'EDataConvert' => array(
+                'class' => 'application.behaviors.EDataConvert',
+                'params' => array('dob', 'dof'),
+            ),
+        );
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -61,9 +71,6 @@ class Employee extends CActiveRecord
 		return array(
 			'device' => array(self::HAS_MANY, 'Device', 'id_employee'),
             'cabinet' => array(self::BELONGS_TO, 'Cabinet', 'id_cabinet'),
-            //'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
-            //'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
-            //'oprganization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
 		);
 	}
 
@@ -142,4 +149,5 @@ class Employee extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
 }

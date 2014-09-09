@@ -95,6 +95,7 @@ class EmployeeController extends Controller
 		if(isset($_POST['Employee']))
 		{
 			$model->attributes=$_POST['Employee'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id_employee));
 		}
@@ -134,7 +135,7 @@ class EmployeeController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Employee('search');
+		$model = new Employee('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Employee']))
 			$model->attributes=$_GET['Employee'];
@@ -186,14 +187,6 @@ class EmployeeController extends Controller
 
 	public function actionShow($id)
 	{
-		/*$id_employee = (int)$id;
-
-		$criteria = new CDbCriteria();
-		$criteria->addCondition('id_employee=:id_employee');
-		$criteria->params = array(':id_employee'=>$id_employee);
-	
-		$dataProvider = new CActiveDataProvider('Device',array('criteria'=>$criteria));*/
-
         $dataProvider = DevShowGrid::getData('t_employees', (int)$id);
 
 		if (Yii::app()->request->isAjaxRequest) {
@@ -218,5 +211,6 @@ class EmployeeController extends Controller
    		foreach($list as $value=>$employee_firstname)
    			echo CHtml::tag('option', array('value'=>$value),
    									  CHtml::encode($employee_firstname),true);
-	}	
+	}
+
 }

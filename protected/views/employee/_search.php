@@ -12,31 +12,6 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_employee'); ?>
-		<?php echo $form->textField($model,'id_employee'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'id_organization'); ?>
-		<?php echo $form->textField($model,'id_organization'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'id_branch'); ?>
-		<?php echo $form->textField($model,'id_branch'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'id_department'); ?>
-		<?php echo $form->textField($model,'id_department'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'id_cabinet'); ?>
-		<?php echo $form->textField($model,'id_cabinet'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'firstname'); ?>
 		<?php echo $form->textField($model,'firstname',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
@@ -59,11 +34,6 @@
 	<div class="row">
 		<?php echo $form->label($model,'telephones'); ?>
 		<?php echo $form->textField($model,'telephones',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'post'); ?>
-		<?php echo $form->textField($model,'post',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -107,7 +77,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Шукати'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

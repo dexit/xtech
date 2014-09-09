@@ -15,7 +15,7 @@ class BranchController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -63,11 +63,6 @@ class BranchController extends Controller
 	public function actionCreate($parent)
 	{
 		$model = new Branch;
-        //var_dump($parent);
-
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Branch']))
 		{

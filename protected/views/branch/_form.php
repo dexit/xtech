@@ -40,12 +40,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('cols'=>45, 'rows'=>10,'maxlength'=>500)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'telephones'); ?>
 		<?php echo $form->textField($model,'telephones',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telephones'); ?>
@@ -59,7 +53,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'www'); ?>
-		<?php echo $form->textField($model,'www',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->urlField($model,'www',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'www'); ?>
 	</div>
 
@@ -68,6 +62,12 @@
 		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'address'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'description'); ?>
+        <?php echo $form->textArea($model,'description',array('cols'=>45, 'rows'=>10,'maxlength'=>500)); ?>
+        <?php echo $form->error($model,'description'); ?>
+    </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>

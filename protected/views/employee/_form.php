@@ -44,31 +44,27 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'firstname'); ?>
-		<?php echo $form->textField($model,'firstname',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'firstname',array('size'=>50,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'firstname'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'lastname'); ?>
-		<?php echo $form->textField($model,'lastname',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'lastname',array('size'=>50,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'lastname'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'surname'); ?>
-		<?php echo $form->textField($model,'surname',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'surname',array('size'=>50,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'surname'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-            <?php echo $form->textArea($model,'description',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
+
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'telephones'); ?>
-		<?php echo $form->textField($model,'telephones',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'telephones',array('size'=>50,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telephones'); ?>
 	</div>
 
@@ -88,25 +84,24 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'login'); ?>
-		<?php echo $form->textField($model,'login',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'login',array('size'=>30,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'login'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tab_number'); ?>
-		<?php echo $form->textField($model,'tab_number'); ?>
+		<?php echo $form->numberField($model,'tab_number',array('size'=>30,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'tab_number'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'home_address'); ?>
-		<?php echo $form->textArea($model,'home_address',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'home_address',array('cols'=>45, 'rows'=>5,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'home_address'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'dob'); ?>
-		<?php //echo $form->textField($model,'dob'); ?>
         <?php
         $this->widget('zii.widgets.jui.CJuiDatePicker', array(
             'model' => $model,
@@ -115,14 +110,14 @@
             'htmlOptions' => array(
                 'size' => '10',         		// textField size
                 'maxlength' => '10',    		// textField maxlength
-                'dateFormat' => 'yy-mm-dd',
+                'dateFormat' => 'mm-dd-YY',
                 'showOtherMonths' => true,      // show dates in other months
                 'selectOtherMonths' => true,    // can seelect dates in other months
                 'changeYear' => true,           // can change year
                 'changeMonth' => true,          // can change month
-                'yearRange' => '2000:2099',     // range of year
-                'minDate' => '1950-01-01',      // minimum date
-                'maxDate' => '2099-12-31',      // maximum date
+                'yearRange' => '1900:2099',     // range of year
+                //'minDate' => '1950-01-01',      // minimum date
+                //'maxDate' => '2099-12-31',      // maximum date
                 'showButtonPanel' => true,      // show button panel
             ),
         ));
@@ -138,8 +133,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'fired'); ?>
-		<?php //echo $form->textField($model,'fired'); ?>
         <?php echo $form->labelEx($model,'fired'); ?>
         <?php if ($model->isNewRecord): ?>
             <input id="Employee_fired" type="radio" name="Employee[fired]" value="0" />Ні
@@ -159,7 +152,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'dof'); ?>
-		<?php //echo $form->textField($model,'dof'); ?>
         <?php
         $this->widget('zii.widgets.jui.CJuiDatePicker', array(
             'model' => $model,
@@ -182,6 +174,12 @@
         ?>
 		<?php echo $form->error($model,'dof'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'description'); ?>
+        <?php echo $form->textArea($model,'description',array('cols'=>45, 'rows'=>10,'maxlength'=>500)); ?>
+        <?php echo $form->error($model,'description'); ?>
+    </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>

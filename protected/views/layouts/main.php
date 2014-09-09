@@ -20,45 +20,68 @@
 	<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/scripts.js',CClientScript::POS_HEAD);?>
 	<?php Yii::app()->clientScript->registerCoreScript('jquery');?>
 	<?php Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/styles.css');?>
-    <?php Yii::app()->clientScript->registerScript('
-        $("#loader").ajaxSend(function(){
-            $(this).show();
-            console.log("show");
-        }).ajaxStop(function(){
-            $(this).hide();
-            console.log("hide");
-        });
-    ', CClientScript::POS_READY); ?>
 
-
-
-
-	
+    <?php
+        $sfOptions = '{delay:300,speed:"fast"}';
+        Yii::app()->clientScript->registerScript('sf-menu',
+            '$("ul.sf-menu").superfish('.$sfOptions.');',
+            CClientScript::POS_READY);
+    ?>
 </head>
 
 <body>
-
 <div class="container" id="page">
 
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Головна', 'url'=>array('/')),
-				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				//array('label'=>'Contact', 'url'=>array('/site/contact')),
-                array('label'=>'Звіти', 'url'=>array('reports/index')),
-				array('label'=>'Довідники', 'url'=>array('directory/index')),
-                array('label'=>'Адміністрування', 'url'=>array('admin/index')),
-				
-				array('label'=>'Вхід', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Вихід ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
+    <div id="m-menu">
+        <?php
+        $this->widget('ext.CDropDownMenu.CDropDownMenu',array(
+                'style' => 'default', // or default or navbar
+                'items'=>array(
+                    array(
+                        'label'=>'Головна',
+                        'url'=>array('/'),
+                        'visible'=>Yii::app()->user->isGuest,
+                    ),
+                    array(
+                        'label'=>'Звіти',
+                        'url'=>array('//reports/index'),
+                        'visible'=>Yii::app()->user->isGuest,
+                    ),
+                    array(
+                        'label'=>'Довідники',
+                        'url'=>array('//directory/index'),
+                        'visible'=>Yii::app()->user->isGuest,
+                        'items' => array(
+                            array(
+                                'label'=>'Працівники',
+                                'url'=>array('//employee/admin'),
+                            )
+                        ),
+                    ),
+                    array(
+                        'label'=>'Адміністрування',
+                        'visible'=>Yii::app()->user->isGuest,
+                        'url'=>array('admin/index'),
+                    ),
+                    array(
+                        'label'=>'Вхід',
+                        'url'=>array('/login'),
+                        'visible'=>Yii::app()->user->isGuest,
+                    ),
+                    array('label'=>'Вихід ('.Yii::app()->user->name.')',
+                         'url'=>array('/logout'),
+                         'visible'=>!Yii::app()->user->isGuest,
+                    ),
+                    )
+                )
+             );
+        ?>
+    </div>
+
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,

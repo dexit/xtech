@@ -2,11 +2,11 @@
 /* @var $this EmployeeController */
 /* @var $model Employee */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Employees'=>array('index'),
 	$model->id_employee=>array('view','id'=>$model->id_employee),
 	'Редагувати',
-);
+);*/
 
 /*$this->menu=array(
 	array('label'=>'List Employee', 'url'=>array('index')),
@@ -16,6 +16,6 @@ $this->breadcrumbs=array(
 );*/
 ?>
 
-<h1>Редагувати дані співробітника <?php echo $model->firstname; ?></h1>
+<h1>Редагувати дані співробітника: <?php echo $model->firstname; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

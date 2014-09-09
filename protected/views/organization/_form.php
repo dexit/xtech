@@ -39,7 +39,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'www'); ?>
-		<?php echo $form->textField($model,'www',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->urlField($model,'www',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'www'); ?>
 	</div>
 
