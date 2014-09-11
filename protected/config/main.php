@@ -44,9 +44,9 @@ return array(
 		'widgetFactory'=>array(
       		'widgets'=>array(
       		 'CGridView'=>array(
-      			'summaryText' => 'Записи з {start} по {end}. Всього {count}',            
+      			    'summaryText' => 'Записи з {start} по {end}. Всього {count}',
       			),
-       		),      	
+            ),
 		),
 
 		/*'clientScript'=>array(
