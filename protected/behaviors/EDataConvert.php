@@ -40,7 +40,7 @@ class EDataConvert extends CActiveRecordBehavior
     {
         $date = $this->owner->$p;
         if ($date) {
-            $this->prop[$p] = date('Y-d-m', strtotime($date));
+            $this->prop[$p] = date('Y-m-d', strtotime($date));
             return true;
         }
         return false;

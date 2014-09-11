@@ -11,6 +11,7 @@ $this->menu=array(
 	//array('label'=>'List Department', 'url'=>array('index')),
 	//array('label'=>'Create Department', 'url'=>array('create')),
 	array('label'=>'Редагувати', 'url'=>array('update', 'id'=>$model->id_department)),
+    array('label'=>'Додати кабінет', 'url'=>array('cabinet/create', 'parent'=>$model->id_department)),
 	array('label'=>'Видалити', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_department),'confirm'=>'Ви впевнені, що бажаєте видалити цей відділ?')),
 	//array('label'=>'Manage Department', 'url'=>array('admin')),
 );

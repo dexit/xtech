@@ -2,7 +2,7 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 /* @var $form CActiveForm */
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_update.js');
+//Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_update.js');
 ?>
 
 <div class="form">
@@ -13,60 +13,9 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 )); ?>
 	
 	<?php echo $form->errorSummary($model); ?>
-<?php /*
-	<div class="row">
-		<?php echo $form->labelEx($model->employee->cabinet->department->branch->organization,'id_organization'); ?>
-        <?php //echo CHtml::label(CHtml::encode('Організація'),'id_organization'); ?>
-		<?php $list = CHtml::listData(Organization::model()->findAll(),
-                                                        'id_organization', 'name');?>
-		<?php echo $form->dropDownList($model->employee->cabinet->department->branch->organization,'id_organization',$list, array(
-									 'options'=>array(
-												$model->employee->cabinet->department->branch->organization->id_organization=>array(
-															'selected'=>'selected')),
-									 	
-												)); ?>
-		<?php echo $form->error($model->employee->cabinet->department->branch->organization,'id_organization'); ?>
-	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model->employee->cabinet->department->branch,'id_branch'); ?>
-		<?php //echo $form->textField($model,'id_branch'); ?>
-		<?php $list = CHtml::listData(Branch::model()->findAll(),'id_branch', 'name');?>
-		<?php echo $form->dropDownList($model->employee->cabinet->department->branch,'id_branch',$list, array(
-									'options'=>array(
-												$model->employee->cabinet->department->branch->id_branch=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model->employee->cabinet->department->branch,'id_branch'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model->employee->cabinet->department,'id_department'); ?>
-		<?php //echo $form->textField($model,'id_department'); ?>
-		<?php $list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');?>
-		<?php echo $form->dropDownList($model->employee->cabinet->department,'id_department',$list, array(
-									'options'=>array(
-												$model->employee->cabinet->department->id_department=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model->employee->cabinet->department,'id_department'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model->employee->cabinet,'id_cabinet'); ?>
-		<?php //echo $form->textField($model,'id_cabinet'); ?>
-		<?php $list = CHtml::listData(Cabinet::model()->findAll(),'id_cabinet', 'number');?>
-		<?php echo $form->dropDownList($model->employee->cabinet,'id_cabinet',$list, array(
-									'options'=>array(
-												$model->employee->cabinet->id_cabinet=>array(
-															'selected'=>'selected')))
-										); ?>
-		<?php echo $form->error($model->employee->cabinet,'id_cabinet'); ?>
-	</div>
-*/?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
-		<?php //echo $form->textField($model,'id_employee'); ?>
 		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
 		<?php echo $form->dropDownList($model,'id_employee',$list, array(
 									'options'=>array(
@@ -78,7 +27,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_type'); ?>
-		<?php //echo $form->textField($model,'id_type'); ?>
 		<?php $list = CHtml::listData(DeviceType::model()->findAll(),'id_device_type', 'name');?>
 		<?php echo $form->dropDownList($model,'id_type',$list, array(
 									'options'=>array(
@@ -92,12 +40,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'description'); ?>
 	</div>
 
 	<div class="row">
@@ -123,7 +65,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 		 	}
 		 	$arrYears = array_reverse($arrYears, true);
 		?>
-		<?php //echo $form->textField($model,'year'); ?>
 		<?php echo $form->dropDownList($model,'year',$arrYears); ?>
 		<?php echo $form->error($model,'year'); ?>
 	</div>
@@ -140,14 +81,14 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 		 	}
 		 	$arrYears = array_reverse($arrYears, true);
 		?>
-		<?php //echo $form->textField($model,'end_varantly_yesr'); ?>
 		<?php echo $form->dropDownList($model,'end_varantly_yesr',$arrYears); ?>
 		<?php echo $form->error($model,'end_varantly_yesr'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'service'); ?>
-		<?php echo $form->textField($model,'service',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'service',
+                        array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'service'); ?>
 	</div>
 
@@ -170,7 +111,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 	    			'language' => 'uk',
 	    			'options' => array(
 	    				'size' => '10',
-	    				'dateFormat' => 'yy-mm-dd',
+	    				'dateFormat' => 'dd-mm-yy',
 	    				'showButtonPanel' => true,
 	    				'changeYear' => true,           // can change year
 				        'changeMonth' => true,
@@ -203,6 +144,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select_upd
 
 		<?php echo $form->error($model,'break'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'description'); ?>
+        <?php echo $form->textArea($model,'description',
+                        array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
+        <?php echo $form->error($model,'description'); ?>
+    </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>

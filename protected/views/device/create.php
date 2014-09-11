@@ -17,14 +17,17 @@ $this->menu=array(
 
 <?php 
 
-//var_dump($model_pc);
-
 if (isset($model_pc)) {
 	$this->renderPartial('_form_create_pc', 
-						array('model'=>$model,'model_pc'=>$model_pc,'device_type'=>$device_type));	
+						array('model'=>$model,
+                              'model_pc'=>$model_pc,
+                              'device_type'=>$device_type,
+                              'parent'=>$parent,));
 } else {
 	$this->renderPartial('_form_create', 
-						array('model'=>$model,'device_type'=>$device_type));
+						array('model'=>$model,
+                              'device_type'=>$device_type,
+                              'parent'=>$parent,));
 }
 
 ?>

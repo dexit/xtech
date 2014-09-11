@@ -13,13 +13,13 @@ $this->widget('zii.widgets.grid.CGridView', array(
       ),
       'itemsCssClass'=>'table-striped',
       'columns'=>array(
-            array(
+            /*array(
               'name' => 'Організація',
               'type' => 'raw',
               //'value' => '$data->organization->name',
               'value' => '(isset($data->employee->cabinet->department->branch->organization->name))?
                           $data->employee->cabinet->department->branch->organization->name:\'Не визначено\'',
-            ),
+            ),*/
             array(
               'name' => 'Філія',
               'type' => 'raw',

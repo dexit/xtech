@@ -17,6 +17,10 @@
 			'htmlOptions'=>array('class'=>'operations'),
 		));
 		$this->endWidget();
+
+        if (($this->id == "employee") && ($this->action->id == "view")) {
+           // $this->widget('application.components.AddDevice.AddDevice', array('parent'=>$model->id_employee));
+        }
 	?>
 	</div><!-- sidebar -->
 </div>

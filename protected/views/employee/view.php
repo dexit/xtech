@@ -11,6 +11,7 @@ $this->menu=array(
 	//array('label'=>'List Employee', 'url'=>array('index')),
 	//array('label'=>'Create Employee', 'url'=>array('create')),
 	array('label'=>'Редагувати', 'url'=>array('update', 'id'=>$model->id_employee)),
+    array('label'=>'Додати співробітника', 'url'=>array('create', 'parent'=>$model->id_cabinet)),
 	array('label'=>'Видалити', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_employee),'confirm'=>'Ви впевнені, що бажаєте видалити даного співробітника?')),
 	//array('label'=>'Manage Employee', 'url'=>array('admin')),
 );
@@ -52,3 +53,7 @@ $this->menu=array(
         ),
 	),
 )); ?>
+
+<hr>
+
+<?php $this->widget('application.components.AddDevice.AddDevice', array('parent'=>$model->id_employee)); ?>

@@ -59,6 +59,10 @@
                             array(
                                 'label'=>'Працівники',
                                 'url'=>array('//employee/admin'),
+                            ),
+                            array(
+                                'label'=>'Типи пристроїв',
+                                'url'=>array('//deviceType/admin'),
                             )
                         ),
                     ),

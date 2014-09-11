@@ -2,11 +2,17 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 /* @var $form CActiveForm */
+
 $model->unsetAttributes();
 $model_pc->unsetAttributes();
-//CVarDumper::dump($model_pc,10,true);
-//var_dump($model);
-Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js');
+
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.input-ip.js');
+Yii::app()->clientScript->registerScript('ip','
+    $(function(){
+        $("#DevicePc_ip").ipAddress();
+    });
+',CClientScript::POS_HEAD);
+//var_dump($parent);
 ?>
 
 <div class="form">
@@ -18,80 +24,17 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 	
 	<?php echo $form->errorSummary($model); ?>
 
-	<?php /*
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_organization'); ?>
-		<?php $list = CHtml::listData(Organization::model()->findAll(),'id_organization', 'name');?>
-		<?php echo $form->dropDownList($model,'id_organization',$list, array(
-											'ajax'=>array(
-													'type'=>'POST',
-													'url'=>Yii::app()->createUrl('branch/loadbyorganization'),
-													'update'=>'#Device_id_branch',
-													'data'=>array('id_organization'=>'js:this.value'),
-													),
-											'empty'=>'Виберіть організацію',
-										)); ?>
-		<?php echo $form->error($model,'id_organization'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_branch'); ?>		
-		<?php echo $form->dropDownList($model,'id_branch',array(), array(
-										'ajax'=>array(
-													'type'=>'POST',
-													'url'=>Yii::app()->createUrl('department/loadbybranch'),
-													'update'=>'#Device_id_department',
-													'data'=>array('id_branch'=>'js:this.value'),
-													),
-										'empty'=>'Виберіть корпус'
-									)
-										); ?>
-		<?php echo $form->error($model,'id_branch'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_department'); ?>
-		<?php //echo $form->textField($model,'id_department'); ?>
-		<?php //$list = CHtml::listData(Department::model()->findAll(),'id_department', 'name');?>
-		<?php echo $form->dropDownList($model,'id_department',array(), array(
-									'ajax'=>array(
-													'type'=>'POST',
-													'url'=>Yii::app()->createUrl('cabinet/loadbydepartment'),
-													'update'=>'#Device_id_cabinet',
-													'data'=>array('id_department'=>'js:this.value'),
-													),
-									'empty'=>'Виберіть відділ')
-										); ?>
-		<?php echo $form->error($model,'id_department'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_cabinet'); ?>
-		<?php //echo $form->textField($model,'id_cabinet'); ?>
-		<?php //$list = CHtml::listData(Cabinet::model()->findAll(),'id_cabinet', 'number');?>
-		<?php echo $form->dropDownList($model,'id_cabinet',array(), array(
-									'ajax'=>array(
-													'type'=>'POST',
-													'url'=>Yii::app()->createUrl('employee/loadbycabinet'),
-													'update'=>'#Device_id_employee',
-													'data'=>array('id_cabinet'=>'js:this.value'),
-													),
-									'empty'=>'Виберіть кабінет')
-										); ?>
-		<?php echo $form->error($model,'id_cabinet'); ?>
-	</div>
-*/?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_employee'); ?>
-		<?php //echo $form->textField($model,'id_employee'); ?>
 		<?php $list = CHtml::listData(Employee::model()->findAll(),'id_employee', 'firstname');?>
 		<?php echo $form->dropDownList($model,'id_employee',$list, array(
-										'empty'=>'Оберіть співробітника')
-										); ?>
+										'empty'=>'Оберіть співробітника',
+                                        'options'=>array(
+                                                $parent=>array(
+                                                'selected'=>'selected')),
+                                        )); ?>
 		<?php echo $form->error($model,'id_employee'); ?>
 	</div>
-
-	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
@@ -100,14 +43,8 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'inv_number'); ?>
-		<?php echo $form->textField($model,'inv_number'); ?>
+		<?php echo $form->textField($model,'inv_number',array('size'=>15,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'inv_number'); ?>
 	</div>
 
@@ -128,7 +65,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 		 	}
 		 	$arrYears = array_reverse($arrYears, true);
 		?>
-		<?php //echo $form->textField($model,'year'); ?>
 		<?php echo $form->dropDownList($model,'year',$arrYears); ?>
 		<?php echo $form->error($model,'year'); ?>
 	</div>
@@ -145,7 +81,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 		 	}
 		 	$arrYears = array_reverse($arrYears, true);
 		?>
-		<?php //echo $form->textField($model,'end_varantly_yesr'); ?>
 		<?php echo $form->dropDownList($model,'end_varantly_yesr',$arrYears); ?>
 		<?php echo $form->error($model,'end_varantly_yesr'); ?>
 	</div>
@@ -175,7 +110,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 	    			'language' => 'uk',
 	    			'options' => array(
 	    				'size' => '10',
-	    				'dateFormat' => 'yy-mm-dd',
+	    				'dateFormat' => 'dd-mm-yy',
 	    				'showButtonPanel' => true,
 	    				'changeYear' => true,           // can change year
 				        'changeMonth' => true,
@@ -210,51 +145,67 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 	</div>
 
 	<div class="row">
-		<?php //var_dump($devicepc); ?>
 		<?php echo $form->labelEx($model_pc,'mb'); ?>
-		<?php echo $form->textField($model_pc,'mb',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'mb',
+                        array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'mb'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'cpu_name'); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
 		<?php echo $form->textField($model_pc,'cpu_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'cpu_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'cpu_p'); ?>
-		<?php echo $form->textField($model_pc,'cpu_p',array('size'=>8,'maxlength'=>10)); ?>
+		<?php echo $form->numberField($model_pc,'cpu_p',
+                                array('size'=>8,'maxlength'=>10, 'step'=>'0.1')); ?>
 		<?php echo $form->error($model_pc,'cpu_p'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'hdd_name'); ?>
-		<?php echo $form->textField($model_pc,'hdd_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'hdd_name',
+                                array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'hdd_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'hdd_p'); ?>
-		<?php echo $form->numberField($model_pc,'hdd_p',array('size'=>8,'maxlength'=>255)); ?>
+		<?php echo $form->numberField($model_pc,'hdd_p',
+                                    array('size'=>8,'maxlength'=>255)); ?>
 		<?php echo $form->error($model_pc,'hdd_p'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'ram_name'); ?>
-		<?php echo $form->textField($model_pc,'ram_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'ram_name',
+                                        array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'ram_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'ram_p'); ?>
-		<?php echo $form->numberField($model_pc,'ram_p',array('size'=>8,'maxlength'=>255)); ?>
+		<?php echo $form->numberField($model_pc,'ram_p',
+                                array('size'=>8,'maxlength'=>255)); ?>
 		<?php echo $form->error($model_pc,'ram_p'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'video_name'); ?>
-		<?php echo $form->textField($model_pc,'video_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'video_name',
+                                array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'video_name'); ?>
 	</div>
 
@@ -266,33 +217,53 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/select.js'
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'cdrom_name'); ?>
-		<?php echo $form->textField($model_pc,'cdrom_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'cdrom_name',
+                                    array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'cdrom_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'lan_name'); ?>
-		<?php echo $form->textField($model_pc,'lan_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'lan_name',
+                                    array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'lan_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'os'); ?>
-		<?php echo $form->textField($model_pc,'os',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'os',
+                                    array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'os'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'net_name'); ?>
-		<?php echo $form->textField($model_pc,'net_name',array('size'=>30,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model_pc,'net_name',
+                                    array('size'=>30,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model_pc,'net_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model_pc,'ip'); ?>
-		<?php echo $form->textField($model_pc,'ip',array('size'=>30,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model_pc,'ip',
+                                           array('size'=>30,'maxlength'=>255)); ?>
 		<?php echo $form->error($model_pc,'ip'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'description'); ?>
+        <?php echo $form->textArea($model,'description',
+                                            array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
+        <?php echo $form->error($model,'description'); ?>
+    </div>
 
 	<div class="row">
 		<input type="hidden" id="Device_id_type" name="Device[id_type]" value="<?php echo $device_type ?>">

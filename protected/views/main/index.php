@@ -4,6 +4,7 @@
     <?php $this->renderPartial('_tree', array(
                         'organizations' => $organizations,));?>
   </div>
+    <?php /*
     <div id="add-device">
         <?php echo CHtml::beginForm(CController::createUrl('device/create'),'get'); ?>
         <div class="row">
@@ -16,6 +17,8 @@
         </div>
         <?php echo CHtml::endForm(); ?>
     </div>
+ */?>
+    <?php $this->widget('application.components.AddDevice.AddDevice'); ?>
                  
 </section> <!-- end of left_col -->
   

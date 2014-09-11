@@ -11,6 +11,7 @@ $this->menu=array(
 	//array('label'=>'List Organization', 'url'=>array('index')),
 	//array('label'=>'Додати', 'url'=>array('create')),
 	array('label'=>'Редагувати', 'url'=>array('update', 'id'=>$model->id_organization)),
+    array('label'=>'Додати філію', 'url'=>array('branch/create', 'parent'=>$model->id_organization)),
 	array('label'=>'Видалити', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_organization),'confirm'=>'Ви бажаєте видалити дану організацію?')),
 	//array('label'=>'Manage Organization', 'url'=>array('admin')),
 );

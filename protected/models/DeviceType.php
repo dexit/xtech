@@ -52,8 +52,8 @@ class DeviceType extends CActiveRecord
 	{
 		return array(
 			'id_device_type' => 'Id Device Type',
-			'name' => 'Name',
-			'description' => 'Description',
+			'name' => 'Назва',
+			'description' => 'Примітка',
 		);
 	}
 

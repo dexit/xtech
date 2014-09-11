@@ -107,18 +107,14 @@
             'model' => $model,
             'attribute' => 'dob',
             'language' => 'uk',
-            'htmlOptions' => array(
-                'size' => '10',         		// textField size
-                'maxlength' => '10',    		// textField maxlength
-                'dateFormat' => 'mm-dd-YY',
-                'showOtherMonths' => true,      // show dates in other months
-                'selectOtherMonths' => true,    // can seelect dates in other months
+            'options' => array(
+                'size' => '10',
+                'dateFormat' => 'dd-mm-yy',
+                'showButtonPanel' => true,
                 'changeYear' => true,           // can change year
-                'changeMonth' => true,          // can change month
-                'yearRange' => '1900:2099',     // range of year
-                //'minDate' => '1950-01-01',      // minimum date
-                //'maxDate' => '2099-12-31',      // maximum date
-                'showButtonPanel' => true,      // show button panel
+                'changeMonth' => true,
+                'showOtherMonths' => true,      // show dates in other months
+                'selectOtherMonths' => true,     // show button panel
             ),
         ));
         ?>

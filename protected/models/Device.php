@@ -30,6 +30,16 @@ class Device extends CActiveRecord
 		return 't_devices';
 	}
 
+    public function behaviors()
+    {
+        return array(
+            'EDataConvert' => array(
+                'class' => 'application.behaviors.EDataConvert',
+                'params' => array('expluatation_data'),
+            ),
+        );
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -38,9 +48,9 @@ class Device extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_employee, id_type, inv_number, year, end_varantly_yesr, expluatation, private, break', 'numerical', 'integerOnly'=>true),
+			array('id_employee, id_type, year, end_varantly_yesr, expluatation, private, break', 'numerical', 'integerOnly'=>true),
 			array('name, description, sn, service', 'length', 'max'=>255),
-			array('expluatation_data', 'safe'),
+			array('expluatation_data, inv_number', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_device, id_employee, id_type, name, description, inv_number, sn, year, end_varantly_yesr, service, expluatation, expluatation_data, private, break', 'safe', 'on'=>'search|insert'),

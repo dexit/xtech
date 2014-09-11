@@ -72,16 +72,17 @@ class DeviceController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate($device_type)
+	public function actionCreate($device_type, $parent)
 	{
-		
 		$device_type = (int)$device_type;
+        $parent = (int)$parent;
 
 		$models = array();
 		$models['device_type'] = $device_type;
+        $models['parent'] = $parent;
 		$models['model'] = new Device;
 
-		if ($device_type == 2) {
+		if (($device_type == 2) || ($device_type == 3)) {
 			$models['model_pc'] = new DevicePc;
 		}
 		
@@ -107,14 +108,12 @@ class DeviceController extends Controller
 				
 				$transaction->commit();
 				$this->redirect(array('view','id'=>$model->id_device));
-				//$this->redirect(array('/'));
-			} catch(Exception $e) { 
+			} catch(Exception $e) {
             		$transaction->rollback();
-            		//var_dump($e);
             		$error = $e->getMessage();
+                    echo $error;
         	}			
 		}
-
 
 		$this->render('create',$models);
 	}

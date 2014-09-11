@@ -49,7 +49,9 @@ $this->menu=array(
 		array(
 			'name' => 'Співробітник',
 			'type' => 'raw',
-            'value' => $model->employee->firstname." ".$model->employee->lastname." ".$model->employee->surname,          
+            'value' => (isset($model->employee->firstname))?
+                    $model->employee->firstname." ".$model->employee->lastname." ".$model->employee->surname:
+                    'Не визначено',
 		),
 		array(
 			'name' => 'Тип пристрою',
@@ -77,12 +79,12 @@ $this->menu=array(
 		array(
 			'name' => 'Стан',
 			'type' => 'raw',
-            'value' => ($model->private)?"Вийшов з ладу":"Працює",          
+            'value' => ($model->break)?"Вийшов з ладу":"Працює",
 		),
 	),
 )); 
 
-if ($model->devicetype->id_device_type == 2) {
+if (($model->devicetype->id_device_type == 2) || ($model->devicetype->id_device_type == 3)) {
 	$this->renderPartial('_device_pc', array(
                       'model' => $model,));
 }

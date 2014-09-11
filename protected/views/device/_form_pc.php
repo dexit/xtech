@@ -2,6 +2,12 @@
 /* @var $this DeviceController */
 /* @var $model Device */
 /* @var $form CActiveForm */
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.input-ip.js');
+Yii::app()->clientScript->registerScript('ip','
+    $(function(){
+        $("#DevicePc_ip").ipAddress();
+    });
+',CClientScript::POS_HEAD);
 ?>
 
 <div class="form">
@@ -40,11 +46,7 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
+
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'inv_number'); ?>
@@ -69,7 +71,6 @@
 		 	}
 		 	$arrYears = array_reverse($arrYears, true);
 		?>
-		<?php //echo $form->textField($model,'year'); ?>
 		<?php echo $form->dropDownList($model,'year',$arrYears); ?>
 		<?php echo $form->error($model,'year'); ?>
 	</div>
@@ -86,14 +87,13 @@
 		 	}
 		 	$arrYears = array_reverse($arrYears, true);
 		?>
-		<?php //echo $form->textField($model,'end_varantly_yesr'); ?>
 		<?php echo $form->dropDownList($model,'end_varantly_yesr',$arrYears); ?>
 		<?php echo $form->error($model,'end_varantly_yesr'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'service'); ?>
-		<?php echo $form->textField($model,'service',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'service',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'service'); ?>
 	</div>
 
@@ -116,7 +116,7 @@
 	    			'language' => 'uk',
 	    			'options' => array(
 	    				'size' => '10',
-	    				'dateFormat' => 'yy-mm-dd',
+	    				'dateFormat' => 'dd-mm-yy',
 	    				'showButtonPanel' => true,
 	    				'changeYear' => true,           // can change year
 				        'changeMonth' => true,
@@ -151,28 +151,34 @@
 	</div>
 
 	<div class="row">
-		<?php //var_dump($devicepc); ?>
 		<?php echo $form->labelEx($model,'mb'); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
 		<?php echo $form->textField($model->devicepc,'mb',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model->devicepc,'mb'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cpu_name'); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
 		<?php echo $form->textField($model->devicepc,'cpu_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'cpu_name'); ?>
+        <?php $this->endContent(); ?>
+        <?php echo $form->error($model->devicepc,'cpu_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cpu_p'); ?>
-		<?php echo $form->textField($model->devicepc,'cpu_p',array('size'=>8,'maxlength'=>10)); ?>
+		<?php echo $form->numberField($model->devicepc,'cpu_p',
+                                    array('size'=>8,'maxlength'=>10, 'step'=>0.1)); ?>
 		<?php echo $form->error($model->devicepc,'cpu_p'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hdd_name'); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
 		<?php echo $form->textField($model->devicepc,'hdd_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'hdd_name'); ?>
+        <?php $this->endContent(); ?>
+        <?php echo $form->error($model->devicepc,'hdd_name'); ?>
 	</div>
 
 	<div class="row">
@@ -183,8 +189,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ram_name'); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
 		<?php echo $form->textField($model->devicepc,'ram_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'ram_name'); ?>
+        <?php $this->endContent(); ?>
+        <?php echo $form->error($model->devicepc,'ram_name'); ?>
 	</div>
 
 	<div class="row">
@@ -195,7 +203,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'video_name'); ?>
-		<?php echo $form->textField($model->devicepc,'video_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model->devicepc,'video_name',
+                                    array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model->devicepc,'video_name'); ?>
 	</div>
 
@@ -207,25 +218,37 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cdrom_name'); ?>
-		<?php echo $form->textField($model->devicepc,'cdrom_name',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model->devicepc,'cdrom_name',
+                                    array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model->devicepc,'cdrom_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'lan_name'); ?>
-		<?php echo $form->textField($model->devicepc,'lan_name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model->devicepc,'lan_name'); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model->devicepc,'lan_name',
+                                            array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
+        <?php echo $form->error($model->devicepc,'lan_name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'os'); ?>
-		<?php echo $form->textField($model->devicepc,'os',array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model->devicepc,'os',
+                                            array('size'=>60,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model->devicepc,'os'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'net_name'); ?>
-		<?php echo $form->textField($model->devicepc,'net_name',array('size'=>30,'maxlength'=>255)); ?>
+        <?php $this->beginContent('//decorators/buttons'); ?>
+		<?php echo $form->textField($model->devicepc,'net_name',
+                                    array('size'=>30,'maxlength'=>255)); ?>
+        <?php $this->endContent(); ?>
 		<?php echo $form->error($model->devicepc,'net_name'); ?>
 	</div>
 
@@ -234,6 +257,12 @@
 		<?php echo $form->textField($model->devicepc,'ip',array('size'=>30,'maxlength'=>255)); ?>
 		<?php echo $form->error($model->devicepc,'ip'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'description'); ?>
+        <?php echo $form->textArea($model,'description',array('cols'=>46, 'rows'=>5, 'maxlength'=>255)); ?>
+        <?php echo $form->error($model,'description'); ?>
+    </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>

@@ -66,3 +66,7 @@ $('.search-form form').submit(function(){
 		),
 	),
 )); ?>
+
+<div id="add-employee" class="buttons">
+    <?php echo CHtml::link('Додати працівника', array('employee/create', 'parent'=>'')); ?>
+</div>

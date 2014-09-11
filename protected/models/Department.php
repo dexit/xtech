@@ -63,7 +63,7 @@ class Department extends CActiveRecord
 			'id_department' => 'Id Department',
 			'id_branch' => 'Філія',
 			'name' => 'Назва',
-			'description' => 'примітка',
+			'description' => 'Примітка',
 			'telephones' => 'Телефони',
 			'emails' => 'Email',
 			'boss' => 'Керівник відділу',
