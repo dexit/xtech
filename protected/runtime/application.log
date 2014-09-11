@@ -16832,3 +16832,14 @@ REQUEST_URI=/index.php
 in C:\WebOpenServer\domains\xtech\protected\views\main\index.php (21)
 in C:\WebOpenServer\domains\xtech\protected\controllers\MainController.php (63)
 in C:\WebOpenServer\domains\xtech\index.php (19)
+2014/09/11 17:23:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "construct".' in C:\WebOpenServer\domains\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\WebOpenServer\domains\yii\framework\web\CController.php(270): CController->missingAction('construct')
+#1 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(282): CController->run('construct')
+#2 C:\WebOpenServer\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reports/constru...')
+#3 C:\WebOpenServer\domains\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\WebOpenServer\domains\xtech\index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=reports/construct
+HTTP_REFERER=http://xtech/index.php
+---

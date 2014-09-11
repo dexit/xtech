@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/protected/views/main/_tree.php" line="12" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/protected/views/main/_tree.php" line="13" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e7a06e-bc93-472a-90f1-a036a60db293" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/components/AddDevice/AddDevice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/components/AddDevice/views/AddDevice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/decorators/buttons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Department.php" afterPath="$PROJECT_DIR$/protected/models/Department.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Device.php" afterPath="$PROJECT_DIR$/protected/models/Device.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DeviceController.php" afterPath="$PROJECT_DIR$/protected/controllers/DeviceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/DeviceType.php" afterPath="$PROJECT_DIR$/protected/models/DeviceType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DeviceTypeController.php" afterPath="$PROJECT_DIR$/protected/controllers/DeviceTypeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/behaviors/EDataConvert.php" afterPath="$PROJECT_DIR$/protected/behaviors/EDataConvert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/TODO.txt" afterPath="$PROJECT_DIR$/m/TODO.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/_device.php" afterPath="$PROJECT_DIR$/protected/views/main/_device.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/_form.php" afterPath="$PROJECT_DIR$/protected/views/device/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/employee/_form.php" afterPath="$PROJECT_DIR$/protected/views/employee/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/_form_create.php" afterPath="$PROJECT_DIR$/protected/views/device/_form_create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/_form_create_pc.php" afterPath="$PROJECT_DIR$/protected/views/device/_form_create_pc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/_form_pc.php" afterPath="$PROJECT_DIR$/protected/views/device/_form_pc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/employee/admin.php" afterPath="$PROJECT_DIR$/protected/views/employee/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/column2.php" afterPath="$PROJECT_DIR$/protected/views/layouts/column2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/create.php" afterPath="$PROJECT_DIR$/protected/views/device/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" afterPath="$PROJECT_DIR$/.idea/frameworkRootSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/index.php" afterPath="$PROJECT_DIR$/protected/views/main/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/reports/construct.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/ReportsController.php" afterPath="$PROJECT_DIR$/protected/controllers/ReportsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/_tree.php" afterPath="$PROJECT_DIR$/protected/views/main/_tree.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/extensions/CDropDownMenu/js/superfish.js" afterPath="$PROJECT_DIR$/protected/extensions/CDropDownMenu/js/superfish.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/update.php" afterPath="$PROJECT_DIR$/protected/views/device/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/cabinet/view.php" afterPath="$PROJECT_DIR$/protected/views/cabinet/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/department/view.php" afterPath="$PROJECT_DIR$/protected/views/department/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts.js" afterPath="$PROJECT_DIR$/js/scripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/device/view.php" afterPath="$PROJECT_DIR$/protected/views/device/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/employee/view.php" afterPath="$PROJECT_DIR$/protected/views/employee/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/organization/view.php" afterPath="$PROJECT_DIR$/protected/views/organization/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xtech.iws" />
@@ -51,12 +28,12 @@
     <file path="/DevController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410184921296" ignored="false" />
     <file path="/BranchController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410182950640" ignored="false" />
     <file path="/DevShowGrid.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409314206156" ignored="false" />
-    <file path="/view.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410435289453" ignored="false" />
+    <file path="/view.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410437942171" ignored="false" />
     <file path="/_form.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410422187609" ignored="false" />
     <file path="/_form_create.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410436315109" ignored="false" />
     <file path="/_form_create_pc.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410422216328" ignored="false" />
     <file path="/_form_pc.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410422227671" ignored="false" />
-    <file path="/_tree.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410184590125" ignored="false" />
+    <file path="/_tree.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410436908859" ignored="false" />
     <file path="/styles.css" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409826125859" ignored="false" />
     <file path="/scripts.js" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410179338203" ignored="false" />
     <file path="/create.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410435642546" ignored="false" />
@@ -69,7 +46,7 @@
     <file path="/MainController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409822501640" ignored="false" />
     <file path="/main.css" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409825601234" ignored="false" />
     <file path="/a.dummy" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409838732093" ignored="false" />
-    <file path="/ReportsController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1409838744843" ignored="false" />
+    <file path="/ReportsController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410441857796" ignored="false" />
     <file path="/DeviceController.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410435516140" ignored="false" />
     <file path="/CDropDownMenu.js" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410251144500" ignored="false" />
     <file path="/superfish.js" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410253000468" ignored="false" />
@@ -79,6 +56,7 @@
     <file path="/buttons.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410417833593" ignored="false" />
     <file path="/AddDevice.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410431144843" ignored="false" />
     <file path="/column2.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410435142562" ignored="false" />
+    <file path="/construct.php" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1410441798984" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +80,17 @@
     <favorites_list name="xtech" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="construct.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/reports/construct.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -120,12 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/Device.php" />
-        <option value="$PROJECT_DIR$/protected/models/Department.php" />
-        <option value="$PROJECT_DIR$/protected/views/device/view.php" />
-        <option value="$PROJECT_DIR$/protected/views/deviceType/admin.php" />
-        <option value="$PROJECT_DIR$/protected/views/employee/admin.php" />
-        <option value="$PROJECT_DIR$/protected/components/AddDevice.php" />
         <option value="$PROJECT_DIR$/protected/components/AddDevice/view/AddDevice.php" />
         <option value="$PROJECT_DIR$/protected/components/AddDevice/views/AddDevice.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/column2.php" />
@@ -136,6 +118,12 @@
         <option value="$PROJECT_DIR$/protected/views/device/create.php" />
         <option value="$PROJECT_DIR$/protected/views/device/_form_create.php" />
         <option value="$PROJECT_DIR$/protected/views/device/_form_create_pc.php" />
+        <option value="$PROJECT_DIR$/js/scripts.js" />
+        <option value="$PROJECT_DIR$/protected/views/main/_tree.php" />
+        <option value="$PROJECT_DIR$/protected/views/device/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/ReportsController.php" />
+        <option value="$PROJECT_DIR$/protected/views/reports/construct.php" />
       </list>
     </option>
   </component>
@@ -217,224 +205,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="device" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="branch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddDevice" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -631,54 +401,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="27" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.4680851">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/yiic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="526" selection-end="526" vertical-scroll-proportion="0.31914893">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../yii/framework/web/widgets/CWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="40" selection-start="6528" selection-end="6539" vertical-scroll-proportion="1.1902378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/AddDevice/views/AddDevice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="9" selection-start="992" selection-end="2081" vertical-scroll-proportion="0.5744681">
-          <folding>
-            <marker date="1410431378062" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1410431378062" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/device/_device_pc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/device/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0851064">
           <folding />
         </state>
       </provider>
@@ -725,13 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/employee/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="101" selection-start="1588" selection-end="1607" vertical-scroll-proportion="0.87234044">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/AddDevice/AddDevice.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="31" selection-start="77" selection-end="77" vertical-scroll-proportion="0.06382979">
@@ -745,6 +463,57 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="156" selection-start="4270" selection-end="4270" vertical-scroll-proportion="0.76242423">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/main/_tree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="60" selection-start="4976" selection-end="4976" vertical-scroll-proportion="1.531915">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/device/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="90" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.9361702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/employee/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="107" selection-start="1506" selection-end="1613" vertical-scroll-proportion="0.87234044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="65" selection-start="2349" selection-end="2349" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ReportsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="32" selection-start="201" selection-end="201" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/reports/construct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>

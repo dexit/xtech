@@ -131,7 +131,7 @@ $(document).ready(function(){
 						ul = li.find('ul');						
 						n_div = $("<div class='Expand'></div>");
                         n_b = $("<div class='tree-menu-button-cabinet'><a href='#'></a></div>");
-						n_content = $("<div class='Content'><a id='cabinet-"+this.id_cabinet+"' href='index.php?r=cabinet/show&id="+this.id_cabinet+"'>"+this.number+"</a></div>");
+						n_content = $("<div class='Content'><a id='cabinet-"+this.id_cabinet+"' href='index.php?r=cabinet/show&id="+this.id_cabinet+"'>каб.№"+this.number+"</a></div>");
 						node = $("<li id=cabinet-"+this.id_cabinet+" class='Node ExpandClosed "+l_class+"'></li>")
                             .append(n_div)
                             .append(n_b)

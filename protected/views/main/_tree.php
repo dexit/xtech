@@ -5,6 +5,7 @@
             if ($(".tree-menu").hasClass("show")) {
                 $(".tree-menu ul li.tree-menu-add").removeClass("show");
                 $(".tree-menu ul li.tree-menu-addchild").removeClass("show");
+                $(".tree-menu ul li.tree-menu-view").removeClass("show");
                 $(".tree-menu ul li.tree-menu-edit").removeClass("show");
                 $(".tree-menu ul li.tree-menu-delete").removeClass("show");
                 $(".tree-menu").removeClass("show");
@@ -49,6 +50,8 @@
             $(".tree-menu ul li.tree-menu-addchild a").attr("href",
                                         "?r="+child_controller+"/create&parent="+p_child+"")
                                         .text("Додати "+text_child);
+            $(".tree-menu ul li.tree-menu-view a").attr("href",
+                                        "?r="+controller+"/view&id="+id+"");
             $(".tree-menu ul li.tree-menu-edit a").attr("href",
                                         "?r="+controller+"/update&id="+id+"");
             $(".tree-menu ul li.tree-menu-delete a").attr("href",
@@ -111,7 +114,8 @@
 <div class="tree-menu">
     <ul>
         <li class="tree-menu-add"><a href="#">Додати</a></li>
-        <li class="tree-menu-addchild"><a href="#">Додати +</a></li>
+        <li class="tree-menu-addchild"><a  style="color: red" href="#">Додати +</a></li>
+        <li class="tree-menu-view"><a href="#">Перегляд</a></li>
         <li class="tree-menu-edit"><a href="#">Редагувати</a></li>
         <li class="tree-menu-delete"><a href="#">Видалити</a></li>
         <!--<li>

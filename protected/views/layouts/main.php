@@ -50,6 +50,12 @@
                         'label'=>'Звіти',
                         'url'=>array('//reports/index'),
                         'visible'=>Yii::app()->user->isGuest,
+                        'items' => array(
+                            array(
+                                'label'=>'Конструктор',
+                                'url'=>array('//reports/construct'),
+                            ),
+                        ),
                     ),
                     array(
                         'label'=>'Довідники',

@@ -90,3 +90,5 @@ if (($model->devicetype->id_device_type == 2) || ($model->devicetype->id_device_
 }
 ?>
 </div>
+<hr>
+<?php $this->widget('application.components.AddDevice.AddDevice', array('parent'=>$model->id_employee)); ?>
