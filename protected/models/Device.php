@@ -191,4 +191,32 @@ class Device extends CActiveRecord
 
 		
 	}*/
+
+    public function construct($request)
+    {
+        $criteria=new CDbCriteria;
+
+        $attr = $request['attr'];
+        $operations = $request['operations'];
+        $value = $request['value'];
+
+        /*$select = null;
+        foreach ($attr as $k=>$v){
+            $select .= $k.',';
+        }*/
+
+        //$from = $this->tableName();
+
+        foreach ($attr as $k=>$v) {
+            $criteria->compare($k, );
+        }
+
+
+        var_dump($request);
+
+        $criteria->compare('id_device',20);
+        return new CActiveDataProvider($this, array(
+            'criteria'=>$criteria,
+        ));
+    }
 }

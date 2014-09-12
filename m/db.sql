@@ -77,9 +77,9 @@ CREATE TABLE IF NOT EXISTS `t_cabinets` (
   `description` varchar(500) DEFAULT NULL,
   `telephones` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_cabinet`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_cabinets: ~10 rows (approximately)
+-- Dumping data for table xtech.t_cabinets: ~15 rows (approximately)
 DELETE FROM `t_cabinets`;
 /*!40000 ALTER TABLE `t_cabinets` DISABLE KEYS */;
 INSERT INTO `t_cabinets` (`id_cabinet`, `id_department`, `number`, `description`, `telephones`) VALUES
@@ -95,7 +95,9 @@ INSERT INTO `t_cabinets` (`id_cabinet`, `id_department`, `number`, `description`
 	(11, 10, '12', '', '4-10-05'),
 	(12, 11, '11', '', '4-06-92'),
 	(13, 11, '8', '', '4-12-69'),
-	(14, 12, '1', '', '4-04-11');
+	(14, 12, '1', '', '4-04-11'),
+	(15, 13, '3а', '', '4-05-96'),
+	(16, 13, '3', '', '4-05-96');
 /*!40000 ALTER TABLE `t_cabinets` ENABLE KEYS */;
 
 
@@ -110,9 +112,9 @@ CREATE TABLE IF NOT EXISTS `t_departmens` (
   `emails` varchar(500) DEFAULT NULL,
   `boss` int(2) DEFAULT NULL,
   PRIMARY KEY (`id_department`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_departmens: ~8 rows (approximately)
+-- Dumping data for table xtech.t_departmens: ~9 rows (approximately)
 DELETE FROM `t_departmens`;
 /*!40000 ALTER TABLE `t_departmens` DISABLE KEYS */;
 INSERT INTO `t_departmens` (`id_department`, `id_branch`, `name`, `description`, `telephones`, `emails`, `boss`) VALUES
@@ -125,7 +127,8 @@ INSERT INTO `t_departmens` (`id_department`, `id_branch`, `name`, `description`,
 	(9, 6, 'Перший заступник начальника управління', '', '4-05-49', '', 11),
 	(10, 6, 'Юридичний відділ', '', '4-10-05', '', 14),
 	(11, 6, 'Загальний відділ', '', '4-06-92', '', 17),
-	(12, 6, 'Сектор персоналу', '', '4-04-11', '', NULL);
+	(12, 6, 'Сектор персоналу', '', '4-04-11', '', NULL),
+	(13, 6, 'Відділ виконання бюджету, бухгалтерського обліку та звітності', '', '4-05-96', '', 28);
 /*!40000 ALTER TABLE `t_departmens` ENABLE KEYS */;
 
 
@@ -147,9 +150,9 @@ CREATE TABLE IF NOT EXISTS `t_devices` (
   `private` tinyint(1) DEFAULT NULL,
   `break` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_device`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_devices: ~8 rows (approximately)
+-- Dumping data for table xtech.t_devices: ~63 rows (approximately)
 DELETE FROM `t_devices`;
 /*!40000 ALTER TABLE `t_devices` DISABLE KEYS */;
 INSERT INTO `t_devices` (`id_device`, `id_employee`, `id_type`, `name`, `description`, `inv_number`, `sn`, `year`, `end_varantly_yesr`, `service`, `expluatation`, `expluatation_data`, `private`, `break`) VALUES
@@ -190,7 +193,37 @@ INSERT INTO `t_devices` (`id_device`, `id_employee`, `id_type`, `name`, `descrip
 	(54, 19, 2, 'BMS ', '', '10480187', '', 2000, 2000, '', 1, '0000-00-00', 0, 0),
 	(55, 19, 14, 'Panasonic KX-F982', '', '1137141', '3CAFP056332', 2000, 2000, '', 1, '0000-00-00', 0, 0),
 	(56, 19, 4, 'HP Lazer 1020', '', '1137117', 'CNC2B96599', 2006, 2007, '', 1, '0000-00-00', 0, 0),
-	(57, 19, 1, 'Wiewsonic', 'Особисто працівника', '', '', 2006, 2007, '', 0, '0000-00-00', 1, 0);
+	(57, 19, 1, 'Wiewsonic', 'Особисто працівника', '', '', 2006, 2007, '', 0, '0000-00-00', 1, 0),
+	(58, 20, 2, 'Silver Mark С-300', '', '10480122', 'D24010634702534', 2006, 2007, '', 1, '0000-00-00', 0, 0),
+	(59, 20, 1, 'AOC e950swnk', '', '', '', 2013, 2014, '', 0, '0000-00-00', 1, 0),
+	(60, 20, 4, 'Lexmark X5150', '', '10480107', '9330632833', 2004, 2005, '', 1, '0000-00-00', 0, 0),
+	(61, 20, 4, 'Sumsung ML -2165', '', '1137133/2', 'Z7B0138GCAF00NMK', 2012, 2013, '', 1, '0000-00-00', 0, 0),
+	(62, 20, 1, 'Acer GD157P', '', '10480025', '8905002334', 1999, 2000, '', 1, '0000-00-00', 0, 0),
+	(63, 21, 1, 'Samtron 76 DF', '', '10480191', 'AN17AHGEW400052Y', 2003, 2004, '', 1, '0000-00-00', 0, 0),
+	(64, 21, 2, 'BMS', '', '10480064', '30101301404', 2001, 2002, '', 1, '0000-00-00', 0, 0),
+	(65, 21, 4, 'Epson LX-300+', '', '10480067', 'C29412005L101220342', 2000, 2000, '', 1, '0000-00-00', 0, 0),
+	(66, 22, 2, 'ПК Folgat', '', '10480069', 'DT15HJEN600853H', 2003, 2004, '', 1, '0000-00-00', 0, 0),
+	(67, 22, 1, 'Samsung SuncMaster 793 DF', '', '1137023', 'LB17HMAY911346T', 2005, 2006, '', 1, '0000-00-00', 0, 0),
+	(68, 23, 2, 'ПК Совинтех ', '', '10480114', '20230995,001-99', 2004, 2005, '', 1, '0000-00-00', 0, 0),
+	(69, 23, 1, 'Samsung SAMATRON 76 E', '', '', '', 2000, 2000, '', 0, '0000-00-00', 1, 0),
+	(70, 23, 1, 'AOC E970Sw', '', '1137136/2', 'FPKD7HA041803', 2013, 2014, '', 1, '0000-00-00', 0, 0),
+	(71, 23, 4, 'Samsung - ML 1661', '', '1137046', 'Z5BBBKBZA01897N', 2010, 2011, '', 1, '0000-00-00', 0, 0),
+	(72, 23, 5, 'SINАPSE 5101-525', '', '1137016/2', 'M71543F021132-B', 2000, 2000, '', 1, '0000-00-00', 0, 0),
+	(73, 24, 2, 'ПК Roma', 'Не в мережі. Для системи Клієнт-банк', '10480071', '', 2003, 2004, '', 1, '0000-00-00', 0, 0),
+	(74, 24, 1, 'Sumsung SuncMaster 550b', '', '10480207', 'LB17HMAY911346T', 2002, 2003, '', 1, '0000-00-00', 0, 0),
+	(75, 24, 4, 'Sumsung ML -2165', '', '1137133/3', 'Z7BOB8GLAF00QCA', 2012, 2013, '', 1, '0000-00-00', 0, 0),
+	(76, 25, 2, 'Термінальна станція', '', '10480131', '3471162', 2004, 2005, '', 1, '0000-00-00', 0, 0),
+	(77, 25, 1, 'SyncMaster753DFX', '', '10480105', 'CZC8453XGH', 2003, 2004, '', 1, '0000-00-00', 0, 0),
+	(78, 26, 2, 'ПК Roma', '', '10480234', '191113-3-41', 2013, 2014, 'Roma', 1, '0000-00-00', 0, 0),
+	(79, 26, 1, 'Wievsonic VA1911a -LED', '', '1137135/2', 'T6N132303828', 2013, 2014, '', 1, '0000-00-00', 0, 0),
+	(80, 27, 2, 'HP Compaq', '', '10480202', 'AN17HMAWA22312M', 2009, 2010, '', 1, '0000-00-00', 0, 0),
+	(81, 27, 1, 'Acer G195 HQV', '', '1137132/1', 'ETLPB0D02123500B6B8509', 2012, 2013, '', 1, '0000-00-00', 0, 0),
+	(82, 27, 4, 'HP Lazer JET 1020', '', '1137034', 'CNC2635372', 2007, 2008, '', 1, '0000-00-00', 0, 0),
+	(83, 28, 2, 'ВМS ', '', '10480058', '', 2002, 2003, '', 1, '1970-01-01', 0, 0),
+	(84, 28, 1, 'Wievsonic VA1911a -LED', '', '1137135/1', 'T6N132303454', 2013, 2014, '', 1, '0000-00-00', 0, 0),
+	(85, 28, 5, 'APC-650', '', '10480047', '', 2001, 2002, '', 1, '0000-00-00', 0, 0),
+	(86, 28, 6, 'Canon FC 208', '', '10480093', 'TTE70617', 2000, 2000, '', 1, '0000-00-00', 0, 0),
+	(87, 28, 14, 'Panasonic KX-FT78', '', '10490006', 'PFGT2072XA', 2000, 2000, '', 1, '0000-00-00', 0, 0);
 /*!40000 ALTER TABLE `t_devices` ENABLE KEYS */;
 
 
@@ -246,9 +279,9 @@ CREATE TABLE IF NOT EXISTS `t_device_pc` (
   PRIMARY KEY (`id`),
   KEY `FK_t_device_pc_t_devices` (`id_device_pc`),
   CONSTRAINT `FK_t_device_pc_t_devices` FOREIGN KEY (`id_device_pc`) REFERENCES `t_devices` (`id_device`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_device_pc: ~8 rows (approximately)
+-- Dumping data for table xtech.t_device_pc: ~22 rows (approximately)
 DELETE FROM `t_device_pc`;
 /*!40000 ALTER TABLE `t_device_pc` DISABLE KEYS */;
 INSERT INTO `t_device_pc` (`id`, `id_device_pc`, `mb`, `cpu_name`, `cpu_p`, `hdd_name`, `hdd_p`, `ram_name`, `ram_p`, `video_name`, `video_p`, `cdrom_name`, `lan_name`, `os`, `net_name`, `ip`) VALUES
@@ -264,7 +297,16 @@ INSERT INTO `t_device_pc` (`id`, `id_device_pc`, `mb`, `cpu_name`, `cpu_p`, `hdd
 	(11, 48, 'MSI MS-6535', 'Intel Pentium 4', 4.2, 'SAMSUNG SV4002H', 40, 'Не визначено', 512, 'SiS 650_651_M650_740', 32, 'SAMSUNG CD-ROM SC-152A', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600', 'NACH_ZAGALNUU', '172.40.96.164'),
 	(12, 49, 'MSI MS-6535', 'Intel Pentium 4', 2.4, 'SAMSUNG SV4002H', 40, 'Не визначено', 512, 'SiS 650_651_M650_740', 32, 'SAMSUNG CD-ROM SC-152A', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600', 'NACH_ZAGALNUU', '172.40.96.164'),
 	(13, 52, 'PCChips M810DLU', 'AMD Duron', 0.8, 'SAMSUNG SV4002H', 40, 'Не визначено', 256, 'SiS 650_651_M650_M652_740', 32, 'Відсутня', 'SiS 900 PCI Fast Ethernet Adapter', 'Microsoft Windows XP Professional 5.1.2600', 'ZAIKA', '172.40.96.137'),
-	(14, 54, 'Chaintech 6EPA2/6ESA(2)/6ESV/6LIA/6LTL/6LTM(2)/6LTS', 'Intel Celeron-A', 0.4, 'GENERIC IDE  DISK TYPE47 ', 4, 'Не визначено', 64, 'RAGE IIC AGP', NULL, 'Відсутня', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows 98 SE 4.10.2222A (Win98 SE)', 'Zagalnui', '172.40.96.170');
+	(14, 54, 'Chaintech 6EPA2/6ESA(2)/6ESV/6LIA/6LTL/6LTM(2)/6LTS', 'Intel Celeron-A', 0.4, 'GENERIC IDE  DISK TYPE47 ', 4, 'Не визначено', 64, 'RAGE IIC AGP', NULL, 'Відсутня', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows 98 SE 4.10.2222A (Win98 SE)', 'Zagalnui', '172.40.96.170'),
+	(15, 58, 'ECS 915GV-M2', 'Intel Celeron D 346', 3, 'SAMSUNG HD080HJ', 80, 'Не визначено', 512, 'Intel GMA 900', NULL, 'NEC CD-ROM CD-3002C', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600', 'zav_personalom', '172.40.96.31'),
+	(16, 64, 'Gigabyte GA-6VXE7+', 'Intel Celeron', 0.6, 'Не визначено', 4, 'Не визначено', 128, 'RAGE 128 ULTRA', NULL, 'Не визначено', 'Realtek 8139-series PCI NIC', 'Microsoft Windows 98 SE 4.10.2222A', 'spec_personal', '170.40.96.179'),
+	(17, 66, 'Asus TUSI-M', 'Intel Celeron-S', 1.2, 'SAMSUNG SV2011H', 20, 'Не визначено', 128, 'SiS 300/305/630/540/730', NULL, 'Відсутня', 'SiS 900 PCI Fast Ethernet Adapter', 'Microsoft Windows XP Professional 5.1.2600', 'BUH_BUDGET2', '172.40.96.134'),
+	(18, 68, 'Asus P4S8X-MX', 'Intel Celeron D 325', 2.5, 'SAMSUNG SP0822N', 80, 'Не визначено', 256, 'SiS 661 series', 32, 'HL-DT-ST CD-ROM GCR-8522B', 'SiS 900-Based PCI Fast Ethernet Adapter', 'Microsoft Windows XP Professional 5.1.2600', 'BUH_BUDGET1', '172.40.96.149'),
+	(19, 73, 'MSI MS-6534', 'Intel Celeron', 1.8, 'Не визначено', 40, 'Не визначено', 128, 'NVIDIA GeForce2 MX/MX 400', 32, 'SAMSUNG CD-ROM SC-152A ', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600', 'Не визначено', '___.___.___.___'),
+	(20, 76, 'PCChips M810DLU', 'AMD Duron', 0.8, 'Не визначено', 10, 'Не визначено', 352, 'SiS 650_651_M650_M652_740 ', 32, 'Відсутня', 'SiS 900 PCI Fast Ethernet Adapter ', 'Microsoft Windows XP Professional 5.1.2600', 'buh_aparat', '172.40.96.138'),
+	(21, 78, 'AMD A75', 'AMD A4-4000', 3, 'TOSHIBA DT01ACA050 SATA', 500, 'Не визначено', 2048, 'AMD Radeon HD 7480D', 512, 'Не визначено', 'Realtek PCIe GBE Family Controller', 'Microsoft Windows 7 Professional 6.1.7601', 'BUH_ZP', '172.40.96.19'),
+	(22, 80, 'HP Compaq dx2400', 'DualCore Intel Celeron E1200', 1.6, 'WDC WD1600AAJS-60B4A0', 150, 'Не визначено', 512, 'Intel(R) G33/G31 Express Chipset Family  ', 256, 'Відсутня', 'Realtek RTL8168C(P)/8111C(P) PCI-E Gigabit Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600', 'ZAM_BUH', '172.40.96.18'),
+	(23, 83, 'MSI MS-6526GL', 'Intel Celeron', 1.7, 'SAMSUNG SV0602H', 60, 'Не визначено', 256, 'Intel(R) 82845G/GL/GE/PE/GV Graphics Controller', 64, 'Відсутня', 'Realtek RTL8139/810x Family Fast Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600', 'GLOV_BUH', '172.40.96.143');
 /*!40000 ALTER TABLE `t_device_pc` ENABLE KEYS */;
 
 
@@ -288,9 +330,9 @@ CREATE TABLE IF NOT EXISTS `t_employees` (
   `fired` tinyint(1) DEFAULT NULL,
   `dof` date DEFAULT NULL,
   PRIMARY KEY (`id_employee`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_employees: ~14 rows (approximately)
+-- Dumping data for table xtech.t_employees: ~26 rows (approximately)
 DELETE FROM `t_employees`;
 /*!40000 ALTER TABLE `t_employees` DISABLE KEYS */;
 INSERT INTO `t_employees` (`id_employee`, `id_cabinet`, `firstname`, `lastname`, `surname`, `description`, `telephones`, `post`, `email`, `login`, `tab_number`, `home_address`, `dob`, `pasp`, `fired`, `dof`) VALUES
@@ -313,7 +355,14 @@ INSERT INTO `t_employees` (`id_employee`, `id_cabinet`, `firstname`, `lastname`,
 	(18, 13, 'Заїка', 'Лілія', 'Сергіївна', '', '4-12-69,4-40-64,067-593-36-27', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
 	(19, 13, 'Погорєлова', 'Юлія', 'Євгеніївна', '', '4-12-69,3-93-21,095-670-01-70', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
 	(20, 14, 'Красько', 'Ольга', 'Олександрівна', '', '4-04-11,63-1-00,067-181-91-92,063-042-62-16', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
-	(21, 14, 'Донковцева', 'Вероніка', 'Сергіївна', '', '4-04-11,4-14-64,099-07-31-624', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00');
+	(21, 14, 'Донковцева', 'Вероніка', 'Сергіївна', '', '4-04-11,4-14-64,099-07-31-624', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(22, 15, 'Золотухіна', 'Ірина', 'Семенівна', '', '', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(23, 15, 'Григорчук', 'Вєста', 'Олександрівна', '', '', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(24, 16, 'Клієнт-Банк', 'Клієнт-Банк', 'Клієнт-Банк', '', '', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(25, 16, 'Померанцева', 'Світлана', 'Миколаївна', '', '4-05-96,097-843-17-65', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(26, 16, 'Довбня', 'Яна', 'Валеріївна', '', '4-05-96,4-14-06,093-685-18-37', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(27, 16, 'Філончук', 'Тетяна', 'Петрівна', '', '4-05-96,050-481-02-58', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
+	(28, 16, 'Петручик', 'Ірина', 'Анатоліївна', '', '4-05-96,4-72-37,066-889-71-15', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00');
 /*!40000 ALTER TABLE `t_employees` ENABLE KEYS */;
 
 
