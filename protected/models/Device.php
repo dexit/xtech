@@ -194,27 +194,38 @@ class Device extends CActiveRecord
 
     public function construct($request)
     {
-        $criteria=new CDbCriteria;
+        if (!isset($request['attr'])) {
+            Yii::app()->user->setFlash('fail', "Не вибрано параметри для пошуку!");
+            return false;
+        }
+        $criteria = new CDbCriteria;
 
         $attr = $request['attr'];
         $operations = $request['operations'];
-        $value = $request['value'];
+        $values = $request['value'];
 
-        /*$select = null;
-        foreach ($attr as $k=>$v){
-            $select .= $k.',';
-        }*/
-
-        //$from = $this->tableName();
+        $compares = array();
 
         foreach ($attr as $k=>$v) {
-            $criteria->compare($k, );
+            $compare = new CAttributeCollection();
+            $compare->attr = $k;
+            $operation = $operations[$k];
+            $compare->operation = $operation;
+            $value = $values[$k];
+            $compare->value = $value;
+            $compares[] = $compare;
         }
 
+        foreach ($compares as $compare) {
+            $criteria->addCondition($compare->itemAt('attr').' '.
+                                    $compare->itemAt('operation').' '.
+                                    $compare->itemAt('value')
 
-        var_dump($request);
 
-        $criteria->compare('id_device',20);
+
+            );
+        }
+        //var_dump($criteria);
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
         ));

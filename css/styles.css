@@ -330,3 +330,14 @@ div[class^="tree-menu-button"] a{
     width: 100%;
     border: 1px solid #ccc;
 }
+
+
+.flash-fail {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: red;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+}
