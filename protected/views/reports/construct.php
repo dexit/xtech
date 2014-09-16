@@ -7,7 +7,6 @@ foreach(Yii::app()->user->getFlashes() as $key => $message) {
 $this->renderPartial('construct_form');
 if ($result) {
     $this->renderPartial('construct_result', array('result'=>$result));
-    //var_dump($result);
 }
 
 ?>

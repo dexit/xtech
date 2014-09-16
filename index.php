@@ -10,7 +10,18 @@ defined('YII_DEBUG') or define('YII_DEBUG',true);
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
 require_once($yii);
+
 $app = Yii::createWebApplication($config);
+
+Yii::import('ext.yiiexcel.YiiExcel', true);
+Yii::registerAutoloader(array('YiiExcel', 'autoload'), true);
+
+PHPExcel_Shared_ZipStreamWrapper::register();
+
+if (ini_get('mbstring.func_overload') & 2) {
+    throw new Exception('Multibyte function overloading in PHP must be disabled for string functions (2).');
+}
+PHPExcel_Shared_String::buildCharacterSets();
 
 if (YII_DEBUG){
     Yii::import("application.components.FirePHPCore.fb", true);

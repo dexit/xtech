@@ -21,6 +21,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
         'application.behaviors.*',
+        'application.vendors.phpexcel.PHPExcel',
 	),
 
 	'modules'=>array(

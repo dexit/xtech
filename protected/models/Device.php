@@ -175,23 +175,6 @@ class Device extends CActiveRecord
 		return parent::model($className);
 	}
 
-	/*protected function afterSave()
-	{
-		//parent::afterSave();
-		//echo "after";
-
-	}
-
-	protected function beforeSave()
-	{
-		//parent::beforeSave();
-		//echo "before";
-
-		//var_dump($_POST);
-
-		
-	}*/
-
     public function construct($request)
     {
         if (!isset($request['attr'])) {
@@ -203,30 +186,50 @@ class Device extends CActiveRecord
         $attr = $request['attr'];
         $operations = $request['operations'];
         $values = $request['value'];
-
         $compares = array();
+
+
 
         foreach ($attr as $k=>$v) {
             $compare = new CAttributeCollection();
             $compare->attr = $k;
             $operation = $operations[$k];
             $compare->operation = $operation;
+
+            if ($operation == 'IN'){
+                $sl = '("';
+                $sr = '")';
+            } else {
+                $sl = '"';
+                $sr = '"';
+            }
+
             $value = $values[$k];
             $compare->value = $value;
             $compares[] = $compare;
         }
 
         foreach ($compares as $compare) {
-            $criteria->addCondition($compare->itemAt('attr').' '.
-                                    $compare->itemAt('operation').' '.
-                                    $compare->itemAt('value')
-
-
-
+            $criteria->addCondition('`'.CHtml::encode($compare->itemAt('attr')).'` '.
+                                    $compare->itemAt('operation').' '.$sl.
+                                    CHtml::encode($compare->itemAt('value')).$sr
             );
         }
-        //var_dump($criteria);
+        if (isset($request['sort'])){
+            $r = $request['sort'];
+            $array = explode("_",$r);
+            $ord = $array[count($array)-1];
+            $field = str_replace(array('_ASC', '_DESC'),'',$r);
+            $order = $field.' '.$ord;
+
+            $criteria->order = $order;
+        }
+
+
         return new CActiveDataProvider($this, array(
+            'pagination'=>array(
+                'pageSize'=>10000,
+            ),
             'criteria'=>$criteria,
         ));
     }
