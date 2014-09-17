@@ -37,6 +37,9 @@ class Device extends CActiveRecord
                 'class' => 'application.behaviors.EDataConvert',
                 'params' => array('expluatation_data'),
             ),
+            'ELogging' => array(
+                'class' => 'application.behaviors.ELogging',
+            ),
         );
     }
 
@@ -107,7 +110,7 @@ class Device extends CActiveRecord
 			'private' => 'Забалансовий',
 			'break' => 'Стан',
 
-			'id' => 'Id',
+			/*'id' => 'Id',
 			'id_device_pc' => 'Id Device PC',
 			'mb' => 'Материнська плата',
 			'cpu_name' => 'Процесор',
@@ -122,7 +125,7 @@ class Device extends CActiveRecord
 			'lan_name' => 'Мережна карта',
 			'os' => 'Операційна система',
 			'net_name' => 'Мережне ім\'я',
-			'ip' => 'IP адреса',
+			'ip' => 'IP адреса',*/
 		);
 	}
 

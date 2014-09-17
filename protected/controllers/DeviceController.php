@@ -128,19 +128,20 @@ class DeviceController extends Controller
 		$model = $this->loadModel($id);
 		$model_pc = $model->devicepc;
 
-		if(isset($_POST['Device']) && isset($_POST['DevicePc']))
+		if (isset($_POST['Device']) && isset($_POST['DevicePc']))
 		{
 			$transaction = Yii::app()->db->beginTransaction();
 			try {
-					$model->attributes=$_POST['Device'];
-					$model_pc->attributes=$_POST['DevicePc'];
-					$model->save();
-					$model_pc->save();
-					$transaction->commit();
-				} catch(Exception $e) { 
-            		$transaction->rollback();
-            		$error = $e->getMessage();
-        		}
+				$model->attributes=$_POST['Device'];
+				$model_pc->attributes=$_POST['DevicePc'];
+				$model->save();
+				$model_pc->save();
+				$transaction->commit();
+			} catch(Exception $e) {
+            	$transaction->rollback();
+            	$error = $e->getMessage();
+                echo $error;
+        	}
         	$this->redirect(array('view','id'=>$model->id_device));						
     	} elseif (isset($_POST['Device']) && !isset($_POST['DevicePc'])) {
 			$model->attributes=$_POST['Device'];
@@ -160,7 +161,6 @@ class DeviceController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-
 		$model = $this->loadModel($id);
 		$transaction = Yii::app()->db->beginTransaction();
 		try {

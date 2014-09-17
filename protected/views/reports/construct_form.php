@@ -1,5 +1,11 @@
 <?php
 $columns = Device::model()->getAttributes();
+
+foreach ($columns as $k=>$v) {
+
+    $columnsLabels[$k] = Device::model()->getAttributeLabel($k);
+}
+
 $operations = array('='=>'=','>'=>'>','<'=>'<','LIKE'=>'Умова', 'IN'=>'В списку');
 ?>
 <div class="notifier">
@@ -35,7 +41,7 @@ foreach ($columns as $k=>$v)
                     array($k.'_DESC'=>'Зменшення',$k.'_ASC'=>'Збільшення'));
         echo "</td>";
         echo "<td>";
-            echo $k;
+            echo $columnsLabels[$k];
         echo "</td>";
         echo "<td>";
             echo CHtml::dropDownList('operations['.$k.']',$k,$operations);
@@ -73,7 +79,7 @@ function getFieldValue($k, $v){
         echo CHtml::dropDownList('value['.$k.']','',array('0'=>'Ні','1'=>'Так'),
                         array('empty' => '--Вибір--'));
     }
-    /*elseif ($k == 'expluatation_data') {
+    elseif ($k == 'expluatation_data') {
         Yii::app()->controller->widget('zii.widgets.jui.CJuiDatePicker', array(
             //'model' => Device::model('search'),
             //'attribute' => 'expluatation_data',
@@ -89,7 +95,7 @@ function getFieldValue($k, $v){
                 'selectOtherMonths' => true,
             ),
         ));
-    }*/
+    }
     else {
         echo CHtml::textField('value['.$k.']','',array('size'=>60,'maxlength'=>255));
     }

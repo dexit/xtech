@@ -2,7 +2,7 @@
 
 //var_dump($result);
 
-echo CHtml::ajaxLink('s',CController::createUrl('reports/export'));
+echo CHtml::ajaxLink('Експортувати в Excel',CController::createUrl('reports/export'));
 
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$result,

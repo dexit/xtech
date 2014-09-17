@@ -25,6 +25,11 @@ class ReportsController extends Controller
 
     public function actionExport(){
         $dataProvider = Yii::app()->session['construct_result'];
+        $p = $dataProvider->getData();
+        if (empty($p)) {
+            throw new Exception("Вибірка порожня!");
+        }
+
         $objPHPExcel = new PHPExcel();
         $objPHPExcel->getProperties()->setCreator("JazzzDima")
             ->setLastModifiedBy("JazzzDima")
@@ -36,27 +41,44 @@ class ReportsController extends Controller
 
         $objPHPExcel->getActiveSheet()->setTitle('Вивантаження');
 
-        /*$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Привет')
-            ->setCellValue('B1', 'Мир!');*/
-
         foreach ($dataProvider->data as $obj) {
             $data[] = $obj->getAttributes();
         }
-        //var_dump($data);
-        $i = array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
-        $j = 1;
-        $z = 1;
+
+        /*Set data to cell*/
+        $i = array('A','B','C','D','E','F','G','H','I','J','K','L','M',
+                    'N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                    'AA','AB','AC','AD','AE','AF','AG','AH','AI','AJ','AK','AL','AM',
+                    'AN','AO','AP','AQ','AR','AS','AT','AU','AV','AW','AX','AY','AZ',
+                   );
+        $z = 2;
         foreach ($data as $d) {
+            $j = 1;
             foreach ($d as $k=>$v) {
                 $objPHPExcel->getActiveSheet()
                     ->setCellValue($i[$j-1].$z, $v);
-                //var_dump($i[$j-1].$z, $v);
                 $j++;
             }
             $z++;
         }
+        /*End set data to cell*/
 
+        /*Set columns labels*/
+        $labels = $dataProvider->data[0]->attributeLabels();
+        $j = 0;
+        foreach ($labels as $l) {
+            $objPHPExcel->getActiveSheet()
+                ->setCellValue($i[$j].'1', $l);
+            $j++;
+        }
+        /*End set columns labels*/
+
+        /*Set date*/
+        $objPHPExcel->getActiveSheet()
+            ->setCellValue($i[0].($z+4), date("Y-m-d H:i:s"));
+        /*End set date*/
+
+        /*Save file*/
         $filename = date("Y-m-d-H-i-s");
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename="'.$filename.'.xls"');
@@ -64,14 +86,45 @@ class ReportsController extends Controller
 
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
 
-        //$objWriter->save('php://output');
-        $objWriter->save('d:\\'.$filename.'.xls');
+        $objWriter->save(Yii::app()->params['report_dir'].'/'.$filename.'.xls');
         unset($this->objWriter);
         unset($this->objWorksheet);
         unset($this->objReader);
         unset($this->objPHPExcel);
-        exit();
-        //var_dump($objPHPExcel);
 
+        $file = Yii::getPathOfAlias('webroot').'/'.Yii::app()->params['report_dir'].'/'.$filename.'.xls';
+
+        $this->redirect(CController::createUrl('download',array('file'=>$file)));
+        //$this->downloadFile($file);
+
+        //exit();
+        /*End save file*/
+    }
+
+
+    public function actionDownload($file)
+    {
+        if (file_exists($file)) {
+            //var_dump($file);
+            if (ob_get_level()) {
+                ob_end_clean();
+            }
+
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/vnd.ms-excel');
+            header('Content-Disposition: attachment; filename=' . basename($file));
+            header('Content-Transfer-Encoding: binary');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($file));
+            // читаем файл и отправляем его пользователю
+            readfile($file);
+            exit();
+            //header('Location: '.$filename);
+        } else {
+            header($_SERVER["SERVER_PROTOCOL"].' 404 Not Found');
+            header('Status: 404 Not Found');
+        }
     }
 }
