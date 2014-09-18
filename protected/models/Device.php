@@ -33,12 +33,12 @@ class Device extends CActiveRecord
     public function behaviors()
     {
         return array(
+            'ELogging' => array(
+                'class' => 'application.behaviors.ELogging',
+            ),
             'EDataConvert' => array(
                 'class' => 'application.behaviors.EDataConvert',
                 'params' => array('expluatation_data'),
-            ),
-            'ELogging' => array(
-                'class' => 'application.behaviors.ELogging',
             ),
         );
     }
@@ -77,15 +77,10 @@ class Device extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			//'devicepc' => array(self::BELONGS_TO, 'DevicePc', 'id_device'),
-			//'devicepc' => array(self::HAS_ONE, 'DevicePc', 'id_device_pc'),
 			'devicepc' => array(self::BELONGS_TO, 'DevicePc', array('id_device'=>'id_device_pc')),
 			'devicetype' => array(self::BELONGS_TO, 'DeviceType', 'id_type'),			
-			//'organization' => array(self::BELONGS_TO, 'Organization', 'id_organization'),
-			//'branch' => array(self::BELONGS_TO, 'Branch', 'id_branch'),
-			//'department' => array(self::BELONGS_TO, 'Department', 'id_department'),
-			//'cabinet' => array(self::BELONGS_TO, 'Cabinet', 'id_cabinet'),
 			'employee' => array(self::BELONGS_TO, 'Employee', 'id_employee'),
+			'log' => array(self::HAS_MANY, 'Log', 'id_device'),
 		);
 	}
 

@@ -11,6 +11,7 @@ $this->menu=array(
 	//array('label'=>'List Device', 'url'=>array('index')),
 	//array('label'=>'Create Device', 'url'=>array('create')),
 	array('label'=>'Редагувати', 'url'=>array('update', 'id'=>$model->id_device)),
+	array('label'=>'Історія змін', 'url'=>array('log/view', 'id'=>$model->id_device)),
 	array('label'=>'Видалити', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id_device),'confirm'=>'Ви впевнені, що бажаєте незворотньо видалити дані цього пристрою?')),
 	//array('label'=>'Manage Device', 'url'=>array('admin')),
 );
