@@ -150,19 +150,19 @@ CREATE TABLE IF NOT EXISTS `t_devices` (
   `private` tinyint(1) DEFAULT NULL,
   `break` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_device`)
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
 
--- Dumping data for table xtech.t_devices: ~63 rows (approximately)
+-- Dumping data for table xtech.t_devices: ~78 rows (approximately)
 DELETE FROM `t_devices`;
 /*!40000 ALTER TABLE `t_devices` DISABLE KEYS */;
 INSERT INTO `t_devices` (`id_device`, `id_employee`, `id_type`, `name`, `description`, `inv_number`, `sn`, `year`, `end_varantly_yesr`, `service`, `expluatation`, `expluatation_data`, `private`, `break`) VALUES
 	(4, 4, 3, 'asus', 'bad book', '10480098', 'sa1564785112', 2013, 2015, 'asus', 1, '2013-10-16', 0, 0),
-	(6, 3, 6, 'zerox a3', 'regergerg', '2147483647', '456456456', 2012, 2013, 'rthrtht', 1, '2013-07-31', 0, 0),
+	(6, 3, 6, 'zerox a70', 'regergerg', '113113', '22222221111', 2010, 2013, 'rthrtht', 1, '2013-07-31', 0, 0),
 	(7, 3, 2, 'bms', 'weqdwefwe', '45345', 'trhtrh', 2014, 2019, 'rthtrhtrh', 1, '2014-07-02', 0, 0),
 	(9, 3, 2, 'bms', 'ewfwefwef', '45345', '345345', 2014, 2019, '34t34t', 0, '0000-00-00', 0, 0),
-	(20, 3, 2, 'dfgdfg', 'dfgfg', '56456', '456456', 2014, 2019, '4564545fbdb', 0, '0000-00-00', 0, 0),
+	(20, 3, 2, 'dfgdfg1', 'dfgfg', '1134545', '456456', 2014, 2019, '4564545fbdb', 0, '1970-01-01', 0, 0),
 	(22, 2, 1, 'FLATRON LG L 1942 S', '', '1137042', '807NDDM35306', 2008, 2009, '', 1, '2008-01-01', 0, 0),
-	(25, 4, 1, 'erge', 'ergeg', '435345', 'ergerg56', 2014, 2019, 'e5hthrth', 1, '2014-09-01', 0, 0),
+	(25, 4, 1, '1111111', 'ergeg', '435345', 'ergerg56', 2014, 2019, 'e5hthrth', 1, '2014-09-01', 0, 0),
 	(26, 3, 2, 'trhtrh', 'trhrth', '476567', '567567', 2014, 2019, 'tyjtyj', 1, '2014-08-13', 0, 0),
 	(27, 4, 1, 'ergeg', 'ggergeerg', '345645645', 'hth 67567', 2014, 2019, 'hrehr', 1, '2014-08-06', 0, 0),
 	(28, 1, 2, 'HP', '', '10480124', 'C2C8453VG3', 2009, 2010, '', 1, '2009-01-01', 0, 0),
@@ -223,7 +223,17 @@ INSERT INTO `t_devices` (`id_device`, `id_employee`, `id_type`, `name`, `descrip
 	(84, 28, 1, 'Wievsonic VA1911a -LED', '', '1137135/1', 'T6N132303454', 2013, 2014, '', 1, '0000-00-00', 0, 0),
 	(85, 28, 5, 'APC-650', '', '10480047', '', 2001, 2002, '', 1, '0000-00-00', 0, 0),
 	(86, 28, 6, 'Canon FC 208', '', '10480093', 'TTE70617', 2000, 2000, '', 1, '0000-00-00', 0, 0),
-	(87, 28, 14, 'Panasonic KX-FT78', '', '10490006', 'PFGT2072XA', 2000, 2000, '', 1, '0000-00-00', 0, 0);
+	(87, 28, 14, 'Panasonic KX-FT78', '', '10490006', 'PFGT2072XA', 2000, 2000, '', 1, '0000-00-00', 0, 0),
+	(88, 3, 10, 'faerr', 'erwwefwefwef', '34234', 'wewfw34324523', 2014, 2019, 'sefef', 0, '0000-00-00', 0, 0),
+	(89, 3, 1, 'trhrth', 'dfdb', '5465', 'dbdfb', 2014, 2019, 'dfbdfb', 0, '0000-00-00', 0, 0),
+	(90, 3, 1, 'gregr', 'ergg', '34535', 'eggre', 2014, 2019, 'ergerg', 0, '0000-00-00', 0, 0),
+	(91, 4, 1, 'dfhdfh', 'df', '456456', 'dhfh', 2014, 2019, 'dfdb', 0, '0000-00-00', 0, 0),
+	(92, 3, 1, 'ergerg', '', '345345345', 'gsgwerger', 2014, 2019, 'efwef', 0, '0000-00-00', 0, 0),
+	(93, 3, 1, 'fgnfgn', '', '35435', 'dfgdfg', 2014, 2019, 'dfg', 0, '0000-00-00', 0, 0),
+	(94, 3, 1, 'rtrthtrh', '', '3454535', 'rthrht', 2014, 2019, '', 0, '0000-00-00', 0, 0),
+	(95, 3, 1, 'wefwef', '', '435345', 'rgerg', 2014, 2019, 'erg', 0, '0000-00-00', 0, 0),
+	(96, 3, 1, 'rthtrh', '', '564645', '45gergerg', 2014, 2019, 'erg', 0, '0000-00-00', 0, 0),
+	(97, 3, 1, 'trtrtrtrtraaaaaaahhh', '', '123123', 'regerg', 2014, 2019, '', 0, '0000-00-00', 0, 0);
 /*!40000 ALTER TABLE `t_devices` ENABLE KEYS */;
 
 
@@ -285,7 +295,7 @@ CREATE TABLE IF NOT EXISTS `t_device_pc` (
 DELETE FROM `t_device_pc`;
 /*!40000 ALTER TABLE `t_device_pc` DISABLE KEYS */;
 INSERT INTO `t_device_pc` (`id`, `id_device_pc`, `mb`, `cpu_name`, `cpu_p`, `hdd_name`, `hdd_p`, `ram_name`, `ram_p`, `video_name`, `video_p`, `cdrom_name`, `lan_name`, `os`, `net_name`, `ip`) VALUES
-	(2, 20, 'dfgdfg', 'dfgfdg', 44, 'dfg', 456, 'dfgdfg', 34, 'dfgg', 45, 'dfg', 'gdf', 'dfg', 'd', ''),
+	(2, 20, 'dfgdfg', 'dfgfdg', 44, 'dfg', 456, 'dfgdfg', 34, 'dfgg', 45, 'dfg', 'gdf', 'dfg', 'd', '___.___.___.___'),
 	(3, 26, 'tyjtyj', 'tyj', 6, '', NULL, '', NULL, '', NULL, '', '', '', '', ''),
 	(4, 28, 'HP Compaq dx2400', 'DualCore Intel Celeron E1200', 1.6, 'WDC WD1600AAJS-60B4A0', 149, '', 2048, 'Intel(R) G33/G31 Express Chipset Family ', 384, 'ATAPI DVD D  DH16D3S', 'Realtek RTL8168C(P)/8111C(P) PCI-E Gigabit Ethernet NIC', 'Microsoft Windows XP Professional 5.1.2600 SP 2', 'nach-ispz', '170.40.96.163'),
 	(5, 31, 'ECS 915GV-M2', 'Intel Celeron D 346', 3, 'SAMSUNG HD080HJ', 80, '', 1024, 'NVIDIA GeForce 210 ', 1024, '', 'Realtek RTL8139/810x Family Fast Ethernet NIC ', 'Microsoft Windows XP Professional 5.1.2600 (WinXP RTM)', 'spec-ispz', '172.40.96.3'),
@@ -364,6 +374,35 @@ INSERT INTO `t_employees` (`id_employee`, `id_cabinet`, `firstname`, `lastname`,
 	(27, 16, 'Філончук', 'Тетяна', 'Петрівна', '', '4-05-96,050-481-02-58', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00'),
 	(28, 16, 'Петручик', 'Ірина', 'Анатоліївна', '', '4-05-96,4-72-37,066-889-71-15', NULL, '', '', NULL, '', '0000-00-00', '', 0, '0000-00-00');
 /*!40000 ALTER TABLE `t_employees` ENABLE KEYS */;
+
+
+-- Dumping structure for table xtech.t_log
+DROP TABLE IF EXISTS `t_log`;
+CREATE TABLE IF NOT EXISTS `t_log` (
+  `id_log` int(10) NOT NULL AUTO_INCREMENT,
+  `id_device` int(10) NOT NULL,
+  `date` datetime NOT NULL,
+  `change` varchar(1024) NOT NULL,
+  PRIMARY KEY (`id_log`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table xtech.t_log: ~12 rows (approximately)
+DELETE FROM `t_log`;
+/*!40000 ALTER TABLE `t_log` DISABLE KEYS */;
+INSERT INTO `t_log` (`id_log`, `id_device`, `date`, `change`) VALUES
+	(2, 6, '2014-09-18 13:09:23', 'Змінено Назва з zerox a68 на zerox a69'),
+	(3, 6, '2014-09-18 13:09:01', 'Змінено Інв. номер з 2147483647 на 10425648'),
+	(4, 6, '2014-09-18 13:27:40', 'Змінено Назва з zerox a69 на zerox a70'),
+	(5, 6, '2014-09-18 13:28:20', 'Змінено Серійний номер з 456456456 на 111122222'),
+	(6, 6, '2014-09-18 13:28:20', 'Змінено Рік випуску з 2012 на 2010'),
+	(7, 6, '2014-09-18 13:29:10', 'Змінено Інв. номер з 10425648 на 113113'),
+	(8, 6, '2014-09-18 13:29:10', 'Змінено Серійний номер з 111122222 на 2222222'),
+	(9, 6, '2014-09-18 13:53:23', 'Змінено Серійний номер з 2222222 на 22222221111'),
+	(10, 97, '2014-09-18 14:12:21', 'Створено новий пристрій Монітор - trtrtrtrtraaaaaaahhh. Співробітник Zaika, інвентарний №123123'),
+	(11, 20, '2014-09-18 15:42:50', 'Змінено Назва з dfgdfg на dfgdfg1'),
+	(12, 20, '2014-09-18 15:42:50', 'Змінено Дата введення в експлуатацію з 0000-00-00 на 1970-01-01'),
+	(13, 20, '2014-09-18 15:44:00', 'Змінено Інв. номер з 56456 на 1134545');
+/*!40000 ALTER TABLE `t_log` ENABLE KEYS */;
 
 
 -- Dumping structure for table xtech.t_organizations
