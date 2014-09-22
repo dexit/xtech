@@ -1,7 +1,4 @@
 <?php
-
-//var_dump($result);
-
 echo CHtml::ajaxLink('Експортувати в Excel',CController::createUrl('reports/export'));
 
 $this->widget('zii.widgets.grid.CGridView', array(
@@ -22,12 +19,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => '(isset($data->devicetype))?$data->devicetype->name:\'Не визначено\'',
         ),
         'name',
-        'description',
+        //'description',
         'inv_number',
         'sn',
         'year',
         'end_varantly_yesr',
-        'service',
+        //'service',
         array(
             'name' => 'Введено в експлуатацію',
             'type' => 'raw',
@@ -44,5 +41,16 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'type' => 'raw',
             'value' => '$data->break ? \'Не працює\' : \'Працює\'',
         ),
+        array(
+            'class'=>'CButtonColumn',
+            'template'=>'{view}',
+            'buttons'=>array(
+                'view' => array(
+                    'label'=>'Перегляд',
+                    'url'=>'Yii::app()->createUrl("device/view", array("id"=>$data->id_device))',
+                ),
+            )
+        )
     ),
+
 ));

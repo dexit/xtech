@@ -187,6 +187,7 @@ class Device extends CActiveRecord
         $operations = $request['operations'];
         $values = $request['value'];
         $compares = array();
+        //var_dump($request);
 
         foreach ($attr as $k=>$v) {
             $compare = new CAttributeCollection();
@@ -226,12 +227,11 @@ class Device extends CActiveRecord
             $criteria->order = $order;
         }
 
-
         return new CActiveDataProvider($this, array(
-            'pagination'=>array(
-                'pageSize'=>10000,
+            'pagination' => array(
+                'pageSize' => 10000,
             ),
-            'criteria'=>$criteria,
+            'criteria' => $criteria,
         ));
     }
 }
