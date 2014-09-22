@@ -179,14 +179,14 @@ class Device extends CActiveRecord
             Yii::app()->user->setFlash('fail', "Не вибрано параметри для пошуку!");
             return false;
         }
+
+        //new criteria
         $criteria = new CDbCriteria;
 
         $attr = $request['attr'];
         $operations = $request['operations'];
         $values = $request['value'];
         $compares = array();
-
-
 
         foreach ($attr as $k=>$v) {
             $compare = new CAttributeCollection();
@@ -207,12 +207,15 @@ class Device extends CActiveRecord
             $compares[] = $compare;
         }
 
+        //add conditions to criteria
         foreach ($compares as $compare) {
             $criteria->addCondition('`'.CHtml::encode($compare->itemAt('attr')).'` '.
                                     $compare->itemAt('operation').' '.$sl.
                                     CHtml::encode($compare->itemAt('value')).$sr
             );
         }
+
+        //add order to criteria
         if (isset($request['sort'])){
             $r = $request['sort'];
             $array = explode("_",$r);

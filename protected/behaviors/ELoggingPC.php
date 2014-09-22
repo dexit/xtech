@@ -1,6 +1,6 @@
 <?php
 
-class ELogging extends CActiveRecordBehavior {
+class ELoggingPC extends CActiveRecordBehavior {
 
     public $model_before;
     public $model_after;
@@ -9,23 +9,19 @@ class ELogging extends CActiveRecordBehavior {
     public function afterSave($event)
     {
         parent::afterSave($event);
-        if ($this->owner->isNewRecord){
-            $changes = $this->newDevice();
-        } else {
+        if (!$this->owner->isNewRecord){
             $this->model_after = $this->owner;
             $changes = $this->compare();
+            $this->toLog($changes, $this->id);
         }
-
-        $this->id = $this->owner->id_device;
-        $this->toLog($changes, $this->id);
     }
 
     public function afterFind($event)
     {
         if (!$this->owner->isNewRecord) {
             $this->model_before = clone $this->owner;
+            $this->id = $this->owner->id_device_pc;
         }
-        $this->id = $this->owner->id_device;
         parent::afterFind($event);
     }
 
@@ -68,7 +64,6 @@ class ELogging extends CActiveRecordBehavior {
                 unset($model);
             }
             return true;
-        }
-        //else return false;
+        } else return false;
     }
 }

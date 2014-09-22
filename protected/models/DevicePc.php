@@ -30,6 +30,15 @@ class DevicePc extends CActiveRecord
 		return 't_device_pc';
 	}
 
+    public function behaviors()
+    {
+        return array(
+            'ELoggingPC' => array(
+                'class' => 'application.behaviors.ELoggingPC',
+            ),
+        );
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
