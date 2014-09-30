@@ -238,7 +238,6 @@ $(document).ready(function(){
 		});
 	}
 
-
 	//On create new device change lists
 	$('body').on('click','a[id^="branch-"]',function(){
 		$.ajax({'url':'/index.php?r=branch/show&id='+this.id.split('-')[1],

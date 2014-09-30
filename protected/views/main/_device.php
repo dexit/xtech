@@ -1,16 +1,19 @@
 <?php
-//var_dump($dataProvider);
+//var_dump($dataProvider->model->related('employee'));
+
+$attr = Yii::app()->request->getRestParams();
+
+$model = new Device('search');
+$model->unsetAttributes();
+$model->setAttributes($attr);
+
 $this->widget('zii.widgets.grid.CGridView', array(
       'dataProvider'=>$dataProvider,
-      'pager' => array(
-          //'pageSize' => '20',
-          'maxButtonCount'=>'10',
-          'header'=>'',
-          'firstPageLabel'=>'Перша',
-          'prevPageLabel'=>'Попередня',
-          'nextPageLabel'=>'Наступна',
-          'lastPageLabel'=>'Остання',
-      ),
+      'enableSorting' => true,
+      'filter'=>$dataProvider->model,
+      //'filter'=>$dataProvider,
+      //'filter'=>new Device('search'),
+      //'filter'=>$model,
       'itemsCssClass'=>'table-striped',
       'columns'=>array(
             /*array(
@@ -21,63 +24,79 @@ $this->widget('zii.widgets.grid.CGridView', array(
                           $data->employee->cabinet->department->branch->organization->name:\'Не визначено\'',
             ),*/
             array(
-              'name' => 'Філія',
+              'header'=>'Філія',
+              //'name' => 'Філія',
+              'name' => 'employee.cabinet.department.branch.name',
+              //'name' => 'departmentname',
               'type' => 'raw',
-              //'value' => '$data->branch->name',
               'value' => '(isset($data->employee->cabinet->department->branch->name))?
                            $data->employee->cabinet->department->branch->name:\'Не визначено\'',
             ),
             array(
-              'name' => 'Відділ',
+              'header'=>'Відділ',
+              //'name' => 'Відділ',
+              'name' => 'employee.cabinet.department.name',
               'type' => 'raw',
-              //'value' => '$data->department->name',
               'value' => '(isset($data->employee->cabinet->department->name))?
                           $data->employee->cabinet->department->name:\'Не визначено\'',
             ),
             array(
-              'name' => 'Кабінет',
+              'header'=>'Кабінет',
+              //'name' => 'Кабінет',
+              'name' => 'employee.cabinet.number',
               'type' => 'raw',
-              //'value' => '$data->cabinet->number',
               'value' => '(isset($data->employee->cabinet->number))?
                           $data->employee->cabinet->number:\'Не визначено\'',
             ),
             array(
-              'name' => 'Співробітник',
+              'header'=>'Співробітник',
+              'name' => 'employee',
               'type' => 'raw',
               'value' => '(isset($data->employee->firstname))?$data->employee->firstname:\'Не визначено\'',
             ),
             array(
-              'name' => 'Пристрій',
+              'header'=>'Пристрій',
+              'name' => 'devicetype',
               'type' => 'raw',
               'value' => '$data->devicetype->name',
+              //'filter'=> CHtml::activeTextField(new CActiveDataProvider('DeviceType'), 'name'),
             ),
+          //'inv_number',
             array(
               'name' => 'Інв №',
               'type' => 'raw',
               'value' => '$data->inv_number',
+              'filter'=> CHtml::activeTextField($dataProvider->model, 'inv_number'),
             ),
-            array(
-              'name' => 'Назва',
+           'name',
+          /*array(
+              'header'=>'Назва',
+              'name' => 'name',
               'type' => 'raw',
               'value' => '$data->name',
-            ),
-            array(
+          ),*/
+            /*array(
               'name' => 'Серійний №',
               'type' => 'raw',
               'value' => '$data->sn',
-            ),            
-            array(
+            ),*/
+          'year',
+            /*array(
               'name' => 'Рік випуску',
               'type' => 'raw',
               'value' => '$data->year',
-            ),
+            ),*/
             array(
-              'name' => 'Забаланс',
+              'header'=>'Забаланс',
+              //'name' => 'Забаланс',
+              'name' => 'private',
               'type' => 'raw',
               'value' => '$data->private ? \'Так\' : \'Ні\'',
             ),
             array(
-              'name' => 'Стан',
+              'header'=>'Стан',
+              //'name' => 'Стан',
+              'name' => 'break',
               'type' => 'raw',
               'value' => '$data->break ? \'Не працює\' : \'Працює\'',
             ),
@@ -99,13 +118,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     'label'=>'Удалить',
                     'imageUrl'=>Yii::app()->request->baseUrl.'/images/delete.png',
                     'url'=>'Yii::app()->createUrl("device/delete", array("id"=>$data->id_device))',
-                    'deleteConfirmation'=>"js:'Ви дійсно бажаєте видалити даний пристрій?'",
+                      'deleteConfirmation'=>"js:'Ви дійсно бажаєте видалити даний пристрій?'",
                   ),
                 ),
             ),
-
       ),
-
   ));
-
 ?>

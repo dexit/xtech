@@ -1,3 +1,11 @@
+<div class="notifier">
+    При пошуку з "Умовою" можливо використовувати спеціальні символи:
+    <span>%</span> (будь яка кількість символів),
+    <span>_</span> (один символ).
+</div>
+<div class="notifier">
+    При пошуку "В списку" значення треба розділити комами.
+</div>
 <?php
 /*
 $columns = Device::model()->getAttributes();
@@ -10,14 +18,7 @@ foreach ($columns as $k=>$v) {
 
 $operations = array('='=>'=','>'=>'>','<'=>'<','LIKE'=>'Умова', 'IN'=>'В списку');
 ?>
-<div class="notifier">
-    При пошуку з "Умовою" можливо використовувати спеціальні символи:
-    <span>%</span> (будь яка кількість символів),
-    <span>_</span> (один символ).
-</div>
-<div class="notifier">
-    При пошуку "В списку" значення треба розділити комами.
-</div>
+
 
 <?php echo CHtml::beginForm($this->createUrl('construct'),'post');?>
 
@@ -57,15 +58,25 @@ foreach ($columns as $k=>$v)
 ?>
  </tbody>
 </table>*/?>
-<div class="form">
+<?php Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/construct_form.css'); ?>
+<div class="form construct">
 <?php
-    $operations = array('='=>'=','>'=>'>','<'=>'<','LIKE'=>'Умова', 'IN'=>'В списку');
-    echo CHtml::submitButton('Пошук');
-    echo CHtml::endForm();
+    //$operations = array('='=>'=','>'=>'>','<'=>'<','LIKE'=>'Умова', 'IN'=>'В списку');
+    //echo CHtml::submitButton('Пошук');
+    //echo CHtml::endForm();
 ?>
 
-<?php echo CHtml::beginForm($this->createUrl('construct'),'post');?>
+<?php
+    $operations = array('='=>'=','>'=>'>','<'=>'<','LIKE'=>'Умова', 'IN'=>'В списку');
+    echo CHtml::beginForm($this->createUrl('construct'),'post');?>
     <!-- employee -->
+    <div class="row">
+        <div class="title_select">Обрати</div>
+        <div class="title_order">Сортування</div>
+        <div class="title_name">Назва</div>
+        <div class="title_def">Умова</div>
+        <div class="title_value">Значення</div>
+    </div>
     <div class="row">
         <?php echo CHtml::checkBox('attr[id_employee]',false,array('id'=>'attr_id_employee','value'=>'id_employee')); ?>
         <?php echo CHtml::radioButtonList('sort','Зменшення',array('id_employee_DESC'=>'Зменшення',
@@ -163,7 +174,7 @@ foreach ($columns as $k=>$v)
             array('empty' => '--Вибір--'));
         ?>
     </div>
-
+    <?/*
     <div class="row">
         <?php echo CHtml::checkBox('attr[cpu_p]',false,array('id'=>'attr_cpu_p','value'=>'cpu_p')); ?>
         <?php echo CHtml::radioButtonList('sort','Зменшення',array('cpu_p_DESC'=>'Зменшення',
@@ -223,9 +234,9 @@ foreach ($columns as $k=>$v)
         <?php echo CHtml::textField('value[ip]','',array('maxlength'=>'255', 'size'=>'12'));
         ?>
     </div>
-
+*/?>
 <?php
-echo CHtml::submitButton('Пошук');
+echo CHtml::submitButton('Пошук',array('class'=>'btn'));
 echo CHtml::endForm();
 ?>
 </div>

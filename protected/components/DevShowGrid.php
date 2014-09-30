@@ -78,6 +78,7 @@ class DevShowGrid {
         $criteria = new CDbCriteria();
         $criteria->addInCondition('id_device', $id_devices, 'AND');
 
-        return new CActiveDataProvider('Device',array('criteria'=>$criteria));
+        return new CActiveDataProvider('Device',array('criteria'=>$criteria,
+                                                    'pagination'=>array('pageSize'=>30),));
     }
 }

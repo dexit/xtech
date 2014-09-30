@@ -169,7 +169,6 @@ class DeviceController extends Controller
 			}
 			$model->delete();				
 			$transaction->commit();
-
 		} catch (Exception $e) {
             $transaction->rollBack();
             $error = $e->getMessage();
@@ -177,8 +176,8 @@ class DeviceController extends Controller
         }
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		if(!isset($_POST['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('/'));
 	}
 
 	/**

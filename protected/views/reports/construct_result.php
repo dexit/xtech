@@ -7,7 +7,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'pageSize' => 100,
     ),
     'columns'=>array(
-        'id_device',
+        //'id_device',
         array(
             'name' => 'Співробітник',
             'type' => 'raw',

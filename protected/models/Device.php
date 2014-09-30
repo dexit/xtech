@@ -139,7 +139,7 @@ class Device extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
-
+        //echo "efef";
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id_device',$this->id_device);
@@ -161,6 +161,7 @@ class Device extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
 
 	/**
 	 * Returns the static model of the specified AR class.

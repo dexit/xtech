@@ -48,18 +48,24 @@
                     ),
                     array(
                         'label'=>'Звіти',
-                        'url'=>array('//reports/index'),
+                        //'url'=>array('//reports/index'),
+                        'url'=>array('#'),
                         'visible'=>Yii::app()->user->isGuest,
                         'items' => array(
                             array(
                                 'label'=>'Конструктор',
                                 'url'=>array('//reports/construct'),
                             ),
+                            array(
+                                'label'=>'Картки',
+                                'url'=>array('site/underconstruct'),
+                            ),
                         ),
                     ),
                     array(
                         'label'=>'Довідники',
-                        'url'=>array('//directory/index'),
+                        //'url'=>array('//directory/index'),
+                        'url'=>array('#'),
                         'visible'=>Yii::app()->user->isGuest,
                         'items' => array(
                             array(
@@ -75,7 +81,8 @@
                     array(
                         'label'=>'Адміністрування',
                         'visible'=>Yii::app()->user->isGuest,
-                        'url'=>array('admin/index'),
+                        //'url'=>array('admin/index'),
+                        'url'=>array('site/underconstruct'),
                     ),
                     array(
                         'label'=>'Вхід',

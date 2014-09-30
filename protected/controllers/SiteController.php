@@ -110,4 +110,9 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
+    public function actionUnderconstruct()
+    {
+        $this->render('//site/underconstruct');
+    }
+
 }

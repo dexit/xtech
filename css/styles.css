@@ -15,7 +15,7 @@
     margin-left: 18px;
     zoom: 1;
     /* линия слева образуется повторяющимся фоновым рисунком */
-    background-image : url(/images/tree/i.gif);
+    background-image : url(../images/tree/i.gif);
     background-position : top left;
     background-repeat : repeat-y;
 }
@@ -27,7 +27,7 @@
 /* это правило - ниже .Node, поэтому имеет больший приоритет */
 .IsLast {
     /* добавить соединительную черточку наверх */
-    background-image: url(/images/tree/i_half.gif);
+    background-image: url(../images/tree/i_half.gif);
     background-repeat : no-repeat;
 }
 
@@ -73,17 +73,17 @@
 }
 /* открытое поддерево */
 .ExpandOpen .Expand {  
-    background-image: url(/images/tree/minus.gif);  
+    background-image: url(../images/tree/minus.gif);  
 }
 
 /* закрытое поддерево */
 .ExpandClosed .Expand {
-    background-image: url(/images/tree/plus.gif);
+    background-image: url(../images/tree/plus.gif);
 }
 
 /* лист */
 .ExpandLeaf .Expand {
-    background-image: url(/images/tree/leaf.gif);
+    background-image: url(../images/tree/leaf.gif);
 }
 .ExpandOpen .Container {
     display: block;
@@ -219,12 +219,17 @@ div[class^="tree-menu-button"] a{
     border: 1px solid #7c9cff;
     background-color: #4F81BD;
 }
-
-
+#data-grid{
+    margin-top: -18px;
+}
+.grid-view {
+    padding: 0;
+}
 .grid-view table.table-striped {
     background: white;
     border-collapse: collapse;
     width: 100%;
+    border: 1px solid #a2a2a2;
     /*border: 1px #D0E3EF solid;*/
 }
 
@@ -237,8 +242,9 @@ div[class^="tree-menu-button"] a{
 .grid-view table.table-striped th
 {
     color: white;
-    background-color: #666666;
+    background-color: #a2a2a2;
     text-align: center;
+    border-radius: 5px;
 }
 
 .grid-view table.table-striped th a
@@ -251,13 +257,13 @@ div[class^="tree-menu-button"] a{
 
 .grid-view table.table-striped th a.asc
 {
-    background:url(up.gif) right center no-repeat;
+    background:url("../images/gridview/up.gif") right center no-repeat;
     padding-right: 10px;
 }
 
 .grid-view table.table-striped th a.desc
 {
-    background:url(down.gif) right center no-repeat;
+    background:url("../images/gridview/down.gif") right center no-repeat;
     padding-right: 10px;
 }
 
@@ -331,7 +337,6 @@ div[class^="tree-menu-button"] a{
     border: 1px solid #ccc;
 }
 
-
 .flash-fail {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -340,4 +345,29 @@ div[class^="tree-menu-button"] a{
     padding: 10px;
     text-align: center;
     width: 500px;
+}
+
+
+ul.yiiPager a:link, ul.yiiPager a {
+    background-color: #959595;
+    border: 1px solid #7b7b7b;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 3px 9px;
+    text-decoration: none;
+}
+
+ul.yiiPager li.page.active a{
+    background-color: #388c95;
+}
+
+ul.yiiPager li.page a:active{
+    background-color: #689588;
+}
+
+ul.yiiPager li.disabled a{
+    background-color: #d6dccc;
+    border-color: #bbbbbb;
+    cursor: auto;
 }

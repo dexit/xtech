@@ -28,37 +28,51 @@ class MainController extends Controller
 	public function actionIndex()
 	{
 		$org = new Organization('search');
-		$org->unsetAttributes();  // clear any default values		
+		$org->unsetAttributes();
 		$organizations = $org->findAll();
 
-		$dev = new Device('search');
-		$dev->unsetAttributes();
+        $model = new Device('search');
+        $model->unsetAttributes();
 
-        $rel = array('devicepc','devicetype','employee');
-		$devices = $dev->with($rel)->findAll();
-
-        /*$sort = new CSort();
+        $sort = new CSort();
         $sort->attributes = array(
-            'defaultOrder'=>'name DESC',
-            'type'=>array(
-                'asc'=>'id_type',
-                'desc'=>'id_type DESC',
+            'name'=>array(
+                'asc'=>'t.name',
+                'desc'=>'t.name DESC'
             ),
-            'inv'=>array(
+            'year'=>array(
+                'asc'=>'year',
+                'desc'=>'year DESC'
+            ),
+            'sn'=>array(
+                'asc'=>'sn',
+                'desc'=>'sn DESC'
+            ),
+            'inv_number'=>array(
                 'asc'=>'inv_number',
-                'desc'=>'inv_number DESC',
+                'desc'=>'inv_number DESC'
             ),
-            '*'
-        );*/
+            'devicetype'=>array(
+                'asc'=>'devicetype.name',
+                'desc'=>'devicetype.name DESC'
+            ),
+            'employee'=>array(
+                'asc'=>'employee.firstname',
+                'desc'=>'employee.firstname DESC'
+            ),
+        );
 
-		$dataProvider = new CActiveDataProvider('Device', array(
-                            //'pagination'=>array('pageSize'=>20),
-                            //'sort' => $sort,
+        $criteria = new CDbCriteria();
+        $criteria->with = array('devicetype','employee');
+
+		$dataProvider = new CActiveDataProvider($model, array(
+                            'criteria'=>$criteria,
+                            'pagination'=>array('pageSize'=>30),
+                            'sort' => $sort,
                         ));
 
 		$this->render('index',array(
 			'organizations'=>$organizations,
-			'devices'=>$devices,
 			'dataProvider' => $dataProvider,
 		));
 		
