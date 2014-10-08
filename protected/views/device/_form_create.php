@@ -27,20 +27,29 @@
     </div>
 
     <div class="row">
+	
         <?php echo $form->labelEx($model,'name'); ?>
+	<?php $this->beginContent('//decorators/buttons'); ?>  
         <?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
+		<?php $this->endContent(); ?>	
         <?php echo $form->error($model,'name'); ?>
     </div>
 
     <div class="row">
+	
         <?php echo $form->labelEx($model,'inv_number'); ?>
+		<?php $this->beginContent('//decorators/buttons'); ?>  
         <?php echo $form->textField($model,'inv_number',array('size'=>15,'maxlength'=>10)); ?>
+		<?php $this->endContent(); ?>	
         <?php echo $form->error($model,'inv_number'); ?>
     </div>
 
     <div class="row">
+	
         <?php echo $form->labelEx($model,'sn'); ?>
+		<?php $this->beginContent('//decorators/buttons'); ?>  
         <?php echo $form->textField($model,'sn',array('size'=>60,'maxlength'=>255)); ?>
+		<?php $this->endContent(); ?>	
         <?php echo $form->error($model,'sn'); ?>
     </div>
 

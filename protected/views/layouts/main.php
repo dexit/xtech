@@ -71,10 +71,22 @@
                             array(
                                 'label'=>'Працівники',
                                 'url'=>array('//employee/admin'),
+								'items'=>array(
+									array(
+										'label'=>'Додати працівника',
+										'url'=>array('//employee/create&parent='),
+									)
+								)
                             ),
                             array(
                                 'label'=>'Типи пристроїв',
                                 'url'=>array('//deviceType/admin'),
+								'items'=>array(
+									array(
+										'label'=>'Додати тип пристроїв',
+										'url'=>array('//deviceType/create'),
+									)
+								)
                             )
                         ),
                     ),

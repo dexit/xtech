@@ -131,7 +131,7 @@
 	<div class="row">
         <?php echo $form->labelEx($model,'fired'); ?>
         <?php if ($model->isNewRecord): ?>
-            <input id="Employee_fired" type="radio" name="Employee[fired]" value="0" />Ні
+            <input id="Employee_fired" type="radio" name="Employee[fired]" value="0" checked/>Ні
             <input id="Employee_fired" type="radio" name="Employee[fired]" value="1" />Так
         <?php else: ?>
             <?php if ($model->fired): ?>

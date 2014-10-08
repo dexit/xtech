@@ -4,27 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/protected/views/main/_tree.php" line="13" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e7a06e-bc93-472a-90f1-a036a60db293" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/construct_form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/site/underconstruct.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DevController.php" afterPath="$PROJECT_DIR$/protected/controllers/DevController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/DevShowGrid.php" afterPath="$PROJECT_DIR$/protected/components/DevShowGrid.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Device.php" afterPath="$PROJECT_DIR$/protected/models/Device.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/DeviceController.php" afterPath="$PROJECT_DIR$/protected/controllers/DeviceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/MainController.php" afterPath="$PROJECT_DIR$/protected/controllers/MainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/m/TODO.txt" afterPath="$PROJECT_DIR$/m/TODO.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/_device.php" afterPath="$PROJECT_DIR$/protected/views/main/_device.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/reports/construct_form.php" afterPath="$PROJECT_DIR$/protected/views/reports/construct_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/reports/construct_result.php" afterPath="$PROJECT_DIR$/protected/views/reports/construct_result.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/main/index.php" afterPath="$PROJECT_DIR$/protected/views/main/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts.js" afterPath="$PROJECT_DIR$/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="69e7a06e-bc93-472a-90f1-a036a60db293" name="Default" comment="" />
     <ignored path="xtech.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="69e7a06e-bc93-472a-90f1-a036a60db293" time="1412058855625" ignored="false" />
@@ -102,26 +82,7 @@
     <favorites_list name="xtech" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DeviceController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/DeviceController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="87" selection-start="4889" selection-end="4889" vertical-scroll-proportion="-20.76923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_device.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/views/main/_device.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="99" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.7206068">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -634,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/DeviceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="87" selection-start="4889" selection-end="4889" vertical-scroll-proportion="-20.76923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../yii/framework/messages/uk/yii.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -651,6 +605,13 @@
     <entry file="file://$PROJECT_DIR$/protected/views/main/_device.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="99" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.7206068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/DeviceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="87" selection-start="4889" selection-end="4889" vertical-scroll-proportion="0.68268013">
           <folding />
         </state>
       </provider>
